@@ -2,13 +2,43 @@
 
 namespace IntelGUA\PMT\Http\Controllers\API;
 
+use Illuminate\Support\Facades\Hash;
 use IntelGUA\PMT\Models\User;
 use IntelGUA\PMT\Http\Controllers\API\BaseController;
-use IntelGUA\PMT\Http\Requests\StoreUserRequest;
-use IntelGUA\PMT\Http\Requests\UpdateUserRequest;
 
 class UsersController extends BaseController
 {
+    private $rules = ['role_id'     =>  'required|integer|exists:roles,id',
+                    'oficial_id'    =>  'required|integer',
+                    'date_birthday' =>  'required|date_format:dd-mm-YY',
+                    'first_name'    =>  'required|min:3',
+                    'last_name'     =>  'required|min:3',
+                    'gender'        =>  'required|in:Male,Female',
+                    'nit'           =>  'required|max:15',
+                    'dpi'           =>  'required|size:13',
+                    'email'         =>  'required|email',
+                    'password'      =>  'required'];
+
+    private $messages = ['role_id.required'         => 'El campo :attribute es obligatorio',
+                        'role_id.integer'           => 'El campo :attribute no es un valor entero',
+                        'role_id.exists'            => 'El campo :attribute no aparece en nuestros registros de Roles',
+                        'oficial_id.required'       => 'El campo :attribute es obligatorio',
+                        'oficial_id.integer'        => 'El campo :attribute no es un valor entero',
+                        'date_birthday.required'    => 'El campo :attribute es obligatorio',
+                        'date_birthday.date_format' => 'El campo :attribute no esta recibiendo el formato esperado. (2019-03-24)',
+                        'first_name.required'       => 'El campo :attribute es obligatorio',
+                        'first_name.min'            => 'El campo :attribute debe tener al menos :min caracteres de longitud',
+                        'last_name.required'        => 'El campo :attribute es obligatorio',
+                        'last_name.min'             => 'El campo :attribute debe tener al menos :min caracteres de longitud',
+                        'gender.required'           => 'El campo :attribute es obligatorio',
+                        'gender.in'                 => 'El campo :attribute esta esperando los siguientes valores: \'Male\', \'Female\'',
+                        'nit.required'              => 'El campo :attribute es obligatorio',
+                        'nit.max'                   => 'El campo :attribute no debe tener más de :max caracteres',
+                        'dpi.required'              => 'El campo :attribute es obligatorio',
+                        'dpi.size'                  => 'El campo :attribute debe contener una longitud exacta de :size caracteres',
+                        'email.required'            => 'El campo :attribute es obligatorio',
+                        'email.email'               => 'El campo :attribute debe ser una correo electrónico valido',
+                        'password.required'         => 'El campo :attribute es obligatorio'];
 
     public function __construct()
     {
@@ -24,7 +54,7 @@ class UsersController extends BaseController
     {
         $users = User::all();
 
-        return $this->sendResponse($users->toArray(), 'Users retrieved successfully.');
+        return $this->sendResponse($users->toArray(), 'Recursos Usuarios obtenidos satisfactoriamente.', 200);
 
     }
 
@@ -34,13 +64,20 @@ class UsersController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUserRequest $request)
+    public function store(Request $request)
     {
         $input = $request->all();
 
+
+        $validator = Validator::make($input, $this->rules, $this->messages);
+
+        if ($validator->fails()) {
+            return $this->sendError('Errores de validación.', $validator->errors(), 406);
+        }
+
         $user = User::create($input);
 
-        return $this->sendResponse($user->toArray(), 'User created successfully.');
+        return $this->sendResponse($user->toArray(), 'Recurso Usuario creado satisfactoriamente.', 201);
 
     }
 
@@ -55,10 +92,10 @@ class UsersController extends BaseController
         $user = User::find($id);
 
         if (is_null($user)) {
-            return $this->sendError('User not found.');
+            return $this->sendError('Recurso Usuario no encontrado.', 404);
         }
 
-        return $this->sendResponse($user->toArray(), 'User retrieved successfully.');
+        return $this->sendResponse($user->toArray(), 'Recurso Usuario obtenido correctamente.', 200);
     }
 
     /**
@@ -68,17 +105,31 @@ class UsersController extends BaseController
      * @param  \IntelGUA\PMT\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, User $user)
+    public function update(Request $request, User $user)
     {
         $input = $request->all();
 
+        $validator = Validator::make($input, $this->rules, $this->messages);
+
+        if ($validator->fails()) {
+            return $this->sendError('Errores de validación.', $validator->errors(), 406);
+        }
+
         // TODO: agregar los campos que faltan...
-        $user->name = $input['name'];
-        $user->detail = $input['detail'];
+        $user->role_id = $input['role_id'];
+        $user->oficial_id = $input['oficial_id'];
+        $user->date_birthday = $input['date_birthday'];
+        $user->first_name = $input['first_name'];
+        $user->last_name = $input['last_name'];
+        $user->gender = $input['gender'];
+        $user->nit = $input['nit'];
+        $user->dpi = $input['dpi'];
+        $user->email = $input['email'];
+        $user->password = Hash::make($input['password']);
         $user->save();
 
 
-        return $this->sendResponse($user->toArray(), 'User updated successfully.');
+        return $this->sendResponse($user->toArray(), 'Recurso Usuario actualizado correctamente.', 204);
     }
 
     /**
@@ -91,6 +142,6 @@ class UsersController extends BaseController
     {
         $user->delete();
 
-        return $this->sendResponse($user->toArray(), 'User deleted successfully.');
+        return $this->sendResponse($user->toArray(), 'Recurso Usuario eliminado correctamente.', 204);
     }
 }
