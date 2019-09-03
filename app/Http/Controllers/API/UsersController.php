@@ -16,7 +16,7 @@ class UsersController extends BaseController
                     'gender'        =>  'required|in:Male,Female',
                     'nit'           =>  'required|max:15',
                     'dpi'           =>  'required|size:13',
-                    'email'         =>  'required|email',
+                    'email'         =>  'required|email|unique:users',
                     'password'      =>  'required'];
 
     private $messages = ['role_id.required'         => 'El campo :attribute es obligatorio',
@@ -109,7 +109,18 @@ class UsersController extends BaseController
     {
         $input = $request->all();
 
-        $validator = Validator::make($input, $this->rules, $this->messages);
+        $validator = Validator::make($input, [
+            'role_id'     =>  'required|integer|exists:roles,id',
+            'oficial_id'    =>  'required|integer',
+            'date_birthday' =>  'required|date_format:dd-mm-YY',
+            'first_name'    =>  'required|min:3',
+            'last_name'     =>  'required|min:3',
+            'gender'        =>  'required|in:Male,Female',
+            'nit'           =>  'required|max:15',
+            'dpi'           =>  'required|size:13',
+            'email'         =>  ['required', 'email', Rule::unique('users')->ignore($user->id)],
+            'password'      =>  'required'
+        ], $this->messages);
 
         if ($validator->fails()) {
             return $this->sendError('Errores de validación.', $validator->errors(), 406);
