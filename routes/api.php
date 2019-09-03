@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::prefix('v1/auth', function () {
+Route::prefix('v1/auth')->group(function () {
 
     Route::post('login', 'AuthController@login')->name('auth.login');
     Route::post('logout', 'AuthController@logout')->name('auth.logout');
@@ -25,6 +25,17 @@ Route::prefix('v1/auth', function () {
 Route::prefix('v1/admin')->group(function () {
     Route::apiResources([
         'users' => 'API\UsersController',
-        'posts' => 'API\PostController'
+    ]);
+});
+
+Route::prefix('v1/peaje')->group(function () {
+    Route::apiResources([
+        'users' => 'API\UsersController',
+    ]);
+});
+
+Route::prefix('v1/remisiones')->group(function () {
+    Route::apiResources([
+        'users' => 'API\UsersController',
     ]);
 });

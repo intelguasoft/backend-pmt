@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
 
             $table->unsignedBigInteger('role_id');
-
             $table->foreign('role_id')
                     ->references('id')
                     ->on('roles')
