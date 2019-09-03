@@ -2,21 +2,21 @@
 
 namespace IntelGUA\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\Role;
+use IntelGUA\PMT\Models\TypeVehicle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
-class RolesController extends BaseController
+class TypeVehiclesController extends BaseController
 {
     private $rules = [
-        'name'     =>  'required|unique:roles',
+        'type'     =>  'required|unique:type_vehicles',
         'description'    =>  'required'
     ];
 
     private $messages = [
-        'name.required'         => 'El campo :attribute es obligatorio',
-        'name.unique'               => 'El campo :attribute ya existe en nuestros registros',
+        'type.required'         => 'El campo :attribute es obligatorio',
+        'type.unique'               => 'El campo :attribute ya existe en nuestros registros',
         'description.required'       => 'El campo :attribute es obligatorio'
     ];
 
@@ -32,9 +32,10 @@ class RolesController extends BaseController
      */
     public function index()
     {
-        $roles = Role::all();
+        $typeVehicles = TypeVehicle::all();
 
-        return $this->sendResponse($roles->toArray(), 'Recursos obtenidos satisfactoriamente.', 200);
+        return $this->sendResponse($typeVehicles->toArray(), 'Recursos obtenidos satisfactoriamente.', 200);
+
     }
 
     /**
@@ -47,45 +48,48 @@ class RolesController extends BaseController
     {
         $input = $request->all();
 
+
         $validator = Validator::make($input, $this->rules, $this->messages);
 
         if ($validator->fails()) {
             return $this->sendError('Errores de validación.', $validator->errors(), 406);
         }
 
-        $role = Role::create($input);
+        $typeVehicle = TypeVehicle::create($input);
 
-        return $this->sendResponse($role->toArray(), 'Recurso creado satisfactoriamente.', 201);
+        return $this->sendResponse($typeVehicle->toArray(), 'Recurso creado satisfactoriamente.', 201);
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \IntelGUA\PMT\Models\TypeVehicle  $typeVehicle
      * @return \Illuminate\Http\Response
      */
-    public function show(Role $role)
+    public function show(TypeVehicle $typeVehicle)
     {
-        if (is_null($role)) {
+        if (is_null($typeVehicle)) {
             return $this->sendError('Recurso no encontrado.', 404);
         }
 
-        return $this->sendResponse($role->toArray(), 'Recurso obtenido correctamente.', 200);
+        return $this->sendResponse($typeVehicle->toArray(), 'Recurso obtenido correctamente.', 200);
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \IntelGUA\PMT\Models\TypeVehicle  $typeVehicle
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(Request $request, TypeVehicle $typeVehicle)
     {
         $input = $request->all();
 
         $validator = Validator::make($input, [
-            'name'     =>  ['required', Rule::unique('roles')->ignore($role->id)],
+            'type'     =>  ['required', Rule::unique('type_vehicles')->ignore($typeVehicle->id)],
             'description'    =>  'required'
         ], $this->messages);
 
@@ -93,29 +97,30 @@ class RolesController extends BaseController
             return $this->sendError('Errores de validación.', $validator->errors(), 406);
         }
 
-        $role->name = $input['name'];
-        $role->description = $input['description'];
-        $role->save();
+        $typeVehicle->type = $input['type'];
+        $typeVehicle->description = $input['description'];
+        $typeVehicle->save();
 
 
-        return $this->sendResponse($role->toArray(), 'Recurso actualizado correctamente.', 204);
+        return $this->sendResponse($typeVehicle->toArray(), 'Recurso actualizado correctamente.', 204);
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \IntelGUA\PMT\Models\TypeVehicle  $typeVehicle
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role)
+    public function destroy(TypeVehicle $typeVehicle)
     {
-        $role->delete();
+        $typeVehicle->delete();
 
-        if (is_null($role)) {
+        if (is_null($typeVehicle)) {
             return $this->sendError('Recurso no encontrado.', 404);
         }
 
-        return $this->sendResponse($role->toArray(), 'Recurso eliminado correctamente.', 204);
+        return $this->sendResponse($typeVehicle->toArray(), 'Recurso eliminado correctamente.', 204);
 
     }
 }

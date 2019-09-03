@@ -4,9 +4,9 @@ namespace IntelGUA\PMT\Http\Controllers\API;
 
 use IntelGUA\PMT\Models\Toll;
 use Illuminate\Http\Request;
-use IntelGUA\PMT\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
-class TollsController extends Controller
+class TollsController extends BaseController
 {
     private $rules = [
         'date'                  =>  'required|date_format:dd-mm-YY',

@@ -2,11 +2,12 @@
 
 namespace IntelGUA\PMT\Http\Controllers\API;
 
+use Illuminate\Validation\Rule;
 use IntelGUA\PMT\Models\TypeTollVehicle;
 use Illuminate\Http\Request;
-use IntelGUA\PMT\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
-class TypeTollVehiclesController extends Controller
+class TypeTollVehiclesController extends BaseController
 {
     private $rules = [
         'type'              =>  'required|unique:type_toll_vehicles',
