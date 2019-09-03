@@ -54,7 +54,7 @@ class UsersController extends BaseController
     {
         $users = User::all();
 
-        return $this->sendResponse($users->toArray(), 'Recursos Usuarios obtenidos satisfactoriamente.', 200);
+        return $this->sendResponse($users->toArray(), 'Recursos obtenidos satisfactoriamente.', 200);
 
     }
 
@@ -77,7 +77,7 @@ class UsersController extends BaseController
 
         $user = User::create($input);
 
-        return $this->sendResponse($user->toArray(), 'Recurso Usuario creado satisfactoriamente.', 201);
+        return $this->sendResponse($user->toArray(), 'Recurso creado satisfactoriamente.', 201);
 
     }
 
@@ -92,10 +92,11 @@ class UsersController extends BaseController
         $user = User::find($id);
 
         if (is_null($user)) {
-            return $this->sendError('Recurso Usuario no encontrado.', 404);
+            return $this->sendError('Recurso no encontrado.', 404);
         }
 
-        return $this->sendResponse($user->toArray(), 'Recurso Usuario obtenido correctamente.', 200);
+        return $this->sendResponse($user->toArray(), 'Recurso obtenido correctamente.', 200);
+
     }
 
     /**
@@ -140,7 +141,7 @@ class UsersController extends BaseController
         $user->save();
 
 
-        return $this->sendResponse($user->toArray(), 'Recurso Usuario actualizado correctamente.', 204);
+        return $this->sendResponse($user->toArray(), 'Recurso actualizado correctamente.', 204);
     }
 
     /**
@@ -153,6 +154,10 @@ class UsersController extends BaseController
     {
         $user->delete();
 
-        return $this->sendResponse($user->toArray(), 'Recurso Usuario eliminado correctamente.', 204);
+        if (is_null($user)) {
+            return $this->sendError('Recurso no encontrado.', 404);
+        }
+
+        return $this->sendResponse($user->toArray(), 'Recurso eliminado correctamente.', 204);
     }
 }
