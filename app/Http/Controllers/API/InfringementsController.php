@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\Infringement;
+use Edgar\PMT\Models\Infringement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -73,7 +73,7 @@ class InfringementsController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\Infringement  $infringement
+     * @param  \Edgar\PMT\Models\Infringement  $infringement
      * @return \Illuminate\Http\Response
      */
     public function show(Infringement $infringement)
@@ -90,7 +90,7 @@ class InfringementsController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\Infringement  $infringement
+     * @param  \Edgar\PMT\Models\Infringement  $infringement
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Infringement $infringement)
@@ -121,7 +121,7 @@ class InfringementsController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\Infringement  $infringement
+     * @param  \Edgar\PMT\Models\Infringement  $infringement
      * @return \Illuminate\Http\Response
      */
     public function destroy(Infringement $infringement)

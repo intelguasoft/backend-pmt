@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Requests;
+namespace Edgar\PMT\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

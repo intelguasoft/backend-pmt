@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Models;
+namespace Edgar\PMT\Models;
 
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;

@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\Mark;
+use Edgar\PMT\Models\Mark;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -66,7 +66,7 @@ class MarksController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\Mark  $mark
+     * @param  \Edgar\PMT\Models\Mark  $mark
      * @return \Illuminate\Http\Response
      */
     public function show(Mark $mark)
@@ -83,7 +83,7 @@ class MarksController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\Mark  $mark
+     * @param  \Edgar\PMT\Models\Mark  $mark
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Mark $mark)
@@ -113,7 +113,7 @@ class MarksController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\Mark  $mark
+     * @param  \Edgar\PMT\Models\Mark  $mark
      * @return \Illuminate\Http\Response
      */
     public function destroy(Mark $mark)

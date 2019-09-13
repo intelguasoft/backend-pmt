@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Providers;
+namespace Edgar\PMT\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        // 'IntelGUA\PMT\Model' => 'IntelGUA\PMT\Policies\ModelPolicy',
+        // 'Edgar\PMT\Model' => 'Edgar\PMT\Policies\ModelPolicy',
     ];
 
     /**

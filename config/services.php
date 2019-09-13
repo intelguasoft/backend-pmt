@@ -35,7 +35,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => IntelGUA\PMT\User::class,
+        'model' => Edgar\PMT\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
         'webhook' => [

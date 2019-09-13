@@ -1,9 +1,9 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
 use Illuminate\Validation\Rule;
-use IntelGUA\PMT\Models\TypeTollVehicle;
+use Edgar\PMT\Models\TypeTollVehicle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -74,7 +74,7 @@ class TypeTollVehiclesController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\TypeTollVehicle  $typeTollVehicle
+     * @param  \Edgar\PMT\Models\TypeTollVehicle  $typeTollVehicle
      * @return \Illuminate\Http\Response
      */
     public function show(TypeTollVehicle $typeTollVehicle)
@@ -91,7 +91,7 @@ class TypeTollVehiclesController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\TypeTollVehicle  $typeTollVehicle
+     * @param  \Edgar\PMT\Models\TypeTollVehicle  $typeTollVehicle
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, TypeTollVehicle $typeTollVehicle)
@@ -135,7 +135,7 @@ class TypeTollVehiclesController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\TypeTollVehicle  $typeTollVehicle
+     * @param  \Edgar\PMT\Models\TypeTollVehicle  $typeTollVehicle
      * @return \Illuminate\Http\Response
      */
     public function destroy(TypeTollVehicle $typeTollVehicle)

@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Middleware;
+namespace Edgar\PMT\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;

@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Providers;
+namespace Edgar\PMT\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

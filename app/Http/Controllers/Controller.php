@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers;
+namespace Edgar\PMT\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

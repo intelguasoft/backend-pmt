@@ -1,5 +1,5 @@
 {
-    "name": "intelguasoft/rest-api-pmt",
+    "name": "edgareli90/backend-pmt",
     "type": "project",
     "description": "Servicio web basado en la arquitectura REST para el control del peaje y multas/remisiones en el area de El Estor.",
     "keywords": [
@@ -42,7 +42,7 @@
     },
     "autoload": {
         "psr-4": {
-            "IntelGUA\\PMT\\": "app/"
+            "Edgar\\PMT\\": "app/"
         },
         "classmap": [
             "database/seeds",

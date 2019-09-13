@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\State;
+use Edgar\PMT\Models\State;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -65,7 +65,7 @@ class StatesController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\State  $state
+     * @param  \Edgar\PMT\Models\State  $state
      * @return \Illuminate\Http\Response
      */
     public function show(State $state)
@@ -82,7 +82,7 @@ class StatesController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\State  $state
+     * @param  \Edgar\PMT\Models\State  $state
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, State $state)
@@ -111,7 +111,7 @@ class StatesController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\State  $state
+     * @param  \Edgar\PMT\Models\State  $state
      * @return \Illuminate\Http\Response
      */
     public function destroy(State $state)

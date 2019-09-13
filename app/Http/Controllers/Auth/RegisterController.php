@@ -1,9 +1,9 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\Auth;
+namespace Edgar\PMT\Http\Controllers\Auth;
 
-use IntelGUA\PMT\Models\User;
-use IntelGUA\PMT\Http\Controllers\Controller;
+use Edgar\PMT\Models\User;
+use Edgar\PMT\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -59,7 +59,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \IntelGUA\PMT\User
+     * @return \Edgar\PMT\User
      */
     protected function create(array $data)
     {

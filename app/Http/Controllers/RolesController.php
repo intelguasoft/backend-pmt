@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers;
+namespace Edgar\PMT\Http\Controllers;
 
-use IntelGUA\PMT\Models\Role;
+use Edgar\PMT\Models\Role;
 use Illuminate\Http\Request;
 use JeroenNoten\LaravelAdminLte\AdminLte;
 
@@ -48,7 +48,7 @@ class RolesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
     public function show(Role $role)
@@ -59,7 +59,7 @@ class RolesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
     public function edit(Role $role)
@@ -71,7 +71,7 @@ class RolesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Role $role)
@@ -82,7 +82,7 @@ class RolesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
     public function destroy(Role $role)

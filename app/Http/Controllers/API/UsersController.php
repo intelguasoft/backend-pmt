@@ -1,12 +1,12 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
-use IntelGUA\PMT\Models\User;
-use IntelGUA\PMT\Http\Controllers\API\BaseController;
+use Edgar\PMT\Models\User;
+use Edgar\PMT\Http\Controllers\API\BaseController;
 
 class UsersController extends BaseController
 {
@@ -86,7 +86,7 @@ class UsersController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\User  $user
+     * @param  \Edgar\PMT\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -105,7 +105,7 @@ class UsersController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\User  $user
+     * @param  \Edgar\PMT\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user)
@@ -149,7 +149,7 @@ class UsersController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\User  $user
+     * @param  \Edgar\PMT\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)

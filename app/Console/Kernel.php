@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Console;
+namespace Edgar\PMT\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

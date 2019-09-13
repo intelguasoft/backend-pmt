@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Exceptions;
+namespace Edgar\PMT\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

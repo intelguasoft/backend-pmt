@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Middleware;
+namespace Edgar\PMT\Http\Middleware;
 
 use Closure;
 use Tymon\JWTAuth\Facades\JWTAuth as TymonJWTAuth;

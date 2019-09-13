@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\Toll;
+use Edgar\PMT\Models\Toll;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -69,7 +69,7 @@ class TollsController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\Toll  $toll
+     * @param  \Edgar\PMT\Models\Toll  $toll
      * @return \Illuminate\Http\Response
      */
     public function show(Toll $toll)
@@ -86,7 +86,7 @@ class TollsController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\Toll  $toll
+     * @param  \Edgar\PMT\Models\Toll  $toll
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Toll $toll)
@@ -121,7 +121,7 @@ class TollsController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\Toll  $toll
+     * @param  \Edgar\PMT\Models\Toll  $toll
      * @return \Illuminate\Http\Response
      */
     public function destroy(Toll $toll)

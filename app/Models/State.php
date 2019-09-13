@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Models;
+namespace Edgar\PMT\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

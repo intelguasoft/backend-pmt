@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\Ballot;
+use Edgar\PMT\Models\Ballot;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -66,7 +66,7 @@ class BallotsController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\Ballot  $ballot
+     * @param  \Edgar\PMT\Models\Ballot  $ballot
      * @return \Illuminate\Http\Response
      */
     public function show(Ballot $ballot)
@@ -83,7 +83,7 @@ class BallotsController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\Ballot  $ballot
+     * @param  \Edgar\PMT\Models\Ballot  $ballot
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Ballot $ballot)
@@ -115,7 +115,7 @@ class BallotsController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\Ballot  $ballot
+     * @param  \Edgar\PMT\Models\Ballot  $ballot
      * @return \Illuminate\Http\Response
      */
     public function destroy(Ballot $ballot)

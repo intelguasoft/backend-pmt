@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Http;
+namespace Edgar\PMT\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -14,11 +14,11 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \IntelGUA\PMT\Http\Middleware\CheckForMaintenanceMode::class,
+        \Edgar\PMT\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        \IntelGUA\PMT\Http\Middleware\TrimStrings::class,
+        \Edgar\PMT\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \IntelGUA\PMT\Http\Middleware\TrustProxies::class,
+        \Edgar\PMT\Http\Middleware\TrustProxies::class,
     ];
 
     /**
@@ -28,12 +28,12 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \IntelGUA\PMT\Http\Middleware\EncryptCookies::class,
+            \Edgar\PMT\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \IntelGUA\PMT\Http\Middleware\VerifyCsrfToken::class,
+            \Edgar\PMT\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -52,16 +52,16 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth'          => \IntelGUA\PMT\Http\Middleware\Authenticate::class,
+        'auth'          => \Edgar\PMT\Http\Middleware\Authenticate::class,
         'auth.basic'    => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings'      => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can'           => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest'         => \IntelGUA\PMT\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest'         => \Edgar\PMT\Http\Middleware\RedirectIfAuthenticated::class,
         'signed'        => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle'      => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified'      => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'jwt'           => \IntelGUA\PMT\Http\Middleware\JWT::class,
+        'jwt'           => \Edgar\PMT\Http\Middleware\JWT::class,
     ];
 
     /**
@@ -74,7 +74,7 @@ class Kernel extends HttpKernel
     protected $middlewarePriority = [
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \IntelGUA\PMT\Http\Middleware\Authenticate::class,
+        \Edgar\PMT\Http\Middleware\Authenticate::class,
         \Illuminate\Session\Middleware\AuthenticateSession::class,
         \Illuminate\Routing\Middleware\SubstituteBindings::class,
         \Illuminate\Auth\Middleware\Authorize::class,

@@ -169,11 +169,11 @@ return [
         /*
          * Application Service Providers...
          */
-        IntelGUA\PMT\Providers\AppServiceProvider::class,
-        IntelGUA\PMT\Providers\AuthServiceProvider::class,
-        // IntelGUA\PMT\Providers\BroadcastServiceProvider::class,
-        IntelGUA\PMT\Providers\EventServiceProvider::class,
-        IntelGUA\PMT\Providers\RouteServiceProvider::class,
+        Edgar\PMT\Providers\AppServiceProvider::class,
+        Edgar\PMT\Providers\AuthServiceProvider::class,
+        // Edgar\PMT\Providers\BroadcastServiceProvider::class,
+        Edgar\PMT\Providers\EventServiceProvider::class,
+        Edgar\PMT\Providers\RouteServiceProvider::class,
 
     ],
 

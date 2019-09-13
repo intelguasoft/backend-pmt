@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\Role;
+use Edgar\PMT\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -61,7 +61,7 @@ class RolesController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
     public function show(Role $role)
@@ -77,7 +77,7 @@ class RolesController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Role $role)
@@ -104,7 +104,7 @@ class RolesController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\Role  $role
+     * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
     public function destroy(Role $role)

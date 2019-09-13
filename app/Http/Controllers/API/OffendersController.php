@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\Offender;
+use Edgar\PMT\Models\Offender;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -76,7 +76,7 @@ class OffendersController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\Offender  $offender
+     * @param  \Edgar\PMT\Models\Offender  $offender
      * @return \Illuminate\Http\Response
      */
     public function show(Offender $offender)
@@ -93,7 +93,7 @@ class OffendersController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\Offender  $offender
+     * @param  \Edgar\PMT\Models\Offender  $offender
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Offender $offender)
@@ -125,7 +125,7 @@ class OffendersController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\Offender  $offender
+     * @param  \Edgar\PMT\Models\Offender  $offender
      * @return \Illuminate\Http\Response
      */
     public function destroy(Offender $offender)

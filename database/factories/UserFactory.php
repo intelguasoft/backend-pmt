@@ -1,7 +1,7 @@
 <?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-use IntelGUA\PMT\User;
+use Edgar\PMT\User;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 

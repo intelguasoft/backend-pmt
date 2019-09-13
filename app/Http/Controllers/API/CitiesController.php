@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\City;
+use Edgar\PMT\Models\City;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -64,7 +64,7 @@ class CitiesController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\City  $city
+     * @param  \Edgar\PMT\Models\City  $city
      * @return \Illuminate\Http\Response
      */
     public function show(City $city)
@@ -81,7 +81,7 @@ class CitiesController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\City  $city
+     * @param  \Edgar\PMT\Models\City  $city
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, City $city)
@@ -109,7 +109,7 @@ class CitiesController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\City  $city
+     * @param  \Edgar\PMT\Models\City  $city
      * @return \Illuminate\Http\Response
      */
     public function destroy(City $city)

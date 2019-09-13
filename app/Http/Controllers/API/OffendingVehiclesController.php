@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
-use IntelGUA\PMT\Models\OffendingVehicle;
+use Edgar\PMT\Models\OffendingVehicle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -69,7 +69,7 @@ class OffendingVehiclesController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  \IntelGUA\PMT\Models\OffendingVehicle  $offendingVehicle
+     * @param  \Edgar\PMT\Models\OffendingVehicle  $offendingVehicle
      * @return \Illuminate\Http\Response
      */
     public function show(OffendingVehicle $offendingVehicle)
@@ -86,7 +86,7 @@ class OffendingVehiclesController extends BaseController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \IntelGUA\PMT\Models\OffendingVehicle  $offendingVehicle
+     * @param  \Edgar\PMT\Models\OffendingVehicle  $offendingVehicle
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, OffendingVehicle $offendingVehicle)
@@ -115,7 +115,7 @@ class OffendingVehiclesController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \IntelGUA\PMT\Models\OffendingVehicle  $offendingVehicle
+     * @param  \Edgar\PMT\Models\OffendingVehicle  $offendingVehicle
      * @return \Illuminate\Http\Response
      */
     public function destroy(OffendingVehicle $offendingVehicle)

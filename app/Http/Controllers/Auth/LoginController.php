@@ -1,8 +1,8 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers\Auth;
+namespace Edgar\PMT\Http\Controllers\Auth;
 
-use IntelGUA\PMT\Http\Controllers\Controller;
+use Edgar\PMT\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller

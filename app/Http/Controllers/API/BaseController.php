@@ -1,10 +1,10 @@
 <?php
 
 
-namespace IntelGUA\PMT\Http\Controllers\API;
+namespace Edgar\PMT\Http\Controllers\API;
 
 
-use IntelGUA\PMT\Http\Controllers\Controller as Controller;
+use Edgar\PMT\Http\Controllers\Controller as Controller;
 
 
 class BaseController extends Controller

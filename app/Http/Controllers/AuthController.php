@@ -1,6 +1,6 @@
 <?php
 
-namespace IntelGUA\PMT\Http\Controllers;
+namespace Edgar\PMT\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
