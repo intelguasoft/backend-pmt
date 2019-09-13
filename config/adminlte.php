@@ -58,7 +58,7 @@ return [
     |
     */
 
-    'layout' => null,
+    'layout' => fixed,
 
     /*
     |--------------------------------------------------------------------------
@@ -129,84 +129,73 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
+            'text' => 'Buscar',
             'search' => true,
         ],
-        ['header' => 'main_navigation'],
+        ['header' => 'Multas'],
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text'        => 'Consultar multa',
+            'url'         => 'multas/consultar',
+            'icon'        => 'far fa-card',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'text'        => 'Cierre diario',
+            'url'         => 'multas/consultar',
+            'icon'        => 'far fa-search',
+        ],
+        [
+            'text'        => 'Reportes',
+            'url'         => 'multas/reportes',
+            'icon'        => 'far fa-edit',
+        ],
+        ['header' => 'Peaje'],
+        [
+            'text' => 'Saldo diario',
+            'url'  => 'peaje/diario',
+            'icon' => 'fas fa-fw fa-cash',
+        ],
+        [
+            'text' => 'Cierre de caja',
+            'url'  => 'peaje/cierre',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text' => 'Cierre de caja',
+            'url'  => 'peaje/cierre',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Reportes',
+            'url'  => 'peaje/reportes',
+            'icon' => 'fas fa-fw fa-edit',
+        ],
+        [
+            'text'    => 'Administrador',
+            'icon'    => 'fas fa-fw fa-user',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Perfiles',
+                    'url'  => '/admin/perfiles',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Departamentos',
+                    'url'  => '/admin/departamentos',
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Municipios',
+                    'url'  => '/admin/municipios',
+                ],
+                [
+                    'text' => 'Otros',
+                    'url'  => '/admin/otros',
                 ],
             ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'aqua',
-        ],
+        ]
     ],
 
     /*
