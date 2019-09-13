@@ -4,6 +4,7 @@ namespace IntelGUA\PMT\Http\Controllers;
 
 use IntelGUA\PMT\Models\Role;
 use Illuminate\Http\Request;
+use JeroenNoten\LaravelAdminLte\AdminLte;
 
 class RolesController extends Controller
 {
@@ -12,9 +13,16 @@ class RolesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.roles.index');
+        // dd($request->q);
+        if(isset($request->q)){
+            $roles = Role::where('name', 'like', "%$request->q%")->paginate(10);
+            dd($roles);
+        } else {
+            $roles = Role::paginate(10);
+        }
+        return view('admin.roles.index')->with('roles', $roles);
     }
 
     /**

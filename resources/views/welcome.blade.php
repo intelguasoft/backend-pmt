@@ -58,6 +58,7 @@
                     <li><a href="#pricing">Multas</a></li>
                     <li><a href="#team">Nuestro equipo</a></li>
                     <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contactar</a></li>
                     <li><a href="/login">Acceso</a></li>
                 </ul>
