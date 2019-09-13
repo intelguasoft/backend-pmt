@@ -19,36 +19,16 @@
         </tr>
     </thead>
     <tbody>
+        @forelse($roles as $role)
         <tr>
-            <td class="text-right">100</td>
-            <td>Policia de transito</td>
-            <td>Todo el control de la carretera...</td>
-            <td><a href="#" class="btn btn-info btn-xs">Usuarios</a> <a href="#" class="btn btn-warning btn-xs">Editar</a> <a href="#" class="btn btn-danger btn-xs">Eliminar</a></td>
+            <td class="text-right">{{ $role->id }}</td>
+            <td>{{ $role->name }}</td>
+            <td>{{ $role->description }}</td>
+            <td><a href="{{ route('perfiles.show', $role->id) }}" class="btn btn-info btn-xs">Usuarios</a> <a href="{{ route('perfiles.edit', $role->id) }}" class="btn btn-warning btn-xs">Editar</a> <a href="{{ route('perfiles.destroy', $role->id) }}" class="btn btn-danger btn-xs">Eliminar</a></td>
         </tr>
-        <tr>
-            <td class="text-right">102</td>
-            <td>Policia de transito</td>
-            <td>Todo el control de la carretera...</td>
-            <td><a href="#" class="btn btn-info btn-xs">Usuarios</a> <a href="#" class="btn btn-warning btn-xs">Editar</a> <a href="#" class="btn btn-danger btn-xs">Eliminar</a></td>
-        </tr>
-        <tr>
-            <td class="text-right">103</td>
-            <td>Policia de transito</td>
-            <td>Todo el control de la carretera...</td>
-            <td><a href="#" class="btn btn-info btn-xs">Usuarios</a> <a href="#" class="btn btn-warning btn-xs">Editar</a> <a href="#" class="btn btn-danger btn-xs">Eliminar</a></td>
-        </tr>
-        <tr>
-            <td class="text-right">104</td>
-            <td>Policia de transito</td>
-            <td>Todo el control de la carretera...</td>
-            <td><a href="#" class="btn btn-info btn-xs">Usuarios</a> <a href="#" class="btn btn-warning btn-xs">Editar</a> <a href="#" class="btn btn-danger btn-xs">Eliminar</a></td>
-        </tr>
-        <tr>
-            <td class="text-right">105</td>
-            <td>Policia de transito</td>
-            <td>Todo el control de la carretera...</td>
-            <td><a href="#" class="btn btn-info btn-xs">Usuarios</a> <a href="#" class="btn btn-warning btn-xs">Editar</a> <a href="#" class="btn btn-danger btn-xs">Eliminar</a></td>
-        </tr>
+        @empty
+
+        @endforelse
     </tbody>
 </table>
 

@@ -18,7 +18,6 @@ class RolesController extends Controller
         // dd($request->q);
         if(isset($request->q)){
             $roles = Role::where('name', 'like', "%$request->q%")->paginate(10);
-            dd($roles);
         } else {
             $roles = Role::paginate(10);
         }
@@ -32,7 +31,7 @@ class RolesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.roles.create');
     }
 
     /**
@@ -54,7 +53,7 @@ class RolesController extends Controller
      */
     public function show(Role $role)
     {
-        //
+        return view('admin.roles.show')->with('role', $role);
     }
 
     /**
@@ -65,7 +64,7 @@ class RolesController extends Controller
      */
     public function edit(Role $role)
     {
-        //
+        return view('admin.roles.edit')->with('role', $role);
     }
 
     /**
