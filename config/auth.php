@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'api',
+        'guard' => 'web',
         'passwords' => 'users',
     ],
 
@@ -68,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => IntelGUA\PMT\Models\User::class,
+            'model' => Edgar\PMT\Models\User::class,
         ],
 
         // 'users' => [

@@ -672,24 +672,24 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Call To Action Section
 --------------------------------*/
 
-#call-to-action {
+#show-tolls {
   overflow: hidden;
   background: linear-gradient(rgba(29, 200, 205, 0.65), rgba(29, 205, 89, 0.2)), url(../img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
 
-#call-to-action .cta-title {
+#show-tolls .cta-title {
   color: #fff;
   font-size: 28px;
   font-weight: 700;
 }
 
-#call-to-action .cta-text {
+#show-tolls .cta-text {
   color: #fff;
 }
 
-#call-to-action .cta-btn {
+#show-tolls .cta-btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -703,7 +703,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-#call-to-action .cta-btn:hover {
+#show-tolls .cta-btn:hover {
   background: #1dc8cd;
   border: 2px solid #1dc8cd;
 }

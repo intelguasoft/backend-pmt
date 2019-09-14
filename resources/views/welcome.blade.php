@@ -55,7 +55,7 @@
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="#intro">Inicio</a></li>
                     <li><a href="#about">Nosotros</a></li>
-                    <li><a href="#pricing">Multas</a></li>
+                    <li><a href="#show-tolls">Multas</a></li>
                     <li><a href="#team">Nuestro equipo</a></li>
                     <li><a href="#gallery">Galería</a></li>
                     <li><a href="#faq">FAQ</a></li>
@@ -74,7 +74,7 @@
         <div class="intro-text">
             <h2></h2>
             <p>Velar por el ordenamiento vial, coordinar y regular el transito y transporte en el Municipio de El Estor, del Departamento de Izabal, por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y otras Leyes referentes a Tránsito.</p>
-            <a href="#pricing" class="btn-get-started scrollto">Ver multas</a>
+            <a href="#show-tolls" class="btn-get-started scrollto">Ver multas</a>
         </div>
 
         <div class="product-screens">
@@ -103,11 +103,10 @@
         <section id="about" class="section-bg">
             <div class="container-fluid">
                 <div class="section-header">
-                    <h3 class="section-title">About Us</h3>
+                    <h3 class="section-title">Nosotros</h3>
                     <span class="section-divider"></span>
                     <p class="section-description">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<br>
-                        sunt in culpa qui officia deserunt mollit anim id est laborum
+                        Somos una institución municipal semiautonoma encargada de velar por el ordenamiento vial,<br/>coordinar y regular el transito y transporte en el Municipio de El Estor, del Departamento de Izabal,<br/>por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y<br/>otras Leyes referentes a Tránsito.
                     </p>
                 </div>
 
@@ -148,7 +147,7 @@
 
                     <div class="col-lg-8 offset-lg-4">
                         <div class="section-header wow fadeIn" data-wow-duration="1s">
-                            <h3 class="section-title">Product Featuress</h3>
+                            <h3 class="section-title">Nuestos servicios</h3>
                             <span class="section-divider"></span>
                         </div>
                     </div>
@@ -163,22 +162,22 @@
 
                             <div class="col-lg-6 col-md-6 box wow fadeInRight">
                                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+                                <h4 class="title"><a href="">Cobro de peaje</a></h4>
                                 <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident clarida perendo.</p>
                             </div>
                             <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
                                 <div class="icon"><i class="ion-ios-flask-outline"></i></div>
-                                <h4 class="title"><a href="">Dolor Sitema</a></h4>
+                                <h4 class="title"><a href="">Ordenamiento vial</a></h4>
                                 <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata noble dynala mark.</p>
                             </div>
                             <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
                                 <div class="icon"><i class="ion-social-buffer-outline"></i></div>
-                                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+                                <h4 class="title"><a href="">Imposición de remisión</a></h4>
                                 <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur teleca starter sinode park ledo.</p>
                             </div>
                             <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.3s">
                                 <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-                                <h4 class="title"><a href="">Magni Dolores</a></h4>
+                                <h4 class="title"><a href="">Coordinación de red vial en eventos</a></h4>
                                 <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum dinoun trade capsule.</p>
                             </div>
                         </div>
@@ -274,7 +273,7 @@
             <div class="container">
 
                 <div class="section-header">
-                    <h3 class="section-title">More Features</h3>
+                    <h3 class="section-title">Servicios</h3>
                     <span class="section-divider"></span>
                     <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
                 </div>
@@ -354,68 +353,22 @@
         </section>#more-features -->
 
         <!--==========================
-      Pricing Section
+      Call To Action Section
     ============================-->
-        <section id="pricing" class="section-bg">
-            <div class="container">
+    <section id="show-tolls">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Multas</h3>
+            <p class="cta-text">¿Quieres saber si tienes alguna multa pendiente de pago.?<br/>Si tienes alguna multa pendiente de pago, debes dirigirte a nuestras oficinas los mas pronto posible y<br/>evitar recargos por incumplimiento de deberes.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Ir al portal</a>
+          </div>
+        </div>
 
-                <div class="section-header">
-                    <h3 class="section-title">Multas</h3>
-                    <span class="section-divider"></span>
-                    <p class="section-description">Si tiene alguna imposición de multa, ingrese al portal y revise su estatus.</p>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="box wow fadeInLeft">
-                            <h3>Free</h3>
-                            <h4><sup>$</sup>0<span> month</span></h4>
-                            <ul>
-                                <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
-                            </ul>
-                            <a href="#" class="get-started-btn">Get Started</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="box featured wow fadeInUp">
-                            <h3>Business</h3>
-                            <h4><sup>$</sup>29<span> month</span></h4>
-                            <ul>
-                                <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
-                            </ul>
-                            <a href="#" class="get-started-btn">Get Started</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="box wow fadeInRight">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>49<span> month</span></h4>
-                            <ul>
-                                <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
-                                <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
-                            </ul>
-                            <a href="#" class="get-started-btn">Get Started</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section><!-- #pricing -->
-
+      </div>
+    </section><!-- #call-to-action -->
 
         <!--==========================
       Frequently Asked Questions Section
@@ -736,7 +689,7 @@
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon
             -->
-                        Designed by <a href="https://pmt.cunadelmanati.com.gt/">@Edgar Chub</a>
+                        Designed by <a href="https://pmt.cunadelmanati.com.gt/">Edgar Chub</a>
                     </div>
                 </div>
                 <div class="col-lg-6">

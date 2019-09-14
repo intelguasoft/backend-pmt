@@ -27,7 +27,12 @@
             <td><a href="{{ route('perfiles.show', $role->id) }}" class="btn btn-info btn-xs">Usuarios</a> <a href="{{ route('perfiles.edit', $role->id) }}" class="btn btn-warning btn-xs">Editar</a> <a href="{{ route('perfiles.destroy', $role->id) }}" class="btn btn-danger btn-xs">Eliminar</a></td>
         </tr>
         @empty
-
+        <tr>
+            <td >{{ $role->id }}</td>
+            <td>{{ $role->name }}</td>
+            <td>{{ $role->description }}</td>
+            <td><a href="{{ route('perfiles.show', $role->id) }}" class="btn btn-info btn-xs">Usuarios</a> <a href="{{ route('perfiles.edit', $role->id) }}" class="btn btn-warning btn-xs">Editar</a> <a href="{{ route('perfiles.destroy', $role->id) }}" class="btn btn-danger btn-xs">Eliminar</a></td>
+        </tr>
         @endforelse
     </tbody>
 </table>
