@@ -12,7 +12,7 @@ class UsersController extends BaseController
 {
     private $rules = ['role_id'     =>  'required|integer|exists:roles,id',
                     'oficial_id'    =>  'required|integer',
-                    'date_birthday' =>  'required|date_format:dd-mm-YY',
+                    'date_birthday' =>  'required|date_format:yyyy-MM-dd',
                     'first_name'    =>  'required|min:3',
                     'last_name'     =>  'required|min:3',
                     'gender'        =>  'required|in:Male,Female',
@@ -77,7 +77,18 @@ class UsersController extends BaseController
             return $this->sendError('Errores de validación.', $validator->errors(), 406);
         }
 
-        $user = User::create($input);
+        $user = new User();
+        $user->role_id = $input['role_id'];
+        $user->oficial_id = $input['oficial_id'];
+        $user->date_birthday = $input['date_birthday'];
+        $user->first_name = $input['first_name'];
+        $user->last_name = $input['last_name'];
+        $user->gender = $input['gender'];
+        $user->nit = $input['nit'];
+        $user->dpi = $input['dpi'];
+        $user->email = $input['email'];
+        $user->password = Hash::make($input['password']);
+        $user->save();
 
         return $this->sendResponse($user->toArray(), 'Recurso creado satisfactoriamente.', 201);
 
@@ -115,7 +126,7 @@ class UsersController extends BaseController
         $validator = Validator::make($input, [
             'role_id'     =>  'required|integer|exists:roles,id',
             'oficial_id'    =>  'required|integer',
-            'date_birthday' =>  'required|date_format:dd-mm-YY',
+            'date_birthday' =>  'required|date_format:yyyy-MM-dd',
             'first_name'    =>  'required|min:3',
             'last_name'     =>  'required|min:3',
             'gender'        =>  'required|in:Male,Female',

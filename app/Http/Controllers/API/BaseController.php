@@ -10,7 +10,7 @@ use Edgar\PMT\Http\Controllers\Controller as Controller;
 class BaseController extends Controller
 {
     /**
-     * success response method.
+     * Método para respuesta satisfactoría.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,7 +28,7 @@ class BaseController extends Controller
 
 
     /**
-     * return error response.
+     * Método para respuesta erronea.
      *
      * @return \Illuminate\Http\Response
      */
