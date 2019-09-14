@@ -727,7 +727,7 @@
             <div class="row">
                 <div class="col-lg-6 text-lg-left text-center">
                     <div class="copyright">
-                        &copy; Copyright <strong>IntelGUA Software Design</strong>. All Rights Reserved
+                        &copy; Copyright <strong>PMT El Estor</strong>. All Rights Reserved
                     </div>
                     <div class="credits">
                         <!--
@@ -736,7 +736,7 @@
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon
             -->
-                        Designed by <a href="https://intelguasoft.com/">@intelguasoft</a>
+                        Designed by <a href="https://pmt.cunadelmanati.com.gt/">@Edgar Chub</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
