@@ -1,7 +1,8 @@
 <?php
 
-namespace Edgar\PMT\Http\Controllers;
+namespace Edgar\PMT\Http\Controllers\API;
 
+use Edgar\PMT\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 

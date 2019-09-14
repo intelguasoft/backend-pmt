@@ -15,27 +15,33 @@ use Illuminate\Http\Request;
 
 Route::prefix('v1/auth')->group(function () {
 
-    Route::post('login', 'AuthController@login')->name('auth.login');
-    Route::post('logout', 'AuthController@logout')->name('auth.logout');
-    Route::post('refresh', 'AuthController@refresh')->name('auth.refresh');
-    Route::post('show', 'AuthController@showMe')->name('auth.show');
+    Route::post('login', 'API\AuthController@login')->name('api.auth.login');
+    Route::post('logout', 'API\AuthController@logout')->name('api.auth.logout');
+    Route::post('refresh', 'API\AuthController@refresh')->name('api.auth.refresh');
+    Route::post('show', 'API\AuthController@showMe')->name('api.auth.show');
 
 });
 
 Route::prefix('v1/admin')->group(function () {
     Route::apiResources([
-        'users' => 'API\UsersController',
+        'roles'     => 'API\RolesController',
+        'users'     => 'API\UsersController',
+        'states'    => 'API\StatesController',
+        'cities'    => 'API\CitiesController',
     ]);
 });
 
 Route::prefix('v1/peaje')->group(function () {
     Route::apiResources([
-        'users' => 'API\UsersController',
+        'tolls'                 => 'API\TollsController',
+        'type-toll-vehicles'    => 'API\TypeTollVehiclesController',
     ]);
 });
 
 Route::prefix('v1/remisiones')->group(function () {
     Route::apiResources([
-        'users' => 'API\UsersController',
+        'ballots'       => 'API\BallotsController',
+        'marks'         => 'API\MarksController',
+        'type-vehicles' => 'API\TypeVehiclesController',
     ]);
 });
