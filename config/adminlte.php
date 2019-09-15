@@ -174,6 +174,7 @@ return [
             'url'  => 'peaje/reportes',
             'icon' => 'fas fa-fw fa-edit',
         ],
+        ['header' => 'Administración'],
         [
             'text'    => 'Administrador',
             'icon'    => 'fas fa-fw fa-user-shield ',
@@ -186,12 +187,12 @@ return [
                 [
                     'text' => 'Departamentos',
                     'url'  => '/admin/departamentos',
-                    'icon' => 'fas fa-fw fa-stamp',
+                    'icon' => 'fas fa-fw fa-city',
                 ],
                 [
                     'text' => 'Municipios',
                     'url'  => '/admin/municipios',
-                    'icon' => 'fas fa-fw fa-city',
+                    'icon' => 'fas fa-fw fa-home',
                 ],
                 [
                     'text' => 'Usuarios',
