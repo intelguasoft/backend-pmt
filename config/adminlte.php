@@ -141,12 +141,12 @@ return [
         [
             'text'        => 'Consultar multa',
             'url'         => 'multas/consultar',
-            'icon'        => 'far fa-card',
+            'icon'        => 'far fa-chart-bar',
         ],
         [
             'text'        => 'Cierre diario',
             'url'         => 'multas/consultar',
-            'icon'        => 'far fa-search',
+            'icon'        => 'far fa-id-badge',
         ],
         [
             'text'        => 'Reportes',
@@ -157,17 +157,17 @@ return [
         [
             'text' => 'Saldo diario',
             'url'  => 'peaje/diario',
-            'icon' => 'fas fa-fw fa-cash',
+            'icon' => 'fas fa-fw fa-piggy-bank',
         ],
         [
             'text' => 'Cierre de caja',
             'url'  => 'peaje/cierre',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-cash-register',
         ],
         [
-            'text' => 'Cierre de caja',
+            'text' => 'Consolidado mensual',
             'url'  => 'peaje/cierre',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-money-check',
         ],
         [
             'text' => 'Reportes',
@@ -176,23 +176,27 @@ return [
         ],
         [
             'text'    => 'Administrador',
-            'icon'    => 'fas fa-fw fa-user',
+            'icon'    => 'fas fa-fw fa-user-shield ',
             'submenu' => [
                 [
                     'text' => 'Perfiles',
                     'url'  => '/admin/perfiles',
+                    'icon' => 'fas fa-fw fa-user-cog',
                 ],
                 [
                     'text' => 'Departamentos',
                     'url'  => '/admin/departamentos',
+                    'icon' => 'fas fa-fw fa-stamp',
                 ],
                 [
                     'text' => 'Municipios',
                     'url'  => '/admin/municipios',
+                    'icon' => 'fas fa-fw fa-city',
                 ],
                 [
-                    'text' => 'Otros',
-                    'url'  => '/admin/otros',
+                    'text' => 'Usuarios',
+                    'url'  => '/admin/usuarios',
+                    'icon' => 'fas fa-fw fa-users',
                 ],
             ],
         ]
