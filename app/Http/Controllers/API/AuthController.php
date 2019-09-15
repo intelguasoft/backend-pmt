@@ -37,7 +37,7 @@ class AuthController extends Controller
                 ]
             ], 422);
         }
-        if (!$token = auth()->attempt($credentials)) {
+        if (!$token = auth('api')->attempt($credentials)) {
             return response()->json([
                 'data' => [
                     'ok'        => false,
@@ -84,7 +84,7 @@ class AuthController extends Controller
      */
     public function refresh()
     {
-        return $this->respondWithToken(auth()->refresh());
+        return $this->respondWithToken(auth('api')->refresh());
     }
     /**
      * Get the token array structure.
@@ -101,7 +101,7 @@ class AuthController extends Controller
                 'message'   => 'Successfully logged',
                 'access_token' => $token,
                 'token_type' => 'bearer',
-                'expires_in' => auth()->factory()->getTTL() * 60,
+                'expires_in' => auth('api')->factory()->getTTL() * 60,
                 'user' => auth()->user(),
                 'code'      => 200
             ]
