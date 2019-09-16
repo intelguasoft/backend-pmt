@@ -13,7 +13,7 @@ class RoleUpdateFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,16 @@ class RoleUpdateFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'     =>  'required',
+            'description'    =>  'required'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required'         => 'El campo :attribute es obligatorio',
+            'description.required'       => 'El campo :attribute es obligatorio'
         ];
     }
 }

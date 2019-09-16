@@ -3,6 +3,7 @@
 namespace Edgar\PMT\Http\Controllers;
 
 use Edgar\PMT\Http\Requests\Role\RoleStoreFormRequest;
+use Edgar\PMT\Http\Requests\Role\RoleUpdateFormRequest;
 use Edgar\PMT\Models\Role;
 use Illuminate\Http\Request;
 use JeroenNoten\LaravelAdminLte\AdminLte;
@@ -78,6 +79,7 @@ class RolesController extends Controller
      */
     public function edit(Role $role)
     {
+        return $role;
         return view('admin.roles.edit')->with('role', $role);
     }
 
@@ -88,9 +90,12 @@ class RolesController extends Controller
      * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(RoleUpdateFormRequest $request, Role $role)
     {
-        //
+        $data = $request->all();
+        return $data;
+        $role = Role::update($data);
+        return redirect()->route('perfiles.index')->with('status', 'Perfil se ha actualizado satisfactoriamente!');
     }
 
     /**
