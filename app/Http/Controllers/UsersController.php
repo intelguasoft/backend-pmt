@@ -2,6 +2,7 @@
 
 namespace Edgar\PMT\Http\Controllers;
 
+use Edgar\PMT\Models\Role;
 use Edgar\PMT\Models\User;
 use Illuminate\Http\Request;
 
@@ -30,7 +31,9 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Role::pluck('id', 'name');
+
+        return view('admin.users.create')->with('roles', $roles);
     }
 
     /**

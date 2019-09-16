@@ -38,7 +38,7 @@ class RoleStoreFormRequest extends FormRequest
     {
         return [
             'name.required'         => 'El campo \'nombre\' es obligatorio',
-            'name.unique'               => 'El campo \'nombre\' ya existe en nuestros registros',
+            'name.unique'               => 'El valor ingresado en el campo \'nombre\' ya existe en nuestros registros',
             'description.required'       => 'El campo \'descripción\' es obligatorio'
         ];
     }

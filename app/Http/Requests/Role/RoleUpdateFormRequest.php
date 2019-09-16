@@ -3,6 +3,7 @@
 namespace Edgar\PMT\Http\Requests\Role;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class RoleUpdateFormRequest extends FormRequest
 {
@@ -38,6 +39,7 @@ class RoleUpdateFormRequest extends FormRequest
     {
         return [
             'name.required'         => 'El campo :attribute es obligatorio',
+            'name.unique'         => 'El valor ingresado en el campo \'nombre\' ya existe en nuestros registros',
             'description.required'       => 'El campo :attribute es obligatorio'
         ];
     }

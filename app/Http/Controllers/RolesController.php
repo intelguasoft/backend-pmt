@@ -6,7 +6,6 @@ use Edgar\PMT\Http\Requests\Role\RoleStoreFormRequest;
 use Edgar\PMT\Http\Requests\Role\RoleUpdateFormRequest;
 use Edgar\PMT\Models\Role;
 use Illuminate\Http\Request;
-use JeroenNoten\LaravelAdminLte\AdminLte;
 
 class RolesController extends Controller
 {

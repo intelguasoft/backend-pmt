@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Hash;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,20 +12,36 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Illuminate\Support\Facades\Hash;
 
-
+// Ruta para la Landing Page.
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Rutas para la autenticación en modo web.
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+// Ruta para obtener un hash de un valor para password.
 Route::get('hash/{valor}', function($valor){
     return Hash::make($valor);
 });
 
+// Rutas para el inicio de la aplicación.
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Rutas para area administrativa.
 Route::resource('admin/perfiles', 'RolesController');
 Route::resource('admin/usuarios', 'UsersController');
+Route::resource('admin/departamentos', 'StatesController');
+Route::resource('admin/municipios', 'CitiesController');
+
+// Rutas para el area de peaje.
+// Route::resources([
+//         ['peaje/municipios', 'CitiesController'],
+//         ['peaje/municipios', 'CitiesController'],
+//         ['peaje/municipios', 'CitiesController'],
+//         ['peaje/municipios', 'CitiesController'],
+//     ]);
+
+// Rutas para el area de remisiones.
+// Route::resource('multas/municipios', 'CitiesController');
