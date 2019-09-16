@@ -32,9 +32,9 @@ class RoleStoreFormRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required'         => 'El campo :attribute es obligatorio',
-            'name.unique'               => 'El campo :attribute ya existe en nuestros registros',
-            'description.required'       => 'El campo :attribute es obligatorio'
+            'name.required'         => 'El campo \'nombre\' es obligatorio',
+            'name.unique'               => 'El campo \'nombre\' ya existe en nuestros registros',
+            'description.required'       => 'El campo \'descripción\' es obligatorio'
         ];
     }
 }

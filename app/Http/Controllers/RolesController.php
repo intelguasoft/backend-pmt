@@ -66,9 +66,9 @@ class RolesController extends Controller
      * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function show(Role $role)
+    public function show(Role $perfile)
     {
-        return view('admin.roles.show')->with('role', $role);
+        return view('admin.roles.show')->with('role', $perfile);
     }
 
     /**
@@ -77,10 +77,10 @@ class RolesController extends Controller
      * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function edit(Role $role)
+    public function edit(Role $perfile)
     {
-        return $role;
-        return view('admin.roles.edit')->with('role', $role);
+        // return $perfile;
+        return view('admin.roles.edit')->with('role', $perfile);
     }
 
     /**
@@ -90,11 +90,14 @@ class RolesController extends Controller
      * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(RoleUpdateFormRequest $request, Role $role)
+    public function update(RoleUpdateFormRequest $request, Role $perfile)
     {
-        $data = $request->all();
-        return $data;
-        $role = Role::update($data);
+        if(is_null($perfile)){
+            return redirect()->route('perfiles.index')->with('status', 'No se ha encontrado ese perfil, asegurese de haber proporcionado un codigo valido.');
+        }
+        $perfile->name = $request->input('name');
+        $perfile->description = $request->input('description');
+        $perfile->save();
         return redirect()->route('perfiles.index')->with('status', 'Perfil se ha actualizado satisfactoriamente!');
     }
 
@@ -104,8 +107,8 @@ class RolesController extends Controller
      * @param  \Edgar\PMT\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role)
+    public function destroy(Role $perfile)
     {
-        //
+        //TODO: Pendiente agregar para eliminar...
     }
 }

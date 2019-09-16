@@ -25,9 +25,9 @@
             <td>{{ $role->description }}</td>
             <td>
                 <div class="btn-group">
-                    <a href="{{ route('perfiles.show', ['role' => $role->id]) }}" class="btn btn-info"><i class="fa fa-search"></i> </a>
-                    <a href="{{ route('perfiles.edit', ['role' => $role->id]) }}" class="btn btn-warning"><i class="fa fa-edit"></i> </a>
-                    <a href="{{ route('perfiles.destroy', ['role' => $role->id]) }}" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
+                    <a href="{{ route('perfiles.show', ['perfile' => $role->id]) }}" class="btn btn-info"><i class="fa fa-search"></i> </a>
+                    <a href="{{ route('perfiles.edit', ['perfile' => $role->id]) }}" class="btn btn-warning"><i class="fa fa-edit"></i> </a>
+                    <a href="{{ route('perfiles.destroy', ['perfile' => $role->id]) }}" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
                 </div>
             </td>
         </tr>
