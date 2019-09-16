@@ -26,3 +26,4 @@ Route::get('hash/{valor}', function($valor){
 });
 
 Route::resource('admin/perfiles', 'RolesController');
+Route::resource('admin/usuarios', 'UsersController');
