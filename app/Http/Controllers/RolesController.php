@@ -2,6 +2,7 @@
 
 namespace Edgar\PMT\Http\Controllers;
 
+use Edgar\PMT\Http\Requests\Role\RoleStoreFormRequest;
 use Edgar\PMT\Models\Role;
 use Illuminate\Http\Request;
 use JeroenNoten\LaravelAdminLte\AdminLte;
@@ -50,9 +51,12 @@ class RolesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RoleStoreFormRequest $request)
     {
-        //
+        $data = $request->all();
+
+        $role = Role::create($data);
+        return redirect()->route('perfiles.index')->with('status', 'Perfil creado satisfactoriamente!');
     }
 
     /**
