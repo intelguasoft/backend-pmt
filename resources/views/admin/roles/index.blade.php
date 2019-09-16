@@ -3,19 +3,18 @@
 @section('title', config('adminlte.title', 'AdminLTE 2'))
 
 @section('content_header')
-<h1>Perfiles</h1>
-<a href="/admin/perfiles/create" class="btn btn-info pull-right">Nuevo perfil</a>
+    <h1>Perfiles</h1>
+    <a href="/admin/perfiles/create" class="btn btn-info float-right"><i class="fa fa-plus"></i> Nuevo perfil</a>
 @stop
 
 @section('content')
-
-<table class="table table-bordered table-hover table-striped">
-    <thead>
+<table class="table table-condensed table-borderless table-hover">
+    <thead class="bg-primary">
         <tr>
             <th class="text-center" width="50px">ID</th>
             <th class="text-center">Perfil</th>
             <th class="text-center">Descripción</th>
-            <th class="text-center" width="180px">Acciones</th>
+            <th class="text-center" width="135px">Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -24,17 +23,22 @@
             <td class="text-right">{{ $role->id }}</td>
             <td>{{ $role->name }}</td>
             <td>{{ $role->description }}</td>
-            <td><a href="{{ route('perfiles.show', $role->id) }}" class="btn btn-info btn-xs">Usuarios</a> <a href="{{ route('perfiles.edit', $role->id) }}" class="btn btn-warning btn-xs">Editar</a> <a href="{{ route('perfiles.destroy', $role->id) }}" class="btn btn-danger btn-xs">Eliminar</a></td>
+            <td>
+                <div class="btn-group">
+                    <a href="{{ route('perfiles.show', $role->id) }}" class="btn btn-info"><i class="fa fa-search"></i> </a>
+                    <a href="{{ route('perfiles.edit', $role->id) }}" class="btn btn-warning"><i class="fa fa-edit"></i> </a>
+                    <a href="{{ route('perfiles.destroy', $role->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
+                </div>
+            </td>
         </tr>
         @empty
         <tr>
-            <td >{{ $role->id }}</td>
-            <td>{{ $role->name }}</td>
-            <td>{{ $role->description }}</td>
-            <td><a href="{{ route('perfiles.show', $role->id) }}" class="btn btn-info btn-xs">Usuarios</a> <a href="{{ route('perfiles.edit', $role->id) }}" class="btn btn-warning btn-xs">Editar</a> <a href="{{ route('perfiles.destroy', $role->id) }}" class="btn btn-danger btn-xs">Eliminar</a></td>
+            <td colspan="4">
+                <h3>No hay perfiles registrados en el sistema.</h3>
+            </td>
         </tr>
         @endforelse
     </tbody>
 </table>
-
-@stop btn-xs
+{{$roles->render()}}
+@stop
