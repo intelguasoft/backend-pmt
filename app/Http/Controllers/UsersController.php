@@ -55,7 +55,33 @@ class UsersController extends Controller
      */
     public function store(UserStoreFormRequest $request)
     {
-        return $request;
+        $data = $request->all();
+
+        $user = User::create($data);
+
+        // Envio del correo para la nueva contraseña
+        // $title = 'Titulo';
+        // $to = $user->email;
+        // $content = 'Contenido';
+        //Grab uploaded file
+        // $attach = $request->file('file');
+        // \Mail::send('mails.send', ['title' => $title, 'content' => $content], function ($message, $to)
+        // {
+        //     $message->from('hnrdiaz@gmail.com', 'Backend PMT El Estor INSIDE');
+        //     $message->to($to);
+        //     //Attach file
+        //     // $message->attach($attach);
+        //     //Add a subject
+        //     $message->subject("Hola desde Backend PMT El Estor");
+        // });
+
+
+        // return $user;
+        // alert()->success('Creación de perfil','Perfil creado satisfactoriamente!')->persistent(true,false);
+        toast('Usuario creado satisfactoriamente!','success');
+        toast('Recuerde informarle al nuevo usuario que revise su bandeja de correo para tener acceso al sistema con la contraseña proporcionada.','info');
+
+        return redirect()->route('usuarios.index');
     }
 
     /**

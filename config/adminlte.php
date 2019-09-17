@@ -174,32 +174,26 @@ return [
             'url'  => 'peaje/reportes',
             'icon' => 'fas fa-fw fa-edit',
         ],
-        ['header' => 'Administración'],
+        ['header' => 'Administración', 'icon' => 'fas fa-fw fa-user-shield'],
         [
-            'text'    => 'Administrador',
-            'icon'    => 'fas fa-fw fa-user-shield ',
-            'submenu' => [
-                [
-                    'text' => 'Perfiles',
-                    'url'  => '/admin/perfiles',
-                    'icon' => 'fas fa-fw fa-user-cog',
-                ],
-                [
-                    'text' => 'Departamentos',
-                    'url'  => '/admin/departamentos',
-                    'icon' => 'fas fa-fw fa-city',
-                ],
-                [
-                    'text' => 'Municipios',
-                    'url'  => '/admin/municipios',
-                    'icon' => 'fas fa-fw fa-home',
-                ],
-                [
-                    'text' => 'Usuarios',
-                    'url'  => '/admin/usuarios',
-                    'icon' => 'fas fa-fw fa-users',
-                ],
-            ],
+            'text' => 'Perfiles',
+            'url'  => '/admin/perfiles',
+            'icon' => 'fas fa-fw fa-user-cog',
+        ],
+        [
+            'text' => 'Departamentos',
+            'url'  => '/admin/departamentos',
+            'icon' => 'fas fa-fw fa-city',
+        ],
+        [
+            'text' => 'Municipios',
+            'url'  => '/admin/municipios',
+            'icon' => 'fas fa-fw fa-home',
+        ],
+        [
+            'text' => 'Usuarios',
+            'url'  => '/admin/usuarios',
+            'icon' => 'fas fa-fw fa-users',
         ]
     ],
 
@@ -242,7 +236,7 @@ return [
     'plugins' => [
         [
             'name' => 'Datatables',
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',
@@ -274,7 +268,7 @@ return [
         ],
         [
             'name' => 'Chartjs',
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',
@@ -285,7 +279,7 @@ return [
         ],
         [
             'name' => 'Sweetalert2',
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',

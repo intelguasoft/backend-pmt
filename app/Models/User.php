@@ -49,7 +49,6 @@ class User extends Authenticatable implements JWTSubject
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'date_birthday' => 'date'
     ];
 
     /**
@@ -66,7 +65,7 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var string
      */
-    protected $dateFormat = 'yy-mm-dd';
+    protected $dateFormat = 'y-m-d';
 
     /**
      * Devuelve el nombre completo del usuario en contexto.
@@ -106,9 +105,9 @@ class User extends Authenticatable implements JWTSubject
      * @param  string  $value
      * @return void
      */
-    public function setFirstNameAttribute($value)
+    public function setDateBirthdayAttribute($value)
     {
-        $date_parts = explode('/', $value);
+        $date_parts = explode('-', $value);
         $this->attributes['date_birthday'] = $date_parts[2] . '-' . $date_parts[1] . '-' . $date_parts[0];
     }
 

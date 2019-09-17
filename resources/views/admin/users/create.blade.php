@@ -167,7 +167,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="form-group">
                             <label for="name">Contraseña: <i class="text-info far fa-question-circle" tabindex="0" data-toggle="popover" data-trigger="focus" title="Generación automatica de contraseña" data-content="La contraseña es generada por el sistema y enviada al correo electronico proporcionado, tenga en cuenta informarle al nuevo usuario al momento de crear la cuenta."></i></label>
-                            <input type="password" class="form-control" placeholder="Contraseña" aria-describedby="help-password" disabled>
+                            <input type="text" class="form-control" value="{{ $password }}" placeholder="Contraseña" aria-describedby="help-password" disabled>
                             <input type="hidden" name="password" id="password" value="{{ $password }}" aria-describedby="help-password">
                             {{-- <span id="help-password" class="help-block">La contraseña es generada por el sistema y enviada al correo electronico proporcionado, tenga en cuenta informarle al <strong>nuevo usuario</strong> al momento de crear la cuenta.</span> --}}
                         </div>
