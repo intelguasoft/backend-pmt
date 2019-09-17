@@ -116,12 +116,13 @@
             @endif
 
             <!-- Content Header (Page header) -->
-            <section class="content-header">
+            <section class="content-header headline">
                 @yield('content_header')
             </section>
 
             <!-- Main content -->
             <section class="content">
+                @include('sweetalert::alert')
 
                 @yield('content')
 

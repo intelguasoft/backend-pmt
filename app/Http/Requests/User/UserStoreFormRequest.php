@@ -26,14 +26,13 @@ class UserStoreFormRequest extends FormRequest
         return [
             'role_id'       =>  'required|integer|exists:roles,id',
             'oficial_id'    =>  'required|integer',
-            'date_birthday' =>  'required|date_format:yyyy-MM-dd',
+            'date_birthday' =>  'required',
             'first_name'    =>  'required|min:3',
             'last_name'     =>  'required|min:3',
             'gender'        =>  'required|in:Male,Female',
             'nit'           =>  'required|max:15',
             'dpi'           =>  'required|size:13',
             'email'         =>  'required|email|unique:users',
-            'password'      =>  'required'
         ];
     }
 
@@ -57,14 +56,13 @@ class UserStoreFormRequest extends FormRequest
             'last_name.required'        => 'El campo \'Apellidos\' es obligatorio',
             'last_name.min'             => 'El campo \'Apellidos\' debe tener al menos :min caracteres de longitud',
             'gender.required'           => 'El campo \'Género\' es obligatorio',
-            'gender.in'                 => 'El campo \'Género\' esta esperando los siguientes valores: \'Male\', \'Female\'',
+            'gender.in'                 => 'El campo \'Género\' esta esperando los siguientes valores: \'Masculino\', \'Femenino\', \'Indefinido\'',
             'nit.required'              => 'El campo \'NIT\' es obligatorio',
             'nit.max'                   => 'El campo \'NIT\' no debe tener más de :max caracteres',
             'dpi.required'              => 'El campo \'DPI\' es obligatorio',
             'dpi.size'                  => 'El campo \'DPI\' debe contener una longitud exacta de :size caracteres',
             'email.required'            => 'El campo \'Correo electrónico\' es obligatorio',
             'email.email'               => 'El campo \'Correo electrónico\' debe ser una correo electrónico valido',
-            'password.required'         => 'El campo \'Contraseña\' es obligatorio'
         ];
     }
 }

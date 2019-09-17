@@ -6,6 +6,7 @@ use Edgar\PMT\Http\Requests\Role\RoleStoreFormRequest;
 use Edgar\PMT\Http\Requests\Role\RoleUpdateFormRequest;
 use Edgar\PMT\Models\Role;
 use Illuminate\Http\Request;
+Use Alert;
 
 class RolesController extends Controller
 {
@@ -56,7 +57,11 @@ class RolesController extends Controller
         $data = $request->all();
 
         $role = Role::create($data);
-        return redirect()->route('perfiles.index')->with('status', 'Perfil creado satisfactoriamente!');
+
+        // alert()->success('Creación de perfil','Perfil creado satisfactoriamente!')->persistent(true,false);
+        toast('Perfil creado satisfactoriamente!','success');
+
+        return redirect()->route('perfiles.index');
     }
 
     /**

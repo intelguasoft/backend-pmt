@@ -2,9 +2,11 @@
 
 namespace Edgar\PMT\Http\Controllers;
 
+use Edgar\PMT\Http\Requests\User\UserStoreFormRequest;
 use Edgar\PMT\Models\Role;
 use Edgar\PMT\Models\User;
 use Illuminate\Http\Request;
+use Hackzilla\PasswordGenerator\Generator\ComputerPasswordGenerator;
 
 class UsersController extends Controller
 {
@@ -31,9 +33,18 @@ class UsersController extends Controller
      */
     public function create()
     {
-        $roles = Role::pluck('id', 'name');
+        $generator = new ComputerPasswordGenerator();
 
-        return view('admin.users.create')->with('roles', $roles);
+        $roles = Role::pluck('name', 'id');
+
+        $generator->setOptionValue(ComputerPasswordGenerator::OPTION_UPPER_CASE, true)
+            ->setOptionValue(ComputerPasswordGenerator::OPTION_LOWER_CASE, true)
+            ->setOptionValue(ComputerPasswordGenerator::OPTION_NUMBERS, true)
+            ->setOptionValue(ComputerPasswordGenerator::OPTION_SYMBOLS, false);
+
+        $password = $generator->generatePassword();
+
+        return view('admin.users.create', compact('roles', 'password'));
     }
 
     /**
@@ -42,9 +53,9 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserStoreFormRequest $request)
     {
-        //
+        return $request;
     }
 
     /**

@@ -10,7 +10,7 @@
 
 <div class="col-md-6 col-md-offset-3">
     <!-- general form elements -->
-    <div class="box box-primary">
+    <div class="box box-info">
         <div class="box-header with-border">
             <!-- <h3 class="text-muted">Los perfiles son los roles a los que puede estar asociado un usuario.</h3> -->
             <h4>Tip! <small>Los perfiles son los roles a los que puede estar asociado un usuario.</small></h4>
@@ -44,11 +44,11 @@
             <!-- /.box-body -->
             <div class="box-footer">
                 <div class="btn-group pull-right">
-                    <a href="{{ route('perfiles.index') }}" class="btn btn-app">
+                    <a href="{{ route('usuarios.index') }}" class="btn btn-info">
                         <i class="fa fa-undo"></i> Cancelar
                     </a>
-                    <button type="submit" class="btn btn-app">
-                        <i class="far fa-save"></i><br />Guardar
+                    <button type="submit" class="btn btn-success">
+                        <i class="far fa-save"></i> Guardar
                     </button>
                 </div>
             </div>

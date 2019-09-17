@@ -87,7 +87,7 @@ class UsersController extends BaseController
         $user->nit = $input['nit'];
         $user->dpi = $input['dpi'];
         $user->email = $input['email'];
-        $user->password = Hash::make($input['password']);
+        $user->password = $input['password'];
         $user->save();
 
         return $this->sendResponse($user->toArray(), 'Recurso creado satisfactoriamente.', 201);
@@ -150,7 +150,7 @@ class UsersController extends BaseController
         $user->nit = $input['nit'];
         $user->dpi = $input['dpi'];
         $user->email = $input['email'];
-        $user->password = Hash::make($input['password']);
+        $user->password = $input['password'];
         $user->save();
 
 

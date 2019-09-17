@@ -3,18 +3,18 @@
 @section('title', config('adminlte.title', 'AdminLTE 2'))
 
 @section('content_header')
-    <h1>Perfiles</h1>
-    <a href="/admin/perfiles/create" class="btn btn-info float-right"><i class="fa fa-plus"></i> Nuevo perfil</a>
+    <h1>Perfiles - <small>Listado</small></h1>
+    <a href="{{ route('perfiles.create') }}" class="btn btn-info  btn-sm pull-right"><i class="fa fa-users-cog"></i> Nuevo perfil</a>
 @stop
 
 @section('content')
-<table class="table table-condensed table-borderless table-hover">
+<table class="table table-condensed table-striped table-bordered table-hover">
     <thead class="bg-primary">
         <tr>
             <th class="text-center" width="50px">ID</th>
             <th class="text-center">Perfil</th>
             <th class="text-center">Descripción</th>
-            <th class="text-center" width="135px">Acciones</th>
+            <th class="text-center" width="200px">Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -25,9 +25,9 @@
             <td>{{ $role->description }}</td>
             <td>
                 <div class="btn-group">
-                    <a href="{{ route('perfiles.show', ['perfile' => $role->id]) }}" class="btn btn-info"><i class="fa fa-search"></i> </a>
-                    <a href="{{ route('perfiles.edit', ['perfile' => $role->id]) }}" class="btn btn-warning"><i class="fa fa-edit"></i> </a>
-                    <a href="{{ route('perfiles.destroy', ['perfile' => $role->id]) }}" class="btn btn-danger"><i class="fa fa-trash"></i> </a>
+                    <a href="{{ route('perfiles.show', ['perfile' => $role->id]) }}" class="btn btn-info btn-xs"><i class="fa fa-search"></i> Detalle</a>
+                    <a href="{{ route('perfiles.edit', ['perfile' => $role->id]) }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                    <a href="{{ route('perfiles.destroy', ['perfile' => $role->id]) }}" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Eliminar</a>
                 </div>
             </td>
         </tr>
