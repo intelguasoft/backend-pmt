@@ -90,9 +90,16 @@ class UsersController extends Controller
      * @param  \Edgar\PMT\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(User $usuario)
     {
-        //
+        return $usuario;
+        if($usuario == [])
+        {
+            toast('El usuario asociado a ese identificador no fue encontrado, corrobore el identificador proporcionado.', 'error');
+            return redirect()->back();
+        }
+
+        return view('admin.users.show', compact('user'));
     }
 
     /**

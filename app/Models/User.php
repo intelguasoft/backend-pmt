@@ -31,8 +31,6 @@ class User extends Authenticatable implements JWTSubject
         'password',
     ];
 
-
-
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -47,9 +45,12 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    //     'created_at' => 'datetime',
+    //     'updated_at' => 'datetime',
+    //     'date_birthday' => 'date'
+    // ];
 
     /**
      * The attributes that should be mutated to dates.
@@ -91,11 +92,11 @@ class User extends Authenticatable implements JWTSubject
     /**
      * Obtiene la fecha de cumpleaños de manera correcta en base a nuestro pais.
      *
-     * @param  string  $value
      * @return string
      */
-    public function getDateBirthdayAttribute($value)
+    public function getDateBirthdayAttribute()
     {
+        // dd($this->attributesToArray());
         return date('d/m/Y', strtotime($this->attributes['date_birthday']));
     }
 

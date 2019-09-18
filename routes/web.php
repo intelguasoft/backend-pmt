@@ -32,8 +32,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Rutas para area administrativa.
 Route::resource('admin/perfiles', 'RolesController');
 Route::resource('admin/usuarios', 'UsersController');
-Route::resource('admin/departamentos', 'StatesController');
-Route::resource('admin/municipios', 'CitiesController');
+// Route::resource('admin/departamentos', 'StatesController');
+// Route::resource('admin/municipios', 'CitiesController');
 Route::post('admin/send/{title}/{to}/{content}', 'EmailController@send')->name('admin.mail.send');
 
 // Rutas para el area de peaje.
