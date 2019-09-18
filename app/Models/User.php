@@ -59,6 +59,9 @@ class User extends Authenticatable implements JWTSubject
      */
     protected $dates = [
         'date_birthday',
+        'email_verified_at',
+        'created_at',
+        'updated_at'
     ];
 
     /**
@@ -66,7 +69,7 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var string
      */
-    protected $dateFormat = 'y-m-d';
+    // protected $dateFormat = 'y-m-d';
 
     /**
      * Devuelve el nombre completo del usuario en contexto.
@@ -97,6 +100,7 @@ class User extends Authenticatable implements JWTSubject
     public function getDateBirthdayAttribute()
     {
         // dd($this->attributesToArray());
+        // return Carbon::parse($value)->format('d-m-Y H:i:s');
         return date('d/m/Y', strtotime($this->attributes['date_birthday']));
     }
 

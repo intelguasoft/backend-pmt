@@ -177,7 +177,7 @@
             <!-- /.box-body -->
             <div class="box-footer">
                 <div class="btn-group pull-right">
-                    <a href="{{ route('perfiles.index') }}" class="btn btn-info">
+                    <a href="{{ route('usuarios.index') }}" class="btn btn-info">
                         <i class="fa fa-undo"></i> Cancelar
                     </a>
                     <button type="submit" class="btn btn-success">

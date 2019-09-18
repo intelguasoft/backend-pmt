@@ -92,14 +92,14 @@ class UsersController extends Controller
      */
     public function show(User $usuario)
     {
-        return $usuario;
+        // return $usuario;
         if($usuario == [])
         {
             toast('El usuario asociado a ese identificador no fue encontrado, corrobore el identificador proporcionado.', 'error');
             return redirect()->back();
         }
 
-        return view('admin.users.show', compact('user'));
+        return view('admin.users.show', compact('usuario'));
     }
 
     /**
