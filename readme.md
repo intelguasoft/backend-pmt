@@ -2,6 +2,9 @@
 
 Servicio web basado en la arquitectura REST para el control del peaje y multas/remisiones en el area de El Estor.
 
+DER:
+![Diagrama Entidad Relación](https://res.cloudinary.com/intelgua-software-design/image/upload/v1569291146/er_rest_api_pmt_eyqldy.png)
+
 Landing Page:
 ![Landing Page](https://res.cloudinary.com/intelgua-software-design/image/upload/v1568399057/recursos-pmt/landing_pmt_jl6nnl.png)
 
