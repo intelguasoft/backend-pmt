@@ -8,4 +8,8 @@ class Toll extends Model
 {
     protected $fillable = ['date', 'time', 'user_id', 'type_toll_vehicle_id', 'car_plate'];
 
+    public function type_toll_vehicle(){
+        return $this->belongsTo(TypeTollVehicle::class);
+    }
+
 }

@@ -12,8 +12,8 @@
     <thead class="bg-primary">
         <tr>
             <th class="text-center" width="50px">ID</th>
-            <th class="text-center">Perfil</th>
-            <th class="text-center">Descripción</th>
+            <th class="text-center">Municipio</th>
+            <th class="text-center">Departamento</th>
             <th class="text-center" width="200px">Acciones</th>
         </tr>
     </thead>

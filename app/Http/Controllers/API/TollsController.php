@@ -37,7 +37,7 @@ class TollsController extends BaseController
      */
     public function index()
     {
-        $tolls = Toll::all();
+        $tolls = Toll::with('type_toll_vehicle')->paginate(10);
 
         return $this->sendResponse($tolls->toArray(), 'Recursos obtenidos satisfactoriamente.', 200);
 
