@@ -4,7 +4,7 @@
 
 @section('content_header')
 <h1>Peaje - <small>Cobro diario</small></h1>
-<a href="{{ route('peaje.generate.pdf.diario') }}" class="btn btn-danger  btn-sm pull-right"><i class="fa fa-file-pdf"></i>&NonBreakingSpace; Generar reporte</a>
+<a href="{{ route('peaje.generate.diario') }}" class="btn btn-danger  btn-sm pull-right"><i class="fa fa-file-pdf"></i>&NonBreakingSpace; Generar reporte</a>
 @stop
 
 @section('content')
@@ -31,7 +31,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="4">
+            <td colspan="6">
                 <h3>No hay cobros de peaje registrados en la fecha actual.</h3>
             </td>
         </tr>

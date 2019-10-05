@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 class TollsController extends BaseController
 {
     private $rules = [
-        'date'                  =>  'required|date_format:dd-mm-YY',
+        'date'                  =>  'required',
         'time'                  =>  'required',
         'user_id'               =>  'required',
         'type_toll_vehicle_id'  =>  'required',
@@ -37,7 +37,7 @@ class TollsController extends BaseController
      */
     public function index()
     {
-        $tolls = Toll::with('type_toll_vehicle')->paginate(10);
+        $tolls = Toll::with('type_toll_vehicle')->orderBy('id', 'desc')->paginate(15);
 
         return $this->sendResponse($tolls->toArray(), 'Recursos obtenidos satisfactoriamente.', 200);
 
@@ -96,7 +96,7 @@ class TollsController extends BaseController
         $validator = Validator::make($input, [
             'date'                  =>  'required|integer|exists:roles,id',
             'time'                  =>  'required|integer',
-            'user_id'               =>  'required|date_format:dd-mm-YY',
+            'user_id'               =>  'required',
             'type_toll_vehicle_id'  =>  'required|min:3',
             'car_plate'             =>  'required|min:3',
             // 'email'                 =>  ['required', 'email', Rule::unique('users')->ignore($user->id)],

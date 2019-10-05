@@ -19,6 +19,7 @@
                 <h2 class="text-center text-danger">Reporte de peaje diario</h2>
             </td>
         </tr>
+        @if(!count($peajes) == 0)
         <tr>
             <td>
                 <label class="text-dark pull-left">Usuario: </label>
@@ -29,6 +30,7 @@
                 <label class="text-info">{{ $peajes[0]->date }}</label>
             </td>
         </tr>
+        @endif
     </table>
     <table class="table table-striped table-bordered">
         <thead>

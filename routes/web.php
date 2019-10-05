@@ -37,10 +37,10 @@ Route::resource('admin/municipios', 'CitiesController');
 Route::post('admin/send/{title}/{to}/{content}', 'EmailController@send')->name('admin.mail.send');
 
 // Rutas para el area de peaje.
-Route::get('peaje/diario', 'PeajeController@index')->name('peaje.diario');
+Route::get('peaje/diario', 'PeajeController@diario')->name('peaje.diario');
 Route::get('peaje/mensual', 'PeajeController@mensual')->name('peaje.mensual');
-Route::get('peaje/diario/reporte', 'PeajeController@generatePdfDiario')->name('peaje.generate.pdf.diario');
-Route::post('peaje/mensual/reporte', 'PeajeController@generatePdfMensual')->name('peaje.generate.pdf.mensual');
+Route::get('peaje/reporte/diario', 'PeajeController@generate_diario')->name('peaje.generate.diario');
+Route::get('peaje/reporte/mensual', 'PeajeController@generate_mensual')->name('peaje.generate.mensual');
 //         ['peaje/municipios', 'CitiesController'],
 //         ['peaje/municipios', 'CitiesController'],
 //         ['peaje/municipios', 'CitiesController'],

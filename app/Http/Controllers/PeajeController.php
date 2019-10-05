@@ -6,6 +6,8 @@ use Edgar\PMT\Models\Toll;
 use Illuminate\Http\Request;
 
 use Barryvdh\DomPDF\Facade as PDF;
+use DateTime;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Storage;
 
 class PeajeController extends Controller
@@ -15,12 +17,12 @@ class PeajeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function diario()
     {
         $ahora = \Carbon\Carbon::now()->format('Y-m-d');
         // dd($ahora);
         $peajes = Toll::with('type_toll_vehicle')->where('date', $ahora)->paginate(10);
-        $peajesTemp = Toll::all();
+        $peajesTemp = Toll::where('date', $ahora)->get();
         $total_dia = $peajesTemp->sum('type_toll_vehicle.cost');
         return view('peaje.diario', compact('peajes', 'total_dia'));
         $this->generatePdf($peajesTemp, $total_dia);
@@ -28,33 +30,42 @@ class PeajeController extends Controller
 
     public function mensual()
     {
-        $ahora = \Carbon\Carbon::now()->format('Y-m-d');
-        // dd($ahora);
-        $peajes = Toll::with('type_toll_vehicle')->where('date', $ahora)->paginate(10);
-        $peajesTemp = Toll::all();
+        $inicial = \Carbon\Carbon::now()->startOfMonth()->toDateString();
+        $final = \Carbon\Carbon::now()->endOfMonth()->toDateString();
+        // dd($inicial, $final);
+        $peajes = Toll::with('type_toll_vehicle')->whereBetween('date', [$inicial, $final])->paginate(10);
+        $peajesTemp = Toll::whereBetween('date', [$inicial, $final])->get();
         $total_dia = $peajesTemp->sum('type_toll_vehicle.cost');
-        return view('peaje.mensual', compact('peajes', 'total_dia'));
+        return view('peaje.mensual', compact('peajes', 'total_dia', 'inicial', 'final'));
         $this->generatePdf($peajesTemp, $total_dia);
     }
 
-    public function generatePdfDiario()
+    public function generate_diario()
     {
         // Storage::disk('local')->makeDirectory('fonts/', 0775, true);
-        $peajesTemp = Toll::all();
+        $ahora = \Carbon\Carbon::now()->format('Y-m-d');
+        // dd($ahora);
+        $peajes = Toll::with('type_toll_vehicle')->where('date', $ahora)->get();
+        $peajesTemp = Toll::where('date', $ahora)->get();
         $total_dia = $peajesTemp->sum('type_toll_vehicle.cost');
-        $pdf = PDF::loadView('peaje.reportes.diario', ['peajes' => $peajesTemp, 'total_dia' => $total_dia]);
+        $pdf = PDF::loadView('peaje.reportes.diario', ['peajes' => $peajes, 'total_dia' => $total_dia]);
         return $pdf->download('reporte-peaje-diario.pdf');
         // return view('peaje.reportes.diario', ['peajes' => $peajesTemp, 'total_dia' => $total_dia]);
     }
 
-    public function generatePdfMensual(Request $request)
+    public function generate_mensual(Request $request)
     {
-        dd($request);
-
+        // $inicial = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('inicial'));
+        // $inicialdt = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('inicial'));
+        $arrInicial = explode('-', $request->input('inicial'));
+        $arrFinal = explode('-', $request->input('final'));
+        $inicial = $dt = \Carbon\Carbon::create($arrInicial[2], $arrInicial[1], $arrInicial[0]);
+        $final = $dt = \Carbon\Carbon::create($arrFinal[2], $arrFinal[1], $arrFinal[0]);
+        // dd($inicialdt, $finaldt);
         // Storage::disk('local')->makeDirectory('fonts/', 0775, true);
-        $peajesTemp = Toll::all();
+        $peajesTemp = Toll::whereBetween('date', [$inicial, $final])->get();
         $total_dia = $peajesTemp->sum('type_toll_vehicle.cost');
-        $pdf = PDF::loadView('peaje.reportes.diario', ['peajes' => $peajesTemp, 'total_dia' => $total_dia]);
+        $pdf = PDF::loadView('peaje.reportes.mensual', ['peajes' => $peajesTemp, 'total_dia' => $total_dia, 'inicial' => $inicial, 'final' => $final]);
         return $pdf->download('reporte-peaje-diario.pdf');
         // return view('peaje.reportes.diario', ['peajes' => $peajesTemp, 'total_dia' => $total_dia]);
     }

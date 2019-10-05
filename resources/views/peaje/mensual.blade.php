@@ -4,24 +4,24 @@
 
 @section('content_header')
 <h1>Peaje - <small>Cobro mensual</small></h1>
-<form action="{{ route('peaje.generate.pdf.mensual') }}" method="POST">
+<form action="{{ route('peaje.generate.mensual') }}" method="get">
     <div class="row">
         @csrf
         <div class="col-md-4 col-md-offset-1">
             <div class="input-group date">
                 <div class="input-group-addon">Inicial: </div>
-                <input type="text" autocomplete="off" class="datepicker text-right form-control pull-right" data-date-format="dd-mm-yyyy" name="date_initial" id="date_initial" value="{{ old('date_birthday') }}" placeholder="12-12-1998" aria-describedby="help-date_birthday">
+                <input type="text" autocomplete="off" class="datepicker text-right form-control pull-right" data-date-format="dd-mm-yyyy" name="inicial" id="inicial" value="{{ \Carbon\Carbon::parse($inicial)->format('d-m-Y') }}">
             </div>
         </div>
         <div class="col-md-4 col-md-offset-1">
             <div class="input-group date">
                 <div class="input-group-addon">Final: </div>
-                <input type="text" autocomplete="off" class="datepicker text-right form-control pull-right" data-date-format="dd-mm-yyyy" name="date_final" id="date_final" value="{{ old('date_birthday') }}" placeholder="12-12-1998" aria-describedby="help-date_birthday">
+                <input type="text" autocomplete="off" class="datepicker text-right form-control pull-right" data-date-format="dd-mm-yyyy" name="final" id="final" value="{{ \Carbon\Carbon::parse($final)->format('d-m-Y') }}">
             </div>
         </div>
         <div class="col-md-2">
             <button type="submit" class="btn btn-block btn-danger  btn-sm pull-right"><i class="fa fa-file-pdf"></i>&NonBreakingSpace; Generar reporte</input>
-            <!-- <a href="{{ route('peaje.generate.pdf.mensual') }}" class="btn btn-block btn-danger  btn-sm pull-right"><i class="fa fa-file-pdf"></i>&NonBreakingSpace; Generar reporte</a> -->
+                <!-- <a href="{{ route('peaje.generate.mensual') }}" class="btn btn-block btn-danger  btn-sm pull-right"><i class="fa fa-file-pdf"></i>&NonBreakingSpace; Generar reporte</a> -->
         </div>
     </div>
 </form>
@@ -51,7 +51,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="4">
+            <td colspan="6">
                 <h3>No hay cobros de peaje registrados en la fecha actual.</h3>
             </td>
         </tr>

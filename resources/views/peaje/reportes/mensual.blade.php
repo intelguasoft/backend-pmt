@@ -15,22 +15,22 @@
 <body>
     <table class="table">
         <tr>
-            <td colspan="2">
+            <td colspan="3">
                 <h2 class="text-center text-danger">Reporte de peaje mensual</h2>
             </td>
         </tr>
         <tr>
             <td>
                 <label class="text-dark pull-left">Fecha de generación: </label>
-                <label class="text-info pull-right">Fecha generado...</label>
+                <label class="text-info pull-right">{{ \Carbon\Carbon::now()->format('d-m-Y') }}</label>
             </td>
             <td>
                 <label class="text-dark">Fecha inicial: </label>
-                <label class="text-info">{{ $peajes[0]->date }}</label>
+                <label class="text-info">{{ \Carbon\Carbon::parse($inicial)->format('d-m-Y') }}</label>
             </td>
             <td>
                 <label class="text-dark">Fecha final: </label>
-                <label class="text-info">{{ $peajes[0]->date }}</label>
+                <label class="text-info">{{ \Carbon\Carbon::parse($final)->format('d-m-Y') }}</label>
             </td>
         </tr>
     </table>

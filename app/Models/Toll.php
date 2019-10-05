@@ -44,11 +44,11 @@ class Toll extends Model
      * @param  string  $value
      * @return void
      */
-    public function setDateAttribute($value)
-    {
-        $date_parts = explode('-', $value);
-        $this->attributes['date'] = $date_parts[2] . '-' . $date_parts[1] . '-' . $date_parts[0];
-    }
+    // public function setDateAttribute($value)
+    // {
+    //     $date_parts = explode('-', $value);
+    //     $this->attributes['date'] = $date_parts[2] . '-' . $date_parts[1] . '-' . $date_parts[0];
+    // }
 
     public function user(){
         return $this->belongsTo(User::class);
