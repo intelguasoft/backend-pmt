@@ -134,4 +134,8 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+
+    public function tolls(){
+        return $this->hasMany(Toll::class);
+    }
 }

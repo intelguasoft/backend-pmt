@@ -132,12 +132,23 @@ return [
             'text' => 'Buscar',
             'search' => true,
         ],
-        ['header' => 'Multas'],
+        ['header' => 'Peaje'],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Cobro diario',
+            'url'  => 'peaje/diario',
+            'icon' => 'fas fa-fw fa-piggy-bank',
         ],
+        [
+            'text' => 'Consolidado mensual',
+            'url'  => 'peaje/mensual',
+            'icon' => 'fas fa-fw fa-money-check',
+        ],
+        [
+            'text' => 'Reportes',
+            'url'  => 'peaje/reportes',
+            'icon' => 'fas fa-fw fa-edit',
+        ],
+        ['header' => 'Multas'],
         [
             'text'        => 'Consultar multa',
             'url'         => 'multas/consultar',
@@ -153,42 +164,11 @@ return [
             'url'         => 'multas/reportes',
             'icon'        => 'far fa-edit',
         ],
-        ['header' => 'Peaje'],
-        [
-            'text' => 'Saldo diario',
-            'url'  => 'peaje/diario',
-            'icon' => 'fas fa-fw fa-piggy-bank',
-        ],
-        [
-            'text' => 'Cierre de caja',
-            'url'  => 'peaje/cierre',
-            'icon' => 'fas fa-fw fa-cash-register',
-        ],
-        [
-            'text' => 'Consolidado mensual',
-            'url'  => 'peaje/cierre',
-            'icon' => 'fas fa-fw fa-money-check',
-        ],
-        [
-            'text' => 'Reportes',
-            'url'  => 'peaje/reportes',
-            'icon' => 'fas fa-fw fa-edit',
-        ],
         ['header' => 'Administración', 'icon' => 'fas fa-fw fa-user-shield'],
         [
             'text' => 'Perfiles',
             'url'  => '/admin/perfiles',
             'icon' => 'fas fa-fw fa-user-cog',
-        ],
-        [
-            'text' => 'Departamentos',
-            'url'  => '/admin/departamentos',
-            'icon' => 'fas fa-fw fa-city',
-        ],
-        [
-            'text' => 'Municipios',
-            'url'  => '/admin/municipios',
-            'icon' => 'fas fa-fw fa-home',
         ],
         [
             'text' => 'Usuarios',
@@ -274,6 +254,32 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js',
+                ],
+            ],
+        ],
+        [
+            'name' => 'flot',
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.pie.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.categories.js',
                 ],
             ],
         ],
