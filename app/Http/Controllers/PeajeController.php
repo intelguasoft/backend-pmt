@@ -22,6 +22,7 @@ class PeajeController extends Controller
         $ahora = \Carbon\Carbon::now()->format('Y-m-d');
         // dd($ahora);
         $peajes = Toll::with('type_toll_vehicle')->where('date', $ahora)->paginate(10);
+        // dd($peajes);
         $peajesTemp = Toll::where('date', $ahora)->get();
         $total_dia = $peajesTemp->sum('type_toll_vehicle.cost');
         return view('peaje.diario', compact('peajes', 'total_dia'));

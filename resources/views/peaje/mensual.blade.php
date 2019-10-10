@@ -60,7 +60,7 @@
     @if(!count($peajes) == 0)
     <tfoot>
         <tr>
-            <th class="text-right" colspan="5">Cobro del dia: </th>
+            <th class="text-right" colspan="5">Resumen total: </th>
             <th class="text-right">Q. {{ number_format($total_dia, 2) }}</th>
         </tr>
     </tfoot>

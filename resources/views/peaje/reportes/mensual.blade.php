@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <table class="table">
+    <table class="table table-condensed">
         <tr>
             <td colspan="3">
                 <h2 class="text-center text-danger">Reporte de peaje mensual</h2>
@@ -56,7 +56,7 @@
             @empty
             <tr>
                 <td colspan="5">
-                    <h3>No hay cobros de peaje registrados en la fecha actual.</h3>
+                    <h3>No hay cobros de peaje registrados en el rango de fecha seleccionado.</h3>
                 </td>
             </tr>
             @endforelse
@@ -64,7 +64,7 @@
         @if(!count($peajes) == 0)
         <tfoot>
             <tr>
-                <th class="text-right" colspan="4">Cobro del dia: </th>
+                <th class="text-right" colspan="4">Resumen total: </th>
                 <th class="text-right">Q. {{ number_format($total_dia, 2) }}</th>
             </tr>
         </tfoot>
