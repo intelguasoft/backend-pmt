@@ -27,7 +27,7 @@ class TollsController extends BaseController
 
     public function __construct()
     {
-        // $this->middleware('jwt');
+        $this->middleware('jwt');
     }
 
     /**

@@ -27,6 +27,17 @@ class Toll extends Model
     // protected $dateFormat = 'y-m-d';
 
     /**
+     * Get the user's first name.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getCarPlateAttribute($value)
+    {
+        return strtoupper($value);
+    }
+
+    /**
      * Obtiene la fecha de cumpleaños de manera correcta en base a nuestro pais.
      *
      * @return string
@@ -58,4 +69,8 @@ class Toll extends Model
         return $this->belongsTo(TypeTollVehicle::class);
     }
 
+    public function setCarPlateAttribute($value)
+    {
+        $this->attributes['car_plate'] = strtoupper($value);
+    }
 }

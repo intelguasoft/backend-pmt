@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Barryvdh\DomPDF\Facade as PDF;
 use DateTime;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Storage;
 
@@ -17,10 +18,10 @@ class PeajeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function diario()
+    public function diario(Request $request)
     {
         $ahora = \Carbon\Carbon::now()->format('Y-m-d');
-        // dd($ahora);
+        dd($request->user('api'));
         $peajes = Toll::with('type_toll_vehicle')->where('date', $ahora)->paginate(10);
         // dd($peajes);
         $peajesTemp = Toll::where('date', $ahora)->get();

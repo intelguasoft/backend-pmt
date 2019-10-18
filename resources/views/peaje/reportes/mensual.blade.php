@@ -38,6 +38,7 @@
         <thead>
             <tr>
                 <th class="text-center" width="50px">#</th>
+                <th class="text-center">Fecha</th>
                 <th class="text-center">Hora</th>
                 <th class="text-center">Tipo vehículo</th>
                 <th class="text-center">Placa</th>
@@ -48,6 +49,7 @@
             @forelse($peajes as $peaje)
             <tr>
                 <td class="text-right">{{ $peaje->id }}</td>
+                <td class="text-right">{{ $peaje->date }}</td>
                 <td class="text-right">{{ $peaje->time }}</td>
                 <td>{{ $peaje->type_toll_vehicle->type }}</td>
                 <td class="text-right">{{ $peaje->type_toll_vehicle->prefix_car_plate }}{{ $peaje->car_plate }}</td>
@@ -55,7 +57,7 @@
             </tr>
             @empty
             <tr>
-                <td colspan="5">
+                <td colspan="6">
                     <h3>No hay cobros de peaje registrados en el rango de fecha seleccionado.</h3>
                 </td>
             </tr>
@@ -64,7 +66,7 @@
         @if(!count($peajes) == 0)
         <tfoot>
             <tr>
-                <th class="text-right" colspan="4">Resumen total: </th>
+                <th class="text-right" colspan="5">Resumen total: </th>
                 <th class="text-right">Q. {{ number_format($total_dia, 2) }}</th>
             </tr>
         </tfoot>

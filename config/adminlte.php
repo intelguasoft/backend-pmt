@@ -132,7 +132,7 @@ return [
             'text' => 'Buscar',
             'search' => true,
         ],
-        ['header' => 'Peaje'],
+        ['header' => 'Reportes de Peaje'],
         [
             'text' => 'Cobro diario',
             'url'  => 'peaje/diario',
@@ -143,20 +143,21 @@ return [
             'url'  => 'peaje/mensual',
             'icon' => 'fas fa-fw fa-money-check',
         ],
-        [
-            'text' => 'Reportes',
-            'url'  => 'peaje/reportes',
-            'icon' => 'fas fa-fw fa-edit',
-        ],
+
         ['header' => 'Multas'],
         [
-            'text'        => 'Consultar multa',
-            'url'         => 'multas/consultar',
+            'text'        => 'Listado de multas',
+            'url'         => 'multas/listar',
             'icon'        => 'far fa-chart-bar',
         ],
         [
-            'text'        => 'Cierre diario',
+            'text'        => 'Consultar multa',
             'url'         => 'multas/consultar',
+            'icon'        => 'fas fa-file-invoice',
+        ],
+        [
+            'text'        => 'Decomiso',
+            'url'         => 'multas/decomiso',
             'icon'        => 'far fa-id-badge',
         ],
         [
@@ -174,6 +175,11 @@ return [
             'text' => 'Usuarios',
             'url'  => '/admin/usuarios',
             'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Costos de peajes',
+            'url'  => '/admin/costos-peajes',
+            'icon' => 'fas fa-fw fa-money-check-alt',
         ]
     ],
 

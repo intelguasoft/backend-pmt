@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Hash;
 */
 
 // Ruta para la Landing Page.
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index')->name('welcome');
+Route::get('/ver-multas', 'PagesController@multas')->name('ver.multas');
 
 // Rutas para la autenticación en modo web.
 Auth::routes();
@@ -45,6 +44,12 @@ Route::get('peaje/reporte/mensual', 'PeajeController@generate_mensual')->name('p
 //         ['peaje/municipios', 'CitiesController'],
 //         ['peaje/municipios', 'CitiesController'],
 //     ]);
+
+Route::get('multas/listar', 'MultasController@index')->name('multas.index');
+Route::get('multas/create', 'MultasController@create')->name('multas.create');
+Route::post('multas/store', 'MultasController@store')->name('multas.store');
+Route::get('multas/{id}', 'MultasController@show')->name('multas.show');
+Route::get('multas/print', 'MultasController@print')->name('multas.print');
 
 // Rutas para el area de remisiones.
 // Route::resource('multas/municipios', 'CitiesController');

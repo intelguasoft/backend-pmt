@@ -68,13 +68,13 @@
 
     <!--==========================
     Intro Section
-  ============================-->
+============================-->
     <section id="intro">
 
         <div class="intro-text">
             <h2></h2>
             <p>Velar por el ordenamiento vial, coordinar y regular el transito y transporte en el Municipio de El Estor, del Departamento de Izabal, por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y otras Leyes referentes a Tránsito.</p>
-            <a href="#show-tolls" class="btn-get-started scrollto">Ver multas</a>
+            <a href="/ver-multas" class="btn-get-started scrollto">Ver multas</a>
         </div>
 
         <div class="product-screens">
@@ -98,15 +98,15 @@
     <main id="main">
 
         <!--==========================
-      About Us Section
-    ============================-->
+    About Us Section
+============================-->
         <section id="about" class="section-bg">
             <div class="container-fluid">
                 <div class="section-header">
                     <h3 class="section-title">Nosotros</h3>
                     <span class="section-divider"></span>
                     <p class="section-description">
-                        Somos una institución municipal semiautonoma encargada de velar por el ordenamiento vial,<br/>coordinar y regular el transito y transporte en el Municipio de El Estor, del Departamento de Izabal,<br/>por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y<br/>otras Leyes referentes a Tránsito.
+                        Somos una institución municipal semiautonoma encargada de velar por el ordenamiento vial,<br />coordinar y regular el transito y transporte en el Municipio de El Estor, del Departamento de Izabal,<br />por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y<br />otras Leyes referentes a Tránsito.
                     </p>
                 </div>
 
@@ -138,8 +138,8 @@
         </section><!-- #about -->
 
         <!--==========================
-      Product Featuress Section
-    ============================-->
+    Product Featuress Section
+============================-->
         <section id="features">
             <div class="container">
 
@@ -191,8 +191,8 @@
         </section><!-- #features -->
 
         <!--==========================
-      Product Advanced Featuress Section
-    ============================-->
+    Product Advanced Featuress Section
+============================-->
         <section id="advanced-features">
 
             <div class="features-row section-bg">
@@ -249,26 +249,26 @@
         </section><!-- #advanced-features -->
 
         <!--==========================
-      Call To Action Section
-    ============================-->
+    Call To Action Section
+============================-->
         <!-- <section id="call-to-action">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 text-center text-lg-left">
-                        <h3 class="cta-title">Call To Action</h3>
-                        <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#">Call To Action</a>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 text-center text-lg-left">
+                    <h3 class="cta-title">Call To Action</h3>
+                    <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="#">Call To Action</a>
+                </div>
             </div>
-        </section>#call-to-action -->
+
+        </div>
+    </section>#call-to-action -->
 
         <!--==========================
-      More Features Section
-    ============================-->
+    More Features Section
+============================-->
         <section id="more-features" class="section-bg">
             <div class="container">
 
@@ -317,62 +317,62 @@
         </section><!-- #more-features -->
 
         <!--==========================
-      Clients
-    ============================-->
+    Clients
+============================-->
         <!-- <section id="clients">
-            <div class="container">
+        <div class="container">
 
-                <div class="row wow fadeInUp">
+            <div class="row wow fadeInUp">
 
-                    <div class="col-md-2">
-                        <img src="./landing/img/clients/client-1.png" alt="">
-                    </div>
-
-                    <div class="col-md-2">
-                        <img src="./landing/img/clients/client-2.png" alt="">
-                    </div>
-
-                    <div class="col-md-2">
-                        <img src="./landing/img/clients/client-3.png" alt="">
-                    </div>
-
-                    <div class="col-md-2">
-                        <img src="./landing/img/clients/client-4.png" alt="">
-                    </div>
-
-                    <div class="col-md-2">
-                        <img src="./landing/img/clients/client-5.png" alt="">
-                    </div>
-
-                    <div class="col-md-2">
-                        <img src="./landing/img/clients/client-6.png" alt="">
-                    </div>
-
+                <div class="col-md-2">
+                    <img src="./landing/img/clients/client-1.png" alt="">
                 </div>
+
+                <div class="col-md-2">
+                    <img src="./landing/img/clients/client-2.png" alt="">
+                </div>
+
+                <div class="col-md-2">
+                    <img src="./landing/img/clients/client-3.png" alt="">
+                </div>
+
+                <div class="col-md-2">
+                    <img src="./landing/img/clients/client-4.png" alt="">
+                </div>
+
+                <div class="col-md-2">
+                    <img src="./landing/img/clients/client-5.png" alt="">
+                </div>
+
+                <div class="col-md-2">
+                    <img src="./landing/img/clients/client-6.png" alt="">
+                </div>
+
             </div>
-        </section>#more-features -->
-
-        <!--==========================
-      Call To Action Section
-    ============================-->
-    <section id="show-tolls">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Multas</h3>
-            <p class="cta-text">¿Quieres saber si tienes alguna multa pendiente de pago.?<br/>Si tienes alguna multa pendiente de pago, debes dirigirte a nuestras oficinas los mas pronto posible y<br/>evitar recargos por incumplimiento de deberes.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Ir al portal</a>
-          </div>
         </div>
-
-      </div>
-    </section><!-- #call-to-action -->
+    </section>#more-features -->
 
         <!--==========================
-      Frequently Asked Questions Section
-    ============================-->
+    Call To Action Section
+============================-->
+        <section id="show-tolls">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 text-center text-lg-left">
+                        <h3 class="cta-title">Multas</h3>
+                        <p class="cta-text">¿Quieres saber si tienes alguna multa pendiente de pago.?<br />Si tienes alguna multa pendiente de pago, debes dirigirte a nuestras oficinas los mas pronto posible y<br />evitar recargos por incumplimiento de deberes.</p>
+                    </div>
+                    <div class="col-lg-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#">Ir al portal</a>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- #call-to-action -->
+
+        <!--==========================
+    Frequently Asked Questions Section
+============================-->
         <section id="faq">
             <div class="container">
 
@@ -460,8 +460,8 @@
         </section><!-- #faq -->
 
         <!--==========================
-      Our Team Section
-    ============================-->
+    Our Team Section
+============================-->
         <section id="team" class="section-bg">
             <div class="container">
                 <div class="section-header">
@@ -476,11 +476,11 @@
                             <h4>Walter White</h4>
                             <span>Chief Executive Officer</span>
                             <!-- <div class="social">
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-google-plus"></i></a>
-                                <a href=""><i class="fa fa-linkedin"></i></a>
-                            </div> -->
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div> -->
                         </div>
                     </div>
 
@@ -490,11 +490,11 @@
                             <h4>John Jhinson</h4>
                             <span>Transit Officer</span>
                             <!-- <div class="social">
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-google-plus"></i></a>
-                                <a href=""><i class="fa fa-linkedin"></i></a>
-                            </div> -->
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div> -->
                         </div>
                     </div>
 
@@ -504,11 +504,11 @@
                             <h4>William Anderson</h4>
                             <span>Transit Officer</span>
                             <!-- <div class="social">
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-google-plus"></i></a>
-                                <a href=""><i class="fa fa-linkedin"></i></a>
-                            </div> -->
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div> -->
                         </div>
                     </div>
 
@@ -518,11 +518,11 @@
                             <h4>Amanda Jepson</h4>
                             <span>Accountant</span>
                             <!-- <div class="social">
-                                <a href=""><i class="fa fa-twitter"></i></a>
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-google-plus"></i></a>
-                                <a href=""><i class="fa fa-linkedin"></i></a>
-                            </div> -->
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div> -->
                         </div>
                     </div>
                 </div>
@@ -531,8 +531,8 @@
         </section><!-- #team -->
 
         <!--==========================
-      Gallery Section
-    ============================-->
+    Gallery Section
+============================-->
         <section id="gallery">
             <div class="container-fluid">
                 <div class="section-header">
@@ -597,8 +597,8 @@
         </section><!-- #gallery -->
 
         <!--==========================
-      Contact Section
-    ============================-->
+    Contact Section
+============================-->
         <section id="contact">
             <div class="container">
                 <div class="row wow fadeInUp">
@@ -674,7 +674,7 @@
 
     <!--==========================
     Footer
-  ============================-->
+    ============================-->
     <footer id="footer">
         <div class="container">
             <div class="row">
