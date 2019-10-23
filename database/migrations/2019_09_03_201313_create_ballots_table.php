@@ -16,9 +16,10 @@ class CreateBallotsTable extends Migration
         Schema::create('ballots', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('ballot_no');
-            $table->boolean('absent')->default(false);
             $table->boolean('signed')->default(false);
+            $table->boolean('is_voided')->default(false);
             $table->timestamps();
         });
     }

@@ -332,5 +332,37 @@ return [
                 ],
             ],
         ],
+        [
+            'name' => 'TimePicker',
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js',
+                ],
+            ],
+        ],
+        [
+            'name' => 'InputMask',
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => 'https://rawgit.com/RobinHerbots/Inputmask/4.x/css/inputmask.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://rawgit.com/RobinHerbots/Inputmask/4.x/dist/jquery.inputmask.bundle.js',
+                ],
+            ],
+        ]
     ],
 ];

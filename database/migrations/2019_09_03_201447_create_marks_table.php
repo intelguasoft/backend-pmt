@@ -16,7 +16,6 @@ class CreateMarksTable extends Migration
         Schema::create('marks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 150);
-            $table->string('initials', 75);
             $table->string('description',250);
             $table->timestamps();
         });
