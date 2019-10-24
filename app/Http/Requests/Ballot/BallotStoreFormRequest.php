@@ -25,11 +25,17 @@ class BallotStoreFormRequest extends FormRequest
     {
         return [
             'ballot_no'         => 'required',
-            // 'signed'            => 'required',
             'car_plate'         => 'required',
             'type_vehicle_id'   => 'required',
             'mark_id'           => 'required',
             'color_design'      => 'required',
+            'date'              => 'required',
+            'time'              => 'required',
+            'total'             => 'required',
+            'place' => 'required',
+            'infringement_summary' => 'required',
+            'law_basics' => 'required',
+            'traffic_regulations' => 'required',
         ];
     }
 

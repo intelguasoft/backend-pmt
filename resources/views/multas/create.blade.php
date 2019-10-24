@@ -19,14 +19,14 @@
         <div class="box-body">
             <h1 class="text-center text-info"><small>Boleta de infracción</small></h1>
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-5">
+                <div class="col-md-6 col-sm-6 col-xs-5 text-green">
                     <h3>PMT (Policia Municipal de Transito)</h3>
-                    <h5><small>El Estor, Izabal.</small></h5>
+                    <h4><small>El Estor, Izabal.</small></h4>
                 </div>
                 <div class="col-md-3 col-sm-4 col-xs-5 col-md-offset-3">
                     <div class="form-group @error('ballot_no') has-error @enderror">
                         <label for="name">No. Boleta:</label>
-                        <input type="number" class="form-control" name="ballot_no" id="ballot_no" value="{{ old('ballot_no') }}" placeholder="9434389" aria-describedby="help-ballot_no">
+                        <input type="number" class="form-control text-right" name="ballot_no" id="ballot_no" value="{{ old('ballot_no') }}" placeholder="9434389" aria-describedby="help-ballot_no">
                         <!-- <span id="help-ballot_no" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                         @error('ballot_no')
                         <span class="help-block">
@@ -67,7 +67,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="form-group @error('driver_license') has-error @enderror">
                         <label for="name">No. de Licencia:</label>
-                        <input type="text" class="form-control" name="driver_license" id="driver_license" value="{{ old('driver_license') }}" placeholder="4340 9454 90543" aria-describedby="help-driver_license">
+                        <input type="text" class="form-control text-right" name="driver_license" id="driver_license" value="{{ old('driver_license') }}" placeholder="4340 9454 90543" aria-describedby="help-driver_license">
                         <!-- <span id="help-driver_license" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                         @error('driver_license')
                         <span class="help-block">
@@ -77,7 +77,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="form-group @error('license_class') has-error @enderror">s                        <label for="name">Tipo de licencia:</label>
+                    <div class="form-group @error('license_class') has-error @enderror">
+                        <label for="name">Tipo de licencia:</label>
                         <input type="text" class="form-control" name="license_class" id="license_class" value="{{ old('license_class') }}" placeholder="Clase C" aria-describedby="help-license_class">
                         <!-- <span id="help-license_class" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                         @error('license_class')
@@ -90,7 +91,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="form-group @error('dpi') has-error @enderror">
                         <label for="name">Número de DPI:</label>
-                        <input type="text" class="form-control" name="dpi" id="dpi" value="{{ old('dpi') }}" placeholder="4324 2543 53454">
+                        <input type="text" class="form-control text-right" name="dpi" id="dpi" value="{{ old('dpi') }}" placeholder="4324 2543 53454">
                         <!-- <span id="help-dpi" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                         @error('dpi')
                         <span class="help-block">
@@ -148,7 +149,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right" data-date-format="dd-mm-yyyy" name="date" id="datepicker" value="{{ old('date') }}" placeholder="12-12-1998" aria-describedby="help-date">
+                            <input type="text" class="form-control text-right pull-right" data-date-format="dd-mm-yyyy" name="date" id="datepicker" value="{{ old('date') }}" placeholder="12-12-1998" aria-describedby="help-date">
                         </div>
                         <!-- <span id="help-date" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                         @error('date')
@@ -165,7 +166,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-clock"></i>
                             </div>
-                            <input type="text" class="form-control timepicker pull-right" data-date-format="HH:mm" name="time" id="timepicker" value="{{ old('time') }}" placeholder="12:54" aria-describedby="help-time">
+                            <input type="text" class="form-control text-right timepicker pull-right" data-date-format="HH:mm" name="time" id="timepicker" value="{{ old('time') }}" placeholder="12:54" aria-describedby="help-time">
                         </div>
                         <!-- <span id="help-date" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                         @error('time')
@@ -219,7 +220,7 @@
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="form-group @error('car_plate') has-error @enderror">
                         <label for="name">No. de placa</label>
-                        <input type="text" class="form-control" name="car_plate" id="car_plate" value="{{ old('car_plate') }}" placeholder="435TCV" aria-describedby="help-car_plate">
+                        <input type="text" class="form-control text-right" name="car_plate" id="car_plate" value="{{ old('car_plate') }}" placeholder="435TCV" aria-describedby="help-car_plate">
                         <!-- <span id="help-car_plate" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                         @error('car_plate')
                         <span class="help-block">
@@ -233,7 +234,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="form-group @error('nit') has-error @enderror">
                         <label for="name">NIT:</label>
-                        <input type="text" class="form-control" name="nit" id="nit" value="{{ old('nit') }}" placeholder="4345353-K" aria-describedby="help-nit">
+                        <input type="text" class="form-control text-right" name="nit" id="nit" value="{{ old('nit') }}" placeholder="4345353-K" aria-describedby="help-nit">
                         <!-- <span id="help-nit" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                         @error('nit')
                         <span class="help-block">
@@ -317,7 +318,7 @@
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="form-group @error('traffic_regulations') has-error @enderror">
-                        <label for="traffic_regulations">Regulaciones de transito:</label>
+                        <label for="traffic_regulations">Regulaciones de tránsito:</label>
                         <!-- <input type="text" class="form-control" name="traffic_regulations" id="traffic_regulations" value="" placeholder="Juan Raul" aria-describedby="help-traffic_regulations"> -->
                         <textarea class="form-control" name="traffic_regulations" id="traffic_regulations" placeholder="Reglamento de transito  que esta acorde al problema" aria-describedby="help-traffic_regulations" rows="2">{{ old('traffic_regulations') }}</textarea>
                         <!-- <span id="help-traffic_regulations" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
@@ -329,36 +330,29 @@
                     </div>
                 </div>
             </div>
-            <h1 class="bg-info text-info"><small>Policia Municipal de Transito</small></h1>
+            <h1 class="bg-info text-info"><small>Policía Municipal de Tránsito</small></h1>
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="radio @error('signed') has-error @enderror">
-                        <input type="radio" class="form-control" id="signed_1" name="radio[0]" value="true" { { old('signed')=="true" ? 'checked=' .'"'.'checked'.'"' : '' } } /><label for="signed" title="Firmo?">Firmo?</label>
-                        @error('signed')
-                        <span class="help-block">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
+                <div class="form-group @error('signed') has-error @enderror">
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="signed" name="signed" value="{{ (!empty(old('signed')) ? 'true' : 'false') }}" {{ (!empty(old('signed')) ? 'checked' : '') }} /> ¿Firmó la boleta de remisión?
+                            </label>
+                            @error('signed')
+                            <br>
+                            <span class=" help-block">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
                     </div>
                 </div>
-                <!-- <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="checkbox @error('signed') has-error @enderror">
-                        <label>
-                            <input type="checkbox" /> Firmo?
-                        </label>
-                        @error('signed')
-                        <span class="help-block">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                </div> -->
-                <div class="col-md-2 col-sm-2 col-xs-12 col-md-offset-4"">
-                <div class=" form-group @error('total') has-error @enderror">
+                <div class="col-md-2 col-sm-2 col-xs-12 col-md-offset-5"">
+                    <div class=" form-group @error('total') has-error @enderror">
                     <label for="name">Valor de la multa: Q.</label>
                     <!-- <input type="number" class="form-control" name="total" id="total" value="{{ old('total') }}" placeholder="500.00" aria-describedby="help-total"> -->
                     <!-- <input type="text" class="form-control" id="cantidad" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask=""> -->
-                    <input id="cantidad" class="form-control" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 2, 'digitsOptional': false, 'prefix': 'Q ', 'placeholder': '0'" inputmode="numeric" style="text-align: right;">
+                    <input id="total" name="total" class="form-control text-right" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 2, 'digitsOptional': false, 'prefix': 'Q ', 'placeholder': '0'" inputmode="numeric" style="text-align: right;">
                     <!-- <span id="help-total" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                     @error('total')
                     <span class="help-block">
@@ -368,20 +362,19 @@
                 </div>
             </div>
         </div>
-</div>
-<!-- /.box-body -->
+</div> <!-- /.box-body -->
 <div class="box-footer">
-    <a href="{{ route('multas.index') }}" class="btn btn-info">
-        <i class="fa fa-undo"></i> Cancelar
-    </a>
-    <button type="submit" class="btn btn-success">
-        <i class="far fa-save"></i> Guardar
-    </button>
+    <div class="fa-pull-right">
+        <a href="{{ route('multas.index') }}" class="btn btn-lg btn-info">
+            <i class="fa fa-undo"></i> Cancelar
+        </a>
+        <button type="submit" class="btn btn-lg btn-success">
+            <i class="far fa-save"></i> Guardar
+        </button>
+    </div>
 </div>
 </form>
-</div>
-<!-- /.box -->
-
+</div> <!-- /.box -->
 @stop
 
 @section('js')

@@ -39,7 +39,7 @@
                 </ul>
             </div>
             <div class="panel-footer">
-                <a href="{{ route('multas.show') }}" class="btn btn-link"><i class="fas fa-info-circle"></i> Ver más</a>&nbsp;
+                <a href="{{ route('multas.show', ['id' => 1]) }}" class="btn btn-link"><i class="fas fa-info-circle"></i> Ver más</a>&nbsp;
                 <a href="{{ route('multas.print') }}" class="btn btn-link pull-right"><i class="fas fa-print"></i> Imprimir</a>
             </div>
         </div>

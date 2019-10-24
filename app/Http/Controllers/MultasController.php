@@ -47,25 +47,20 @@ class MultasController extends Controller
      */
     public function store(BallotStoreFormRequest $request)
     {
+        // dd(!empty($request['signed']) ? 'true' : 'false');
         // dd($request->all());
 
         DB::transaction(function () use ($request) {
 
             $date = explode('-', $request->input('date'));
-            $dateParse = $dt = \Carbon\Carbon::create($date[2], $date[1], $date[0]);
+            $dateParse = $dt = Carbon::create($date[2], $date[1], $date[0]);
 
-            $timeArr = explode(':', $request->input('time'));
-            $timeTz = explode(' ', $timeArr[1]);
-
-
-            $timestamp = Carbon::create($timeArr[0], $timeTz[0], "00", "America/Guatemala");
-
-            dd($timestamp);
+            $time = date('H:i:s', strtotime($request->input('time')));
 
             $newBallot = Ballot::create([
                 'user_id' => auth()->user()->id,
                 'ballot_no' => $request['ballot_no'],
-                'signed' => false,
+                'signed' => !empty($request['signed']) ? true : false,
             ]);
             if (!$newBallot) {
                 throw new \Exception('Ballot not created');
@@ -100,7 +95,7 @@ class MultasController extends Controller
 
             $newInfringement = Infringement::create([
                 'date' =>  $dateParse,
-                'time' =>  $timestamp,
+                'time' =>  $time,
                 'place' =>  $request['place'],
                 'infringement_summary' =>  $request['infringement_summary'],
                 'law_basics' =>  $request['law_basics'],
@@ -114,8 +109,8 @@ class MultasController extends Controller
 
             toast('Multa agregada satisfactoriamente!', 'success');
 
-            return redirect()->route('multas.index');
         });
+        return redirect()->route('multas.index');
     }
 
     /**

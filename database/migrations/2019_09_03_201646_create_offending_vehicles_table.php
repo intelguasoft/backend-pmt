@@ -16,7 +16,7 @@ class CreateOffendingVehiclesTable extends Migration
         Schema::create('offending_vehicles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('car_plate', 10);
-            $table->string('nit', 15);
+            $table->string('nit', 15)->nullable();
 
             $table->unsignedBigInteger('type_vehicle_id');
             $table->foreign('type_vehicle_id')->references('id')->on('type_vehicles');
