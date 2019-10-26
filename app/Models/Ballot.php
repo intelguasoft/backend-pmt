@@ -13,4 +13,16 @@ class Ballot extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function offender(){
+        return $this->hasOne(Offender::class);
+    }
+
+    public function offending_vehicle()
+    {
+        return $this->hasOne(OffendingVehicle::class);
+    }
+    public function infringement()
+    {
+        return $this->hasOne(Infringement::class);
+    }
 }

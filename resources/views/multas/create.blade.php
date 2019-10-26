@@ -79,7 +79,15 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="form-group @error('license_class') has-error @enderror">
                         <label for="name">Tipo de licencia:</label>
-                        <input type="text" class="form-control" name="license_class" id="license_class" value="{{ old('license_class') }}" placeholder="Clase C" aria-describedby="help-license_class">
+                        <!-- <input type="text" class="form-control" name="license_class" id="license_class" value="{{ old('license_class') }}" placeholder="Clase C" aria-describedby="help-license_class"> -->
+                        <select class="form-control" name="license_class" id="license_class" placeholder="Perfil">
+                            <option value="">[Seleccione]</option>
+                            <option value="Clase A" {{ (\Illuminate\Support\Facades\Input::old("license_class") == 'Clase A' ? "selected":"") }}>Clase A</option>
+                            <option value="Clase B" {{ (\Illuminate\Support\Facades\Input::old("license_class") == 'Clase B' ? "selected":"") }}>Clase B</option>
+                            <option value="Clase C" {{ (\Illuminate\Support\Facades\Input::old("license_class") == 'Clase C' ? "selected":"") }}>Clase C</option>
+                            <option value="Clase E" {{ (\Illuminate\Support\Facades\Input::old("license_class") == 'Clase E' ? "selected":"") }}>Clase E</option>
+                            <option value="Clase Extranjera" {{ (\Illuminate\Support\Facades\Input::old("license_class") == 'Clase Extranjera' ? "selected":"") }}>Clase Extranjera</option>
+                        </select>
                         <!-- <span id="help-license_class" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
                         @error('license_class')
                         <span class="help-block">

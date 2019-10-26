@@ -13,30 +13,27 @@
     @forelse($multas as $multa)
     <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="panel panel-default">
-            <div class="panel-heading">Vehículo: <strong>P-768BCX</strong></div>
+            <div class="panel-heading">Vehículo: <strong>{{ $multa->offending_vehicle->car_plate}}</strong></div>
             <div class="panel-body">
                 <div class="jumbotron">
-                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>                </div>
+                    <p>{{($multa->infringement == null) ? 'No hay informacion referente a esta multa' : $multa->infringement->infringement_summary}}</p>
+                </div>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span class="badge">El Estor</span>
-                        Dirección:
+                        <span class="badge">{{$multa->offending_vehicle->mark->name}}</span>
+                        Marca:
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">El Estor</span>
-                        Dirección:
+                        <span class="badge">{{$multa->offending_vehicle->type_vehicle->type}}</span>
+                        Tipo de vehículo:
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">El Estor</span>
-                        Dirección:
+                        <span class="badge">{{$multa->infringement->place}}</span>
+                        Area de la infracción:
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">El Estor</span>
-                        Dirección:
-                    </li>
-                    <li class="list-group-item">
-                        <span class="badge">El Estor</span>
-                        Dirección:
+                        <span class="badge">{{$multa->infringement->total}}</span>
+                        Valor Q:
                     </li>
                 </ul>
             </div>
@@ -47,9 +44,11 @@
         </div>
     </div>
     @empty
-        <div class="container">
-            <div class="alert alert-info text-center" role="alert"><h4>No hay multas registradas.</h4></div>
+    <div class="container">
+        <div class="alert alert-info text-center" role="alert">
+            <h4>No hay multas registradas.</h4>
         </div>
+    </div>
     @endforelse
 </div>
 {{ $multas->render() }}
@@ -66,10 +65,9 @@
 
 @section('css')
 <style>
-div.panel div.panel-body .jumbotron
-{
-padding: 5px;
-margin-bottom: 2px;
-}
+    div.panel div.panel-body .jumbotron {
+        padding: 5px;
+        margin-bottom: 2px;
+    }
 </style>
 @stop
