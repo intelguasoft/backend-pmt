@@ -110,23 +110,39 @@
                 </div>
             </div>
             <div class="row">
+
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="form-group @error('state') has-error @enderror">
+                    <div class="form-group @error('states') has-error @enderror">
                         <label for="name">Departamento:</label>
-                        <input type="text" class="form-control" name="state" id="state" value="{{ old('state') }}" placeholder="Izabal" aria-describedby="help-state">
-                        <!-- <span id="help-state" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
-                        @error('state')
+                        <select class="form-control select2" style="width: 100%;" name="states" id="states" placeholder="Departamento">
+                            <option value="">[Seleccione un Departamento]</option>
+                            @forelse ($states as $id => $name)
+                            {{-- <option value="{{ $id }}">{{ $name }}</option> --}}
+                            <option value="{{ $id }}" {{ (\Illuminate\Support\Facades\Input::old("states") == $id ? "selected":"") }}>{{ $name }}</option>
+                            @empty
+                            <option value="">[No hay Departamento selccionado]</option>
+                            @endforelse
+                        </select>
+                        @error('states')
                         <span class="help-block">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
                     </div>
                 </div>
+
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="form-group @error('city') has-error @enderror">
                         <label for="name">Municipio:</label>
-                        <input type="text" class="form-control" name="city" id="city" value="{{ old('city') }}" placeholder="Puerto Barrios" aria-describedby="help-city">
-                        <!-- <span id="help-city" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span> -->
+                        <select class="form-control select2" style="width: 100%;" name="city" id="city" placeholder="Departamento">
+                            <option value="">[Seleccione un Municipio]</option>
+                            @forelse ($city as $id => $name)
+                            {{-- <option value="{{ $id }}">{{ $name }}</option> --}}
+                            <option value="{{ $id }}" {{ (\Illuminate\Support\Facades\Input::old("city") == $id ? "selected":"") }}>{{ $name }}</option>
+                            @empty
+                            <option value="">[No hay Municipio selccionado]</option>
+                            @endforelse
+                        </select>
                         @error('city')
                         <span class="help-block">
                             <strong>{{ $message }}</strong>
@@ -134,6 +150,8 @@
                         @enderror
                     </div>
                 </div>
+
+
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="form-group @error('home_address') has-error @enderror">
                         <label for="home_address">Dirección de residencia:</label>

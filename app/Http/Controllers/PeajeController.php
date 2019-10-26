@@ -21,7 +21,7 @@ class PeajeController extends Controller
     public function diario(Request $request)
     {
         $ahora = \Carbon\Carbon::now()->format('Y-m-d');
-        dd($request->user('api'));
+        //dd($request->user('api'));
         $peajes = Toll::with('type_toll_vehicle')->where('date', $ahora)->paginate(10);
         // dd($peajes);
         $peajesTemp = Toll::where('date', $ahora)->get();
