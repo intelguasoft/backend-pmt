@@ -31,4 +31,13 @@ class OffendingVehicle extends Model
     {
         return $this->belongsTo(City::class);
     }
+
+    public function setCarPlateAttribute($value)
+    {
+        $this->attributes['car_plate'] = strtoupper($value);
+    }
+    public function getCarPlateAttribute($value)
+    {
+        return strtoupper($value);
+    }
 }
