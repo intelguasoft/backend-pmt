@@ -15,9 +15,10 @@ class CreateTypeTollVehiclesTable extends Migration
     {
         Schema::create('type_toll_vehicles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('type', 75);
+            $table->unsignedBigInteger('type_vehicle_id');
+            $table->foreign('type_vehicle_id')->references('id')->on('type_vehicles');
             $table->decimal('cost', 11, 2);
-            $table->string('description', 250);
+            $table->string('description', 500);
             $table->string('prefix_car_plate', 5);
             $table->timestamps();
         });

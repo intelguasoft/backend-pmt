@@ -9,6 +9,9 @@ use Edgar\PMT\Models\Mark;
 use Edgar\PMT\Models\Offender;
 use Edgar\PMT\Models\OffendingVehicle;
 use Edgar\PMT\Models\TypeVehicle;
+use Edgar\PMT\Models\State;
+use Edgar\PMT\Models\City;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -35,8 +38,10 @@ class MultasController extends Controller
     {
         $marcas = Mark::pluck('name', 'id');
         $tipoVehiculos = TypeVehicle::pluck('type', 'id');
+        $states = State::pluck('name', 'id');
+        $city = City::pluck('name', 'id');
 
-        return view('multas.create', ['marcas' => $marcas, 'tipo_vehiculos' => $tipoVehiculos]);
+        return view('multas.create', ['marcas' => $marcas, 'tipo_vehiculos' => $tipoVehiculos, 'states' => $states, 'city' => $city]);
     }
 
     /**
@@ -108,7 +113,6 @@ class MultasController extends Controller
             }
 
             toast('Multa agregada satisfactoriamente!', 'success');
-
         });
         return redirect()->route('multas.index');
     }

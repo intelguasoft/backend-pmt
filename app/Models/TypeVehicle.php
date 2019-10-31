@@ -12,5 +12,8 @@ class TypeVehicle extends Model
     {
         return $this->hasMany(OffendingVehicle::class);
     }
-
+    public function type_toll_vehicles()
+    {
+        return $this->hasMany(TypeTollVehicle::class);
+    }
 }

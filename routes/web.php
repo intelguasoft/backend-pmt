@@ -21,7 +21,7 @@ Route::get('/ver-multas', 'PagesController@multas')->name('ver.multas');
 Auth::routes();
 
 // Ruta para obtener un hash de un valor para password.
-Route::get('hash/{valor}', function($valor){
+Route::get('hash/{valor}', function ($valor) {
     return Hash::make($valor);
 });
 
@@ -33,7 +33,11 @@ Route::resource('admin/perfiles', 'RolesController');
 Route::resource('admin/usuarios', 'UsersController');
 Route::resource('admin/departamentos', 'StatesController');
 Route::resource('admin/municipios', 'CitiesController');
+<<<<<<< HEAD
 // Route::resource('admin/costos-peajes', 'CitiesController');
+=======
+Route::resource('admin/costos-peajes', 'CostosPeajeController');
+>>>>>>> d8fdd8df34f80b9b1e1d90b3619eefef6c0f09cd
 Route::post('admin/send/{title}/{to}/{content}', 'EmailController@send')->name('admin.mail.send');
 
 // Rutas para el area de peaje.
@@ -56,3 +60,15 @@ Route::put('multas/{ballot}', 'MultasController@anular')->name('multas.anular');
 
 // Rutas para el area de remisiones.
 // Route::resource('multas/municipios', 'CitiesController');
+
+Route::get('costos-peajes/listar', 'CostosPeajeController@index')->name('costos-peajes.index');
+Route::get('costos-peajes/create', 'CostosPeajeController@create')->name('costos-peajes.create');
+Route::post('costos-peajes/store', 'CostosPeajeController@store')->name('costos-peajes.store');
+Route::get('costos-peajes/show/{costos}', 'CostosPeajeController@show')->name('costos-peajes.show');
+Route::get('costos-peajes/{costos}/edit', 'CostosPeajeController@edit')->name('costos-peajes.edit');
+Route::put('costos-peajes/update/{costos}', 'CostosPeajeController@update')->name('costos-peajes.update');
+// Route::get('costos-peajes/delete/{costos}', 'CostosPeajeController@delete')->name('costos-peajes.delete');
+// Route::delete('costos-peajes/destroy/{costos}', 'CostosPeajeController@destroy')->name('costos-peajes.destroy');
+
+
+//Rutas para el are de costos de peaje.
