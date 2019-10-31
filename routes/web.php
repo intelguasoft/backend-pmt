@@ -33,11 +33,8 @@ Route::resource('admin/perfiles', 'RolesController');
 Route::resource('admin/usuarios', 'UsersController');
 Route::resource('admin/departamentos', 'StatesController');
 Route::resource('admin/municipios', 'CitiesController');
-<<<<<<< HEAD
 // Route::resource('admin/costos-peajes', 'CitiesController');
-=======
 Route::resource('admin/costos-peajes', 'CostosPeajeController');
->>>>>>> d8fdd8df34f80b9b1e1d90b3619eefef6c0f09cd
 Route::post('admin/send/{title}/{to}/{content}', 'EmailController@send')->name('admin.mail.send');
 
 // Rutas para el area de peaje.
