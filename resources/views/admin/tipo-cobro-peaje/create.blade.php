@@ -3,7 +3,7 @@
 @section('title', config('adminlte.title', 'AdminLTE 2'))
 
 @section('content_header')
-<h1>Perfiles - <small>Crear nuevo</small></h1>
+<h1>Tipo de vehículo para peaje - <small>Crear nuevo</small></h1>
 @stop
 
 @section('content')
@@ -13,7 +13,7 @@
     <div class="box box-info">
         <div class="box-header with-border">
             <!-- <h3 class="text-muted">Los perfiles son los roles a los que puede estar asociado un usuario.</h3> -->
-            <h4>Tip! <small>Los perfiles son los roles a los que puede estar asociado un usuario.</small></h4>
+            <h4>Tip! <small>El costo que se refiere aca esta asociado a los cobros del peaje en dichos vehículos.</small></h4>
         </div>
         <!-- /.box-header -->
         <!-- form start -->

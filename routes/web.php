@@ -33,6 +33,7 @@ Route::resource('admin/perfiles', 'RolesController');
 Route::resource('admin/usuarios', 'UsersController');
 Route::resource('admin/departamentos', 'StatesController');
 Route::resource('admin/municipios', 'CitiesController');
+// Route::resource('admin/costos-peajes', 'CitiesController');
 Route::post('admin/send/{title}/{to}/{content}', 'EmailController@send')->name('admin.mail.send');
 
 // Rutas para el area de peaje.
@@ -48,8 +49,10 @@ Route::get('peaje/reporte/mensual', 'PeajeController@generate_mensual')->name('p
 Route::get('multas/listar', 'MultasController@index')->name('multas.index');
 Route::get('multas/create', 'MultasController@create')->name('multas.create');
 Route::post('multas/store', 'MultasController@store')->name('multas.store');
-Route::get('multas/{id}', 'MultasController@show')->name('multas.show');
-Route::get('multas/print', 'MultasController@print')->name('multas.print');
+Route::get('multas/{ballot}', 'MultasController@show')->name('multas.show');
+Route::get('multas/{ballot}/print', 'MultasController@print')->name('multas.print');
+Route::get('multas/{ballot}/voided', 'MultasController@voided')->name('multas.voided');
+Route::put('multas/{ballot}', 'MultasController@anular')->name('multas.anular');
 
 // Rutas para el area de remisiones.
 // Route::resource('multas/municipios', 'CitiesController');

@@ -13,7 +13,7 @@
     @forelse($multas as $multa)
     <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="panel panel-default">
-            <div class="panel-heading">Vehículo: <strong>{{ $multa->offending_vehicle->car_plate}}</strong></div>
+            <div class="panel-heading text-right">Vehículo: <strong>{{ $multa->offending_vehicle->car_plate}}</strong></div>
             <div class="panel-body">
                 <div class="jumbotron">
                     <p>{{($multa->infringement == null) ? 'No hay informacion referente a esta multa' : $multa->infringement->infringement_summary}}</p>
@@ -38,8 +38,9 @@
                 </ul>
             </div>
             <div class="panel-footer">
-                <a href="{{ route('multas.show', ['id' => 1]) }}" class="btn btn-link"><i class="fas fa-info-circle"></i> Ver más</a>&nbsp;
-                <a href="{{ route('multas.print') }}" class="btn btn-link pull-right"><i class="fas fa-print"></i> Imprimir</a>
+                <a href="{{ route('multas.show', ['ballot' => $multa]) }}" class="btn btn-info"><i class="fas fa-info-circle"></i> Ver más</a>&nbsp;
+                <a href="{{ route('multas.voided', ['ballot' => $multa]) }}" class="btn btn-danger"><i class="fas fa-times"></i> Anular</a>&nbsp;
+                <a href="{{ route('multas.print', ['ballot' => $multa]) }}" class="btn btn-success pull-right"><i class="fas fa-print"></i> Imprimir</a>
             </div>
         </div>
     </div>

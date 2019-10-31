@@ -121,12 +121,24 @@ class MultasController extends Controller
      */
     public function show(Ballot $ballot)
     {
-        //
+        // dd($ballot->with('user'));
+        return view('multas.show', ['multa' => $ballot]);
     }
 
     public function print(Ballot $ballot)
     {
-        //
+        return view('multas.reportes.print', ['multa' => $ballot]);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \Edgar\PMT\Models\Ballot  $ballot
+     * @return \Illuminate\Http\Response
+     */
+    public function voided(Ballot $ballot)
+    {
+        return view('multas.voided', ['multa' => $ballot]);
     }
 
     /**
@@ -137,6 +149,11 @@ class MultasController extends Controller
      */
     public function anular(Ballot $ballot)
     {
-        //
+        $ballot->is_voided = true;
+        $ballot->save();
+
+        toast('La multa fue anulada correctamente!', 'warning');
+
+        return redirect()->route('multas.index');
     }
 }

@@ -71,6 +71,15 @@
                 <p class="section-description">Aca aparece todo nuestro recurso humano, conocelos y evita ser engañado por personas ajenas a la institución.</p>
             </div>
             <div class="row">
+                <div class="col-2 col-md-offset-5">
+                    <div class="form-group">
+                        <label for="placa">Placa del vehículo:</label>
+                        <input type="text" class="form-control text-right" name="placa" id="placa" value="{{ old('driver_license') }}" placeholder="P-324TXC" aria-describedby="help-driver_license">
+                        <span id="help-driver_license" class="help-block">Debe ingresar el número de placa del vehículo tal y como aparace en la misma.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
