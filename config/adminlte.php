@@ -171,7 +171,7 @@ return [
 
                 [
                     'text'        => 'Decomiso',
-                    'url'         => 'multas/decomiso',
+                    'url'         => 'multas/decomisos',
                     'icon'        => 'far fa-id-badge',
                 ],
 

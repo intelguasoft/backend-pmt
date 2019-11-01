@@ -50,13 +50,14 @@ Route::get('peaje/reporte/mensual', 'PeajeController@generate_mensual')->name('p
 
 Route::get('multas/listar', 'MultasController@index')->name('multas.index');
 Route::get('multas/anuladas', 'MultasController@anuladas')->name('multas.anuladas');
-Route::get('multas/create', 'MultasController@create')->name('multas.create');
 Route::get('multas/decomisos', 'MultasController@seizures')->name('multas.decomisos');
+Route::get('multas/create', 'MultasController@create')->name('multas.create');
 Route::get('multas/cobros', 'PaymentBallotController@index')->name('multas-cobradas.index');
 Route::get('multas/cobros/create/{ballot}', 'PaymentBallotController@create')->name('multas-cobradas.create');
 Route::post('multas/cobros/store', 'PaymentBallotController@store')->name('multas-cobradas.store');
 Route::get('multas/cobros/listar', 'PaymentBallotController@listar')->name('multas-cobradas.listar');
-Route::get('multas/cobros/show/{ballot}', 'PaymentBallotController@show')->name('multas-cobradas.show');
+Route::get('multas/seizures/show/{ballot}', 'MultasController@seizureshow')->name('multas.seizureshow');
+Route::get('multas/show/{ballot}', 'PaymentBallotController@show')->name('multas-cobradas.show');
 Route::post('multas/store', 'MultasController@store')->name('multas.store');
 Route::get('multas/{ballot}', 'MultasController@show')->name('multas.show');
 Route::get('multas/{ballot}/print', 'MultasController@print')->name('multas.print');
