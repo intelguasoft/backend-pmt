@@ -11,7 +11,7 @@ use Edgar\PMT\Models\OffendingVehicle;
 use Edgar\PMT\Models\TypeVehicle;
 use Edgar\PMT\Models\State;
 use Edgar\PMT\Models\City;
-
+use Edgar\PMT\Models\PaymentBallot;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -25,7 +25,11 @@ class MultasController extends Controller
      */
     public function index()
     {
-        $ballots = Ballot::orderBy('id', 'desc')->paginate(6);
+        $pagadas = PaymentBallot::pluck('ballot_id');
+
+        // dd($pagadas->toArray());
+
+        $ballots = Ballot::where([['is_voided', '=', false], ['id', 'in', $pagadas]])->orderBy('id', 'desc')->paginate(6);
         return view('multas.listar', ['multas' => $ballots]);
     }
 
