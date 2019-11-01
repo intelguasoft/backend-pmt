@@ -25,13 +25,13 @@
             <td class="text-right">{{ $peaje->id }}</td>
             <td class="text-right">{{ $peaje->date }}</td>
             <td class="text-right">{{ $peaje->time }}</td>
-            <td>{{ $peaje->type_toll_vehicle->type }}</td>
+            <td>{{ $peaje->type_toll_vehicle->type_vehicle->type }}</td>
             <td class="text-right">{{ $peaje->type_toll_vehicle->prefix_car_plate }}{{ $peaje->car_plate }}</td>
             <td class="text-right">Q. {{ number_format($peaje->type_toll_vehicle->cost, 2) }}</td>
         </tr>
         @empty
         <tr>
-            <td colspan="6">
+            <td class="text-center" colspan="6">
                 <h3>No hay cobros de peaje registrados en la fecha actual.</h3>
             </td>
         </tr>

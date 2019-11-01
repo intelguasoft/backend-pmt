@@ -134,12 +134,17 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
-    public function tolls(){
+    public function tolls()
+    {
         return $this->hasMany(Toll::class);
     }
 
     public function ballots()
     {
         return $this->hasMany(Ballot::class);
+    }
+    public function payment_ballots()
+    {
+        return $this->hasMany(PaymentBallot::class);
     }
 }
