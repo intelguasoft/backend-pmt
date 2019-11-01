@@ -34,6 +34,29 @@ class MultasController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function consultar(Request $request)
+    {
+        $q = $request->query('q');
+        if (!is_null($q) && !empty($q))
+        {
+            // dd($q);
+            $ballots = OffendingVehicle::with('ballot')->where('car_plate', $q)->get();
+            dd($ballots);
+
+        }
+        $pagadas = PaymentBallot::pluck('ballot_id');
+
+        // dd($pagadas->toArray());
+
+        $ballots = Ballot::whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->paginate(6);
+        return view('multas.consultar', ['multas' => $ballots]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
