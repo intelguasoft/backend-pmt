@@ -3,11 +3,8 @@
 @section('title', config('adminlte.title', 'AdminLTE 2'))
 
 @section('content_header')
-<h1>Multas - <small>Listado</small></h1>
-<a href="{{ route('multas.index') }}" class="btn btn-danger  btn-sm pull-right"><i class="fa fa-file-pdf"></i> Generar reporte</a>
-<a href="{{ route('multas.create') }}" class="btn btn-info  btn-sm pull-right"><i class="fa fa-plus"></i> Agregar multa</a>
+<h1>Multas listado- <small>Pagar</small></h1>
 @stop
-
 @section('content')
 <div class="row">
     @forelse($multas as $multa)
@@ -38,9 +35,7 @@
                 </ul>
             </div>
             <div class="panel-footer">
-                <a href="{{ route('multas.show', ['ballot' => $multa]) }}" class="btn btn-info btn-xs"><i class="fas fa-info-circle"></i> Ver más</a>&nbsp;
-                <a href="{{ route('multas.voided', ['ballot' => $multa]) }}" class="btn btn-danger btn-xs"><i class="fas fa-times"></i> Anular</a>&nbsp;
-                <a href="{{ route('multas.print', ['ballot' => $multa]) }}" class="btn btn-success pull-right btn-xs"><i class="fas fa-print"></i> Imprimir</a>
+                <a href="{{ route('multas-cobradas.create', ['ballot' => $multa]) }}" class="btn btn-primary btn-block btn btn-danger"><i class="fas fa-shopping-cart"></i> Pagar </a>&nbsp;
             </div>
         </div>
     </div>

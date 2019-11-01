@@ -13,7 +13,8 @@ class Ballot extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function offender(){
+    public function offender()
+    {
         return $this->hasOne(Offender::class);
     }
 
@@ -24,5 +25,9 @@ class Ballot extends Model
     public function infringement()
     {
         return $this->hasOne(Infringement::class);
+    }
+    public function payment_ballot()
+    {
+        return $this->hasOne(PaymentBallot::class);
     }
 }

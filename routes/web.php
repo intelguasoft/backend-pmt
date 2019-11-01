@@ -33,6 +33,7 @@ Route::resource('admin/perfiles', 'RolesController');
 Route::resource('admin/usuarios', 'UsersController');
 Route::resource('admin/departamentos', 'StatesController');
 Route::resource('admin/municipios', 'CitiesController');
+Route::resource('admin/multas-cobradas', 'PaymentBallotController');
 // Route::resource('admin/costos-peajes', 'CitiesController');
 Route::resource('admin/costos-peajes', 'CostosPeajeController');
 Route::post('admin/send/{title}/{to}/{content}', 'EmailController@send')->name('admin.mail.send');
@@ -49,6 +50,11 @@ Route::get('peaje/reporte/mensual', 'PeajeController@generate_mensual')->name('p
 
 Route::get('multas/listar', 'MultasController@index')->name('multas.index');
 Route::get('multas/create', 'MultasController@create')->name('multas.create');
+Route::get('multas/cobros', 'PaymentBallotController@index')->name('multas-cobradas.index');
+Route::get('multas/cobros/create/{ballot}', 'PaymentBallotController@create')->name('multas-cobradas.create');
+Route::post('multas/cobros/store', 'PaymentBallotController@store')->name('multas-cobradas.store');
+Route::get('multas/cobros/listar', 'PaymentBallotController@listar')->name('multas-cobradas.listar');
+Route::get('multas/cobros/show/{ballot}', 'PaymentBallotController@show')->name('multas-cobradas.show');
 Route::post('multas/store', 'MultasController@store')->name('multas.store');
 Route::get('multas/{ballot}', 'MultasController@show')->name('multas.show');
 Route::get('multas/{ballot}/print', 'MultasController@print')->name('multas.print');
@@ -58,8 +64,8 @@ Route::put('multas/{ballot}', 'MultasController@anular')->name('multas.anular');
 // Rutas para el area de remisiones.
 // Route::resource('multas/municipios', 'CitiesController');
 
-Route::get('costos-peajes/listar', 'CostosPeajeController@index')->name('costos-peajes.index');
 Route::get('costos-peajes/create', 'CostosPeajeController@create')->name('costos-peajes.create');
+Route::get('costos-peajes/listar', 'CostosPeajeController@index')->name('costos-peajes.index');
 Route::post('costos-peajes/store', 'CostosPeajeController@store')->name('costos-peajes.store');
 Route::get('costos-peajes/show/{costos}', 'CostosPeajeController@show')->name('costos-peajes.show');
 Route::get('costos-peajes/{costos}/edit', 'CostosPeajeController@edit')->name('costos-peajes.edit');
@@ -68,4 +74,5 @@ Route::put('costos-peajes/update/{costos}', 'CostosPeajeController@update')->nam
 // Route::delete('costos-peajes/destroy/{costos}', 'CostosPeajeController@destroy')->name('costos-peajes.destroy');
 
 
-//Rutas para el are de costos de peaje.
+//Rutas para el de costos de peaje.
+//Rutas para multas pagadas
