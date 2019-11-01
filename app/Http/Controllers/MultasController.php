@@ -29,7 +29,7 @@ class MultasController extends Controller
 
         // dd($pagadas->toArray());
 
-        $ballots = Ballot::where([['is_voided', '=', false], ['id', 'in', $pagadas]])->orderBy('id', 'desc')->paginate(6);
+        $ballots = Ballot::whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->paginate(6);
         return view('multas.listar', ['multas' => $ballots]);
     }
 

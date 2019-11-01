@@ -144,26 +144,38 @@ return [
             'icon' => 'fas fa-fw fa-money-check',
         ],
 
-        ['header' => 'Multas'],
         [
-            'text'        => 'Listado de multas',
-            'url'         => 'multas/listar',
-            'icon'        => 'far fa-chart-bar',
-        ],
-        [
-            'text'        => 'Consultar multa',
-            'url'         => 'multas/consultar',
-            'icon'        => 'fas fa-file-invoice',
-        ],
-        [
-            'text'        => 'Cobro multa',
-            'url'         => 'multas/cobros',
-            'icon'        => 'far fa-id-badge',
-        ],
-        [
-            'text'        => 'Decomiso',
-            'url'         => 'multas/decomiso',
-            'icon'        => 'far fa-id-badge',
+            'text'    => 'Multas',
+            'icon'    => 'fas fa-file-invoice-dollar',
+            'submenu' => [
+                [
+                    'text'        => 'Consultar multa',
+                    'url'         => 'multas/consultar',
+                    'icon'        => 'fas fa-search',
+                ],
+                [
+                    'text'        => 'Multas Activas',
+                    'url'         => 'multas/listar',
+                    'icon'        => 'far fa-chart-bar',
+                ],
+                [
+                    'text'        => 'Cobro multa',
+                    'url'         => 'multas/cobros',
+                    'icon'        => 'far fa-id-badge',
+                ],
+                [
+                    'text'        => 'Multas Anuladas',
+                    'url'         => 'multas/listar',
+                    'icon'        => 'far fa-chart-bar',
+                ],
+
+                [
+                    'text'        => 'Decomiso',
+                    'url'         => 'multas/decomiso',
+                    'icon'        => 'far fa-id-badge',
+                ],
+
+            ],
         ],
         [
             'text'        => 'Reportes',
