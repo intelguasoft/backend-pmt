@@ -156,8 +156,8 @@ return [
             'icon'        => 'fas fa-file-invoice',
         ],
         [
-            'text'        => 'Decomiso',
-            'url'         => 'multas/decomiso',
+            'text'        => 'Decomisos',
+            'url'         => '/multas/decomisos',
             'icon'        => 'far fa-id-badge',
         ],
         [

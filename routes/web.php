@@ -49,6 +49,7 @@ Route::get('peaje/reporte/mensual', 'PeajeController@generate_mensual')->name('p
 
 Route::get('multas/listar', 'MultasController@index')->name('multas.index');
 Route::get('multas/create', 'MultasController@create')->name('multas.create');
+Route::get('multas/decomisos', 'MultasController@seizures')->name('multas.decomisos');
 Route::post('multas/store', 'MultasController@store')->name('multas.store');
 Route::get('multas/{ballot}', 'MultasController@show')->name('multas.show');
 Route::get('multas/{ballot}/print', 'MultasController@print')->name('multas.print');

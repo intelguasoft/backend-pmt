@@ -160,4 +160,31 @@ class MultasController extends Controller
 
         return redirect()->route('multas.index');
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function seizures(Request $request)
+    {
+        $now = Carbon::now();
+        $multasDec = [];
+
+        $multas = Ballot::where('is_voided', false)->get();
+
+        foreach ($multas as $key => $value) {
+
+            $date = Carbon::createFromFormat('d/m/Y', $value->infringement->date);
+
+
+            if ($date->diffInDays($now) >= 31) {
+                # code...
+                $multasDec = $value;
+            }
+        }
+
+        return view('multas.seizures', ['multas' => $multasDec]);
+    }
 }
