@@ -9,12 +9,15 @@
 @section('content')
 <div id="contenido">
     <!-- general form elements -->
-    <div class="box box-info">
+    <div class="box box-info ">
         <div class="box-header with-border">
             <!-- <h4>Tip! <small>No olvide que la contraseña generada sera enviada al usuario a su correo electronico proporcionado, recuerde cambiarlo cuando sea logueado por primera vez.</small></h4> -->
         </div>
         <!-- /.box-header -->
-        <div class="box-body">
+        <div class="box-body cuerpo-marca">
+            <div class="background">
+                <p id="bg-text">Pagada</p>
+            </div>
             <h1 class="text-center text-info"><small>Boleta de infracción</small></h1>
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-5 text-green">
@@ -212,33 +215,27 @@
 
 @section('css')
 <style>
-    body::after {
-        content: 'Cancelado';
-        font-size: 10em;
-        color: rgba(255, 51, 51, 0.4);
+    .background {
+        position: absolute;
         z-index: 9999;
-        transform: rotate(-35deg);
+        background: transparent;
+        display: block;
+        min-height: 50%;
+        min-width: 50%;
+        color: yellow;
+        padding-top: 200px;
+    }
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    .cuerpo-marca {
+        position: relative;
+        z-index: 1;
+    }
 
-        -webkit-pointer-events: none;
-        -moz-pointer-events: none;
-        -ms-pointer-events: none;
-        -o-pointer-events: none;
-        pointer-events: none;
-
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
+    #bg-text {
+        color: rgba(255, 51, 51, 0.4);
+        font-size: 300px;
+        transform: rotate(300deg);
+        -webkit-transform: rotate(300deg);
     }
 </style>
 @stop
