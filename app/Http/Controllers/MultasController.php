@@ -32,7 +32,17 @@ class MultasController extends Controller
         $ballots = Ballot::whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->paginate(6);
         return view('multas.listar', ['multas' => $ballots]);
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function anuladas()
+    {
 
+        $ballots = Ballot::where('is_voided', true)->orderBy('id', 'desc')->paginate(6);
+        return view('multas.anuladas', ['multas' => $ballots]);
+    }
     /**
      * Display a listing of the resource.
      *

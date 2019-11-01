@@ -13,7 +13,12 @@
         <!-- <h4>Tip! <small>No olvide que la contraseña generada sera enviada al usuario a su correo electronico proporcionado, recuerde cambiarlo cuando sea logueado por primera vez.</small></h4> -->
     </div>
     <!-- /.box-header -->
-    <div class="box-body">
+    <div class="box-body {{ ($multa->is_voided == true) ? 'cuerpo-marca' : ''}} ">
+        @if ($multa->is_voided == true)
+        <div class="background">
+            <p id="bg-text">Anulada</p>
+        </div>
+        @endif
         <h1 class="text-center text-info"><small>Boleta de infracción</small></h1>
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-5 text-green">
@@ -222,6 +227,29 @@
 
     .input-group {
         width: 100%;
+    }
+
+    .background {
+        position: absolute;
+        z-index: 9999;
+        background: transparent;
+        display: block;
+        min-height: 50%;
+        min-width: 50%;
+        color: yellow;
+        padding-top: 230px;
+    }
+
+    .cuerpo-marca {
+        position: relative;
+        z-index: 1;
+    }
+
+    #bg-text {
+        color: rgba(255, 51, 51, 0.4);
+        font-size: 300px;
+        transform: rotate(300deg);
+        -webkit-transform: rotate(300deg);
     }
 </style>
 @stop

@@ -165,7 +165,7 @@ return [
                 ],
                 [
                     'text'        => 'Multas Anuladas',
-                    'url'         => 'multas/listar',
+                    'url'         => 'multas/anuladas',
                     'icon'        => 'far fa-chart-bar',
                 ],
 
