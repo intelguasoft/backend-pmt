@@ -52,6 +52,7 @@ Route::get('multas/listar', 'MultasController@index')->name('multas.index');
 Route::get('multas/anuladas', 'MultasController@anuladas')->name('multas.anuladas');
 Route::get('multas/decomisos', 'MultasController@seizures')->name('multas.decomisos');
 Route::get('multas/create', 'MultasController@create')->name('multas.create');
+Route::get('multas/consultar', 'MultasController@consultar')->name('multas.consultar');
 Route::get('multas/cobros', 'PaymentBallotController@index')->name('multas-cobradas.index');
 Route::get('multas/cobros/create/{ballot}', 'PaymentBallotController@create')->name('multas-cobradas.create');
 Route::post('multas/cobros/store', 'PaymentBallotController@store')->name('multas-cobradas.store');
