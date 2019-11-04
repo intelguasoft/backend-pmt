@@ -47,7 +47,7 @@ Route::get('peaje/reporte/mensual', 'PeajeController@generate_mensual')->name('p
 //         ['peaje/municipios', 'CitiesController'],
 //         ['peaje/municipios', 'CitiesController'],
 //     ]);
-
+Route::get('multas/reporte/mensual', 'PaymentBallotController@generate_mensual')->name('multa.generate.mensual');
 Route::get('multas/listar', 'MultasController@index')->name('multas.index');
 Route::get('multas/anuladas', 'MultasController@anuladas')->name('multas.anuladas');
 Route::get('multas/decomisos', 'MultasController@seizures')->name('multas.decomisos');
