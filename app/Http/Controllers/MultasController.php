@@ -39,15 +39,21 @@ class MultasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function anuladas()
+    public function anuladas(Request $request)
     {
-        if (\Route::current()->getName() == 'multas.anuladas') {
+        $q = $request->query('q');
 
-            dd(\Route::current()->getName());
-
+        if (!is_null($q) && !empty($q)) {
+            // dd($q);
+            // $ballots = OffendingVehicle::with('ballot')->where('car_plate', 'LIKE', $q . '%')->orderBy('ballot_id', 'desc')->paginate(6);
+            $ballots = Ballot::where('car_plate', 'LIKE', $q . '%')->orderBy('id', 'desc')->paginate(6);
+            // dd($ballots[0]->ballot->offending_vehicle->car_plate);
+        } else {
+            $ballots = Ballot::where('is_voided', true)->orderBy('id', 'desc')->paginate(6);
         }
 
-        $ballots = Ballot::where('is_voided', true)->orderBy('id', 'desc')->paginate(6);
+
+
         // dd($ballots);
         return view('multas.anuladas', ['multas' => $ballots]);
     }
@@ -60,16 +66,12 @@ class MultasController extends Controller
     {
         $q = $request->query('q');
         $pagadas = PaymentBallot::pluck('ballot_id');
-        if (!is_null($q) && !empty($q))
-        {
+        if (!is_null($q) && !empty($q)) {
             // dd($q);
-            $ballots = OffendingVehicle::with('ballot')->where('car_plate', 'LIKE' , $q.'%')->orderBy('ballot_id', 'desc')->paginate(6);
+            $ballots = OffendingVehicle::with('ballot')->where('car_plate', 'LIKE', $q . '%')->orderBy('ballot_id', 'desc')->paginate(6);
             // dd($ballots[0]->ballot->offending_vehicle->car_plate);
-        }
-        else
-        {
+        } else {
             $ballots = OffendingVehicle::with('ballot')->orderBy('ballot_id', 'desc')->paginate(6);
-
         }
 
         return view('multas.consultar', ['multas' => $ballots]);
