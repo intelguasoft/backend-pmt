@@ -43,6 +43,7 @@ class PaymentBallotController extends Controller
      */
     public function create(Ballot $ballot)
     {
+
         return view('admin.multas-cobradas.create', ['multa' => $ballot]);
     }
 
@@ -89,7 +90,11 @@ class PaymentBallotController extends Controller
      */
     public function listar(Ballot $ballots)
     {
-        $ballots = Ballot::orderBy('id', 'desc')->paginate(6);
+        $pagadas = PaymentBallot::pluck('ballot_id');
+
+        // dd($pagadas->toArray());
+
+        $ballots = Ballot::whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->paginate(6);
         return view('admin.multas-cobradas.listar', ['multas' => $ballots]);
     }
 

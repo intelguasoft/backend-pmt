@@ -40,7 +40,6 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <label for="description">Descripción</label>
                 <textarea disabled class="form-control" name="description" rows="5" placeholder="Descripción del vehículo" aria-describedby="help-description" readonly>{{ $costos->description }}</textarea>
-
                 <!-- /.box-body -->
                 <div class="box-footer">
                     <div class="btn-group pull-right">
@@ -53,6 +52,7 @@
                     </div>
                 </div>
             </div>
-            <!-- /.box -->
+        </div>
+        <!-- /.box -->
 
-            @stop
+        @stop

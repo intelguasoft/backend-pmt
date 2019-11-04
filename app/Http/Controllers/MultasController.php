@@ -11,8 +11,10 @@ use Edgar\PMT\Models\OffendingVehicle;
 use Edgar\PMT\Models\TypeVehicle;
 use Edgar\PMT\Models\State;
 use Edgar\PMT\Models\City;
+use Edgar\PMT\Models\Collections\SeizuresCollection;
 use Edgar\PMT\Models\PaymentBallot;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -46,6 +48,7 @@ class MultasController extends Controller
         }
 
         $ballots = Ballot::where('is_voided', true)->orderBy('id', 'desc')->paginate(6);
+        // dd($ballots);
         return view('multas.anuladas', ['multas' => $ballots]);
     }
     /**
@@ -213,21 +216,30 @@ class MultasController extends Controller
     public function seizures(Request $request)
     {
         $now = Carbon::now();
-        $multasDec = [];
+        $multasDec = null;
 
-        $multas = Ballot::where('is_voided', false)->get();
-
-        foreach ($multas as $key => $value) {
-
-            $date = Carbon::createFromFormat('d/m/Y', $value->infringement->date);
+        $pagadas = PaymentBallot::pluck('ballot_id');
+        $multas = Ballot::whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->get();
 
 
-            if ($date->diffInDays($now) >= 31) {
+        foreach ($multas as $key => $multa) {
+
+            $date = Carbon::createFromFormat('d/m/Y', $multa->infringement->date);
+
+
+            if (!($date->diffInDays($now) >= 31)) {
                 # code...
-                $multasDec = $value;
+                $multas->forget($key);
             }
         }
 
-        return view('multas.seizures', ['multas' => $multasDec]);
+
+        return view('multas.seizures', ['multas' => $multas, 6, 1]);
+    }
+
+    public function seizureshow(Ballot $ballot)
+    {
+        // dd($ballot);
+        return view('multas.seizureshow', ['multa' => $ballot]);
     }
 }

@@ -160,15 +160,19 @@
             </div>
             <h1 class="bg-info text-info"><small>AREA DE PAGO</small></h1>
             <div class="row">
-                <div class="col-md-7 col-sm-7 col-xs-12">
-                    <div class=" form-group">
-                        <label for="name">Comentario:</label>
-                        <textarea class="form-control" name="comment" id="comment" cols="30" rows="5"></textarea>
+                <div class="col-md-6 col-sm-7 col-xs-12">
+                    <div class=" form-group @error('comment') has-error @enderror"">
+                        <label for=" name">Número de Boleta Municipal:</label>
+                         <input type="text" class="form-control" name="comment" id="comment" value="{{ old('comment') }}" placeholder="Número de boleta Municipal">
+                        @error('comment')
+                        <span class="help-block">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
                 </div>
-                <div class="col-md-5 col-sm-5 col-xs-12 ">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-2">
+
+                         <div class="col-md-3 ">
                             <div class=" form-group has-success">
                                 <label for="name">Valor de la multa: Q.</label>
                                 <label class="form-control text-right">{{ $multa->infringement->total }}</label>
@@ -176,7 +180,7 @@
                                 <input type="hidden" name="ballot_id" id="ballot_id" value="{{ $multa->id }}">
                             </div>
                         </div>
-                        <div class="col-md-10 col-md-offset-2">
+                        <div class="col-md-3 ">
                             <div class=" form-group @error('total') has-error @enderror">
                                 <label for="name">Valor pagado: Q.</label>
                                 <input id="total" name="total" class="form-control text-right" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 2, 'digitsOptional': false, 'prefix': 'Q ', 'placeholder': '0'" inputmode="numeric" style="text-align: right;">
@@ -186,11 +190,8 @@
                                 </span>
                                 @enderror
                             </div>
-
-
                         </div>
-                    </div>
-                </div>
+
             </div>
         </div>
 </div>

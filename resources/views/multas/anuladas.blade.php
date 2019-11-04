@@ -3,7 +3,7 @@
 @section('title', config('adminlte.title', 'AdminLTE 2'))
 
 @section('content_header')
-<h1>Multas - <small>Anuladas</small></h1>
+<h1>Multas - <small>Listado</small></h1>
 <!-- <a href="{{ route('multas.index') }}" class="btn btn-danger  btn-sm pull-right"><i class="fa fa-file-pdf"></i> Generar reporte</a>
 <a href="{{ route('multas.create') }}" class="btn btn-info  btn-sm pull-right"><i class="fa fa-plus"></i> Agregar multa</a> -->
 @stop
@@ -89,7 +89,7 @@
     }
 
     #bg-text {
-        color: red;
+        color: rgba(255, 51, 51, 0.4);
         font-size: 70px;
         transform: rotate(300deg);
         -webkit-transform: rotate(300deg);

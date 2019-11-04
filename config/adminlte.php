@@ -148,11 +148,7 @@ return [
             'text'    => 'Multas',
             'icon'    => 'fas fa-file-invoice-dollar',
             'submenu' => [
-                [
-                    'text'        => 'Consultar multa',
-                    'url'         => 'multas/consultar',
-                    'icon'        => 'fas fa-search',
-                ],
+
                 [
                     'text'        => 'Multas Activas',
                     'url'         => 'multas/listar',
@@ -171,7 +167,7 @@ return [
 
                 [
                     'text'        => 'Decomiso',
-                    'url'         => 'multas/decomiso',
+                    'url'         => 'multas/decomisos',
                     'icon'        => 'far fa-id-badge',
                 ],
 

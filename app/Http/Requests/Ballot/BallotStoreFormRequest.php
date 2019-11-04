@@ -32,7 +32,7 @@ class BallotStoreFormRequest extends FormRequest
             'date'              => 'required',
             'time'              => 'required',
             'total'             => 'required',
-            'place' => 'required',
+            'place'             => 'required',
             'infringement_summary' => 'required',
             'law_basics' => 'required',
             'traffic_regulations' => 'required',
@@ -42,9 +42,11 @@ class BallotStoreFormRequest extends FormRequest
     public function messages()
     {
         return [
-            'user_id.required'         => 'El campo :attribute es obligatorio',
-            'ballot_no.required'         => 'El campo :attribute es obligatorio',
-            'signed.required'       => 'El campo :attribute es obligatorio'
+            'user_id.required'              => 'El campo :attribute es obligatorio',
+            'ballot_no.required'            => 'El campo es obligatorio',
+            'signed.required'               => 'El campo :attribute es obligatorio',
+            'type_vehicle_id.required'       => 'El campo es obligatorio',
+            'car_plate.required' => 'El campo es obligatorio'
         ];
     }
 }
