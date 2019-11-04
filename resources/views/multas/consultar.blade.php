@@ -13,26 +13,26 @@
     @forelse($multas as $multa)
     <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="panel panel-default">
-            <div class="panel-heading text-right">Vehículo: <strong>{{ $multa->offending_vehicle->car_plate}}</strong></div>
+            <div class="panel-heading text-right">Vehículo: <strong>{{ $multa->ballot->offending_vehicle->car_plate}}</strong></div>
             <div class="panel-body">
                 <div class="jumbotron">
-                    <p>{{($multa->infringement == null) ? 'No hay informacion referente a esta multa' : $multa->infringement->infringement_summary}}</p>
+                    <p>{{($multa->ballot->infringement == null) ? 'No hay informacion referente a esta multa' : $multa->ballot->infringement->infringement_summary}}</p>
                 </div>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <span class="badge">{{$multa->offending_vehicle->mark->name}}</span>
+                        <span class="badge">{{$multa->ballot->offending_vehicle->mark->name}}</span>
                         Marca:
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">{{$multa->offending_vehicle->type_vehicle->type}}</span>
+                        <span class="badge">{{$multa->ballot->offending_vehicle->type_vehicle->type}}</span>
                         Tipo de vehículo:
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">{{$multa->infringement->place}}</span>
+                        <span class="badge">{{$multa->ballot->infringement->place}}</span>
                         Area de la infracción:
                     </li>
                     <li class="list-group-item">
-                        <span class="badge">{{$multa->infringement->total}}</span>
+                        <span class="badge">{{$multa->ballot->infringement->total}}</span>
                         Valor Q:
                     </li>
                 </ul>
