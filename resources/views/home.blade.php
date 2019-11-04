@@ -7,136 +7,136 @@
 @stop
 
 @section('content')
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            Previsualización de resultados
-            <small> Cobros</small>
-        </h1>
-    </section>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Graficas Gerenciales
+        <small> Cobros y Multas</small>
+    </h1>
+</section>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-            <div class="col-xs-12">
-                <!-- interactive chart -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <i class="fa fa-bar-chart-o"></i>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- interactive chart -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-bar-chart-o"></i>
 
-                        <h3 class="box-title">Cobro de Peaje</h3>
+                    <h3 class="box-title">Cobro de Peaje</h3>
 
-                        <div class="box-tools pull-right">
-                            Real time
-                            <div class="btn-group" id="realtime" data-toggle="btn-toggle">
-                                <button type="button" class="btn btn-default btn-xs active" data-toggle="on">On</button>
-                                <button type="button" class="btn btn-default btn-xs" data-toggle="off">Off</button>
-                            </div>
+                    <div class="box-tools pull-right">
+                        Tiempo real
+                        <div class="btn-group" id="realtime" data-toggle="btn-toggle">
+                            <button type="button" class="btn btn-default btn-xs active" data-toggle="on">On</button>
+                            <button type="button" class="btn btn-default btn-xs" data-toggle="off">Off</button>
                         </div>
                     </div>
-                    <div class="box-body">
-                        <div id="interactive" style="height: 300px;"></div>
-                    </div>
-                    <!-- /.box-body-->
                 </div>
-                <!-- /.box -->
-
+                <div class="box-body">
+                    <div id="interactive" style="height: 300px;"></div>
+                </div>
+                <!-- /.box-body-->
             </div>
-            <!-- /.col -->
+            <!-- /.box -->
+
         </div>
-        <!-- /.row -->
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
 
-        <div class="row">
-            <div class="col-md-6">
-                <!-- Line chart -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <i class="fa fa-bar-chart-o"></i>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Line chart -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-bar-chart-o"></i>
 
-                        <h3 class="box-title">Peajes por dia</h3>
+                    <h3 class="box-title">Peajes por dia</h3>
 
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                            </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                        </div>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                     </div>
-                    <div class="box-body">
-                        <div id="line-chart" style="height: 300px;"></div>
-                    </div>
-                    <!-- /.box-body-->
                 </div>
-                <!-- /.box -->
-
-                <!-- Area chart -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <i class="fa fa-bar-chart-o"></i>
-
-                        <h3 class="box-title">Peajes por mes</h3>
-
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                            </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                        </div>
-                    </div>
-                    <div class="box-body">
-                        <div id="area-chart" style="height: 338px;" class="full-width-chart"></div>
-                    </div>
-                    <!-- /.box-body-->
+                <div class="box-body">
+                    <div id="line-chart" style="height: 300px;"></div>
                 </div>
-                <!-- /.box -->
-
+                <!-- /.box-body-->
             </div>
-            <!-- /.col -->
+            <!-- /.box -->
 
-            <div class="col-md-6">
-                <!-- Bar chart -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <i class="fa fa-bar-chart-o"></i>
+            <!-- Area chart -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-bar-chart-o"></i>
 
-                        <h3 class="box-title">Remisiones por semana</h3>
+                    <h3 class="box-title">Peajes por mes</h3>
 
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                            </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                        </div>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                     </div>
-                    <div class="box-body">
-                        <div id="bar-chart" style="height: 300px;"></div>
-                    </div>
-                    <!-- /.box-body-->
                 </div>
-                <!-- /.box -->
-
-                <!-- Donut chart -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <i class="fa fa-bar-chart-o"></i>
-
-                        <h3 class="box-title">Remisiones por mes</h3>
-
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                            </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                        </div>
-                    </div>
-                    <div class="box-body">
-                        <div id="donut-chart" style="height: 300px;"></div>
-                    </div>
-                    <!-- /.box-body-->
+                <div class="box-body">
+                    <div id="area-chart" style="height: 338px;" class="full-width-chart"></div>
                 </div>
-                <!-- /.box -->
+                <!-- /.box-body-->
             </div>
-            <!-- /.col -->
+            <!-- /.box -->
+
         </div>
-        <!-- /.row -->
-    </section>
-    <!-- /.content -->
+        <!-- /.col -->
+
+        <div class="col-md-6">
+            <!-- Bar chart -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-bar-chart-o"></i>
+
+                    <h3 class="box-title">Remisiones por mes</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div id="bar-chart" style="height: 300px;"></div>
+                </div>
+                <!-- /.box-body-->
+            </div>
+            <!-- /.box -->
+
+            <!-- Donut chart -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-bar-chart-o"></i>
+
+                    <h3 class="box-title">Remisiones por mes</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div id="donut-chart" style="height: 300px;"></div>
+                </div>
+                <!-- /.box-body-->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->
 @stop
 
 @section('js')

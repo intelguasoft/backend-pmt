@@ -106,6 +106,22 @@
                     <h3 class="section-title">Nosotros</h3>
                     <span class="section-divider"></span>
                     <p class="section-description">
+                        La Policía Municipal de Tránsito – PMT – fue creada en el año 1998, de acuerdo con el alcalde metropolitana de la época, Óscar Berger Perdomo.
+
+                        El objetivo de la creación de la Policía Municipal de Tránsito era y sigue siendo:
+
+                        Supervisar y regular el tránsito en la ciudad.
+                        Montaje de operativos varios (alcoholímetros, carreras clandestinas, transporte pesado, etc.).
+                        Operativos de control de buses y taxis.
+                        Apoyo a eventos socioculturales, recreativos y deportivos.
+                        Ejecución de planes operativos y órdenes de servicio.
+                        Apoyo a infraestructura, señalización y cambios de vía.
+                        Prevención de accidentes y orientación a los conductores; en los cambios efectuados por la comuna.
+                        La Policía Municipal de Tránsito inició con 95 agentes de tránsito, de los cuales 19 eran mujeres, también se inició con 25 autopatrullas, 30 motocicletas y un helicóptero, iniciando labores el día 28 de febrero de 1998.
+
+                        Los agentes recibieron un adiestramiento de cuatro meses a cargo de una empresa técnica en sistemas de seguridad, además de que un requisito muy importante para optar a ser parte de la PMT era haber cerrado pensum de Diversificado.
+
+                        No olvides que la Policía Municipal de Tránsito de la Ciudad de Guatemala, se caracteriza por el orden y la disciplina, estando al servicio del vecino en el momento que más lo necesita, y siendo eso, uno de los principales objetivos por cumplir día con día en la Ciudad de Guatemala.
                         Somos una institución municipal semiautonoma encargada de velar por el ordenamiento vial,<br />coordinar y regular el transito y transporte en el Municipio de El Estor, del Departamento de Izabal,<br />por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y<br />otras Leyes referentes a Tránsito.
                     </p>
                 </div>

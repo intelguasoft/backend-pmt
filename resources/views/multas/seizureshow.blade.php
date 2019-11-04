@@ -159,20 +159,41 @@
                 </div>
             </div>
         </div>
-        <h1 class="bg-info text-info"><small>Policía Municipal de Tránsito</small></h1>
+        <h1 class="bg-info text-info"><small>Detalles del decomiso</small></h1>
         <div class="row">
-            <div class="form">
-                <label for="description">Razon:</label>
-                <textarea disabled class="form-control" name="description" rows="5" placeholder="Descripción del vehículo" aria-describedby="help-description" readonly></textarea>
+            <div class="col-md-7 col-sm-7 col-xs-12">
+                <div class=" form-group">
+                    <label for="name">Comentario:</label>
+                    <textarea class="form-control" name="comment" id="comment" cols="30" rows="8">
+                        Por motivo de vencimiento del plazo que le fue concedido al
+                        vehiculo infractor se orden el decomiso el vehiclo antes identificado,
+                        por orden del juzgado de paz del Municipio de El Estor departamento de
+                        izabal.
+                        Con fecha ___________________.
+                        VoBo.
+                        Juez de Paz  Nombre:________________
+                        </textarea>
+                </div>
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-12 col-md-offset-5"">
-                <div class=" form-group has-success">
-                <label for="name">Valor de la multa: Q.</label>
-                <label class="form-control text-right">{{$multa->infringement->total}}</label>
+            <div class="col-md-5 col-sm-5 col-xs-12 ">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-2">
+                        <div class=" form-group has-success">
+                            <label for="name">Firma del Juez.</label>
+                            <label class="form-control text-right"></label>
+
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-md-offset-2">
+                        <div class=" form-group @error('total') has-error @enderror">
+                            <label for="name">Firma del enterante.</label>
+                            <label class="form-control text-right"></label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div> <!-- /.box-body -->
 <div class="box-footer">
     <div class="fa-pull-right">

@@ -25,7 +25,8 @@ class PaymentBallotStoreFormRequest extends FormRequest
     {
         return
             [
-                'total' => 'required|confirmed'
+                'total' => 'required|confirmed',
+                'comment' => 'required'
             ];
     }
     public function messages()
@@ -33,7 +34,8 @@ class PaymentBallotStoreFormRequest extends FormRequest
         return
             [
                 'total.required' => 'Este campo es requerido',
-                'total.confirmed' => 'El valor ingresado no coincide con el valor de la boleta'
+                'total.confirmed' => 'El valor ingresado no coincide con el valor de la boleta',
+                'comment.required' => 'Por favor ingrese el Número de boleta Municipal'
             ];
     }
 }
