@@ -46,17 +46,22 @@ class PeajeController extends Controller
     {
         // Storage::disk('local')->makeDirectory('fonts/', 0775, true);
         $ahora = \Carbon\Carbon::now()->format('Y-m-d');
+
+        $hoy = \Carbon\Carbon::now();
+        $hoy->format('d-m-y_h:i:s');
         // dd($ahora);
         $peajes = Toll::with('type_toll_vehicle')->where('date', $ahora)->get();
         $peajesTemp = Toll::where('date', $ahora)->get();
         $total_dia = $peajesTemp->sum('type_toll_vehicle.cost');
         $pdf = PDF::loadView('peaje.reportes.diario', ['peajes' => $peajes, 'total_dia' => $total_dia]);
-        return $pdf->download('reporte-peaje-diario.pdf');
+        return $pdf->download("reporte-peaje-diario$hoy.pdf");
         // return view('peaje.reportes.diario', ['peajes' => $peajesTemp, 'total_dia' => $total_dia]);
     }
 
     public function generate_mensual(Request $request)
     {
+         $hoy = \Carbon\Carbon::now();
+        $hoy->format('d-m-y_h:i:s');
         // $inicial = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('inicial'));
         // $inicialdt = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('inicial'));
         $arrInicial = explode('-', $request->input('inicial'));
@@ -68,7 +73,7 @@ class PeajeController extends Controller
         $peajesTemp = Toll::whereBetween('date', [$inicial, $final])->get();
         $total_dia = $peajesTemp->sum('type_toll_vehicle.cost');
         $pdf = PDF::loadView('peaje.reportes.mensual', ['peajes' => $peajesTemp, 'total_dia' => $total_dia, 'inicial' => $inicial, 'final' => $final]);
-        return $pdf->download('reporte-peaje-diario.pdf');
+        return $pdf->download("reporte-peaje-mensual$hoy.pdf");
         // return view('peaje.reportes.diario', ['peajes' => $peajesTemp, 'total_dia' => $total_dia]);
     }
 }

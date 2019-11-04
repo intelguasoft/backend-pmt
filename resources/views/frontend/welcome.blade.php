@@ -12,7 +12,7 @@
 
     <!-- Favicons -->
     <link href="./landing/img/favicon.ico" rel="icon">
-    <link href="./landing/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="./landing/img/iconpmt.jpg" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -73,22 +73,22 @@
 
         <div class="intro-text">
             <h2></h2>
-            <p>Velar por el ordenamiento vial, coordinar y regular el transito y transporte en el Municipio de El Estor, del Departamento de Izabal, por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y otras Leyes referentes a Tránsito.</p>
+            <p class="text-justify">Velar por el ordenamiento vial, coordinar y regular el tránsito y transporte en el Municipio de El Estor, del Departamento de Izabal, por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y otras Leyes referentes a Tránsito.</p>
             <a href="/ver-multas" class="btn-get-started scrollto">Ver multas</a>
         </div>
 
         <div class="product-screens">
 
             <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
-                <img src="./landing/img/product-screen-1.png" alt="">
+                <img src="./landing/img/PMT4.jpg" alt="">
             </div>
 
             <div class="product-screen-2 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
-                <img src="./landing/img/product-screen-2.png" alt="">
+                <img src="./landing/img/PMT5.png" alt="">
             </div>
 
             <div class="product-screen-3 wow fadeInUp" data-wow-duration="0.6s">
-                <img src="./landing/img/product-screen-3.png" alt="">
+                <img src="./landing/img/PMT1.png" alt="">
             </div>
 
         </div>
@@ -105,48 +105,46 @@
                 <div class="section-header">
                     <h3 class="section-title">Nosotros</h3>
                     <span class="section-divider"></span>
-                    <p class="section-description">
-                        La Policía Municipal de Tránsito – PMT – fue creada en el año 1998, de acuerdo con el alcalde metropolitana de la época, Óscar Berger Perdomo.
+                    <div class="section-description text-justify" style="margin:5px 10px">
+                        <p>La Policía Municipal de Tránsito – PMT – fue creada en el año 2,016, de acuerdo con el alcalde municipal de la época, Rony Méndez Caal.</p>
 
-                        El objetivo de la creación de la Policía Municipal de Tránsito era y sigue siendo:
+                        <p class="text-justify">
+                            La Policía Municipal de Tránsito inició con 12 agentes de tránsito,
+                            de los cuales 4 eran mujeres, también se inició con 1 autopatrulla
+                            y 2 motocicletas, iniciando labores en marzo de 2016.
+                            Los agentes recibieron un adiestramiento de cuatro meses a cargo de
+                            una empresa técnica en sistemas de seguridad, además de que un requisito
+                            muy importante para optar a ser parte de la PMT era haber cerrado pensum
+                            de Diversificado.<br />
+                            <br />
+                            No olvides que la Policía Municipal de Tránsito de la El Estor, Izabal.
+                            Se caracteriza por el orden y la disciplina, estando al servicio del vecino
+                            en el momento que más lo necesita, y siendo eso, uno de los principales objetivos
+                            por cumplir día con día en El Estor, Izabal. <br />
+                            Somos una institución municipal semiautonoma encargada de velar por el ordenamiento
+                            vial, coordinar y regular el transito y transporte en el Municipio de El Estor, del
+                            Departamento de Izabal, por medio del cumplimiento de la Ley de Transito y su Reglamento,
+                            así como Normas Municipales y otras Leyes referentes a Tránsito.
 
-                        Supervisar y regular el tránsito en la ciudad.
-                        Montaje de operativos varios (alcoholímetros, carreras clandestinas, transporte pesado, etc.).
-                        Operativos de control de buses y taxis.
-                        Apoyo a eventos socioculturales, recreativos y deportivos.
-                        Ejecución de planes operativos y órdenes de servicio.
-                        Apoyo a infraestructura, señalización y cambios de vía.
-                        Prevención de accidentes y orientación a los conductores; en los cambios efectuados por la comuna.
-                        La Policía Municipal de Tránsito inició con 95 agentes de tránsito, de los cuales 19 eran mujeres, también se inició con 25 autopatrullas, 30 motocicletas y un helicóptero, iniciando labores el día 28 de febrero de 1998.
-
-                        Los agentes recibieron un adiestramiento de cuatro meses a cargo de una empresa técnica en sistemas de seguridad, además de que un requisito muy importante para optar a ser parte de la PMT era haber cerrado pensum de Diversificado.
-
-                        No olvides que la Policía Municipal de Tránsito de la Ciudad de Guatemala, se caracteriza por el orden y la disciplina, estando al servicio del vecino en el momento que más lo necesita, y siendo eso, uno de los principales objetivos por cumplir día con día en la Ciudad de Guatemala.
-                        Somos una institución municipal semiautonoma encargada de velar por el ordenamiento vial,<br />coordinar y regular el transito y transporte en el Municipio de El Estor, del Departamento de Izabal,<br />por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y<br />otras Leyes referentes a Tránsito.
-                    </p>
+                        </p>
+                    </div>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6 about-img wow fadeInLeft">
-                        <img src="./landing/img/about-img.jpg" alt="">
+                        <img src="./landing/img/LOGOPMT2.png" alt="">
                     </div>
 
                     <div class="col-lg-6 content wow fadeInRight">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elite storium paralate</h2>
-                        <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-
+                        <h2>El objetivo de la creación de la Policía Municipal de Tránsito era y sigue siendo:</h2>
                         <ul>
-                            <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                            <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                            <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                            <li><i class="ion-android-checkmark-circle"></i>Supervisar y regular el tránsito municipio de El Estor, Izabal.</li>
+                            <li><i class="ion-android-checkmark-circle"></i>Montaje de operativos varios (alcoholímetros, carreras clandestinas, transporte pesado, etc.).</li>
+                            <li><i class="ion-android-checkmark-circle"></i>Operativos de control de buses y taxis.</li>
+                            <li><i class="ion-android-checkmark-circle"></i>Ejecución de planes operativos y órdenes de servicio.</li>
+                            <li><i class="ion-android-checkmark-circle"></i>Apoyo a infraestructura, señalización y cambios de vía.</li>
                         </ul>
 
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Libero justo laoreet sit amet cursus sit amet dictum sit. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec
-                        </p>
                     </div>
                 </div>
 
@@ -163,13 +161,13 @@
 
                     <div class="col-lg-8 offset-lg-4">
                         <div class="section-header wow fadeIn" data-wow-duration="1s">
-                            <h3 class="section-title">Nuestos servicios</h3>
+                            <h3 class="section-title">Nuestos Deber</h3>
                             <span class="section-divider"></span>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-5 features-img">
-                        <img src="./landing/img/product-features.png" alt="" class="wow fadeInLeft">
+                        <img src="./landing/img/PMT6.jpg" alt="" class="wow fadeInLeft">
                     </div>
 
                     <div class="col-lg-8 col-md-7 ">
@@ -179,22 +177,22 @@
                             <div class="col-lg-6 col-md-6 box wow fadeInRight">
                                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
                                 <h4 class="title"><a href="">Cobro de peaje</a></h4>
-                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident clarida perendo.</p>
+                                <p class="description text-justify">Se realiza los cobros de peaje a transporte pesado en nuestra garita municipal, para la inversión en nuestras calles.</p>
                             </div>
                             <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
-                                <div class="icon"><i class="ion-ios-flask-outline"></i></div>
+                                <div class="icon"><i class="ion-model-s"></i></div>
                                 <h4 class="title"><a href="">Ordenamiento vial</a></h4>
-                                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata noble dynala mark.</p>
+                                <p class="description text-justify">En cordinacion de los cocodes establecemos las vias direccionamiento de calles de El Estor, Izabal. Asi mismo establecemos las velocidades limites dentro del casco urbano.</p>
                             </div>
                             <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
-                                <div class="icon"><i class="ion-social-buffer-outline"></i></div>
+                                <div class="icon"><i class="ion-ios-compose-outline"></i></div>
                                 <h4 class="title"><a href="">Imposición de remisión</a></h4>
-                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur teleca starter sinode park ledo.</p>
+                                <p class="description text-justify">Por regulación vial y en marco de la legalidad como institución podemos hacer uso de remisiones para sanciones a vehiculos que infringen la ley de tránsito .</p>
                             </div>
                             <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.3s">
-                                <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-                                <h4 class="title"><a href="">Coordinación de red vial en eventos</a></h4>
-                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum dinoun trade capsule.</p>
+                                <div class="icon"><i class="ion-android-hand"></i></div>
+                                <h5 class="title"><a href="">Coordinación de red vial en eventos</a></h5>
+                                <p class="description text-justify">Brindamos servicio a la sociedad apoyandola en eventos sociales para una mejor seguridad vial.</p>
                             </div>
                         </div>
 
@@ -215,12 +213,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <img class="advanced-feature-img-right wow fadeInRight" src="./landing/img/advanced-feature-1.jpg" alt="">
+                            <img class="advanced-feature-img-right wow fadeInRight" src="./landing/img/PMTEDUCACIONVIAL.jpg" alt="">
                             <div class="wow fadeInLeft">
-                                <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                                <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <h2>Festival construyendo la paz por El Estor, Izabal.</h2>
+                                <h3>SEGURIDAD Y EDUCACIÓN VIAL.</h3>
+                                <p class="text-justify">En cumplimiento con el ordenamiento vial brindan Educación Vial a niños
+                                    quienes hacen presentes dicho festival.</p>
+                                <p class="text-justify">De esta manera se fomenta la Educación Vial de manera adecuada,
+                                    a niños y niñas de nuestro municipio...</p>
                             </div>
                         </div>
                     </div>
@@ -231,15 +231,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <img class="advanced-feature-img-left" src="./landing/img/advanced-feature-2.jpg" alt="">
+                            <img class="advanced-feature-img-left" src="./landing/img/PMTVIAL.png" alt="">
                             <div class="wow fadeInRight">
-                                <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                                <i class="ion-ios-paper-outline" class="wow fadeInRight" data-wow-duration="0.5s"></i>
-                                <p class="wow fadeInRight" data-wow-duration="0.5s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                <i class="ion-ios-color-filter-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
-                                <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                                <i class="ion-ios-barcode-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
-                                <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                                <h2>Ordenamiento Vial</h2>
+                                <i class="ion-android-cancel" class="wow fadeInRight" data-wow-duration="0.5s"></i>
+                                <p class="wow fadeInRight" data-wow-duration="0.5s">La Policia Municipal de Tránsito vela por reparaciones de los semáforos y brinda ayuda la movilidad vial.</p>
+                                <i class="ion-flag wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
+                                <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">La Policia Municipal de Tránsito contribuye a organizacion de vias conjuntamente con los cocodes.</p>
+                                <i class="ion-map wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
+                                <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">La Policia Municipal de Tránsito otorga tarjetas para taxistas conforme a la lista previamente acordada con la junta de taxistas de El Estor, Izabal.</p>
                             </div>
                         </div>
                     </div>
@@ -250,13 +250,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <img class="advanced-feature-img-right wow fadeInRight" src="./landing/img/advanced-feature-3.jpg" alt="">
+                            <img class="advanced-feature-img-right wow fadeInRight" src="./landing/img/PMT1.jpg" alt="">
                             <div class="wow fadeInLeft">
-                                <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                                <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                <h2>Colaboración en actividades</h2>
+                                <h3>Promoviendo la cultura y el deporte.</h3>
                                 <i class="ion-ios-albums-outline"></i>
-                                <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p class="text-justify">Como parte de los compromisos adquiridos a la sociedad la Policia Municipalidad de Tránsito de El Estor, Izabal. Apoya en la diferentes actividades socio-culturales, para promover el deporte y asi fomententar el la disciplina a los niños, jovenes y adultos de El Estor, Izabal.</p>
                             </div>
                         </div>
                     </div>
@@ -285,7 +284,7 @@
         <!--==========================
     More Features Section
 ============================-->
-        <section id="more-features" class="section-bg">
+        <!-- <section id="more-features" class="section-bg">
             <div class="container">
 
                 <div class="section-header">
@@ -330,7 +329,8 @@
 
                 </div>
             </div>
-        </section><!-- #more-features -->
+        </section> -->
+        <!-- #more-features -->
 
         <!--==========================
     Clients

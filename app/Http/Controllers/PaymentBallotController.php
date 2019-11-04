@@ -7,6 +7,8 @@ use Edgar\PMT\Http\Requests\PaymentBallot\PaymentBallotStoreFormRequest;
 use Edgar\PMT\Models\PaymentBallot;
 use Edgar\PMT\Models\Ballot;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
+use DateTime;
 
 class PaymentBallotController extends Controller
 {
@@ -28,12 +30,15 @@ class PaymentBallotController extends Controller
     public function index(Request $request)
     {
         // dd($request->all());
+        $inicial = \Carbon\Carbon::now()->startOfMonth()->toDateString();
+        $final = \Carbon\Carbon::now()->endOfMonth()->toDateString();
         if (isset($request->q)) {
             $multaspagadas = PaymentBallot::where('name', 'like', "%$request->q%")->paginate(10);
         } else {
             $multaspagadas = PaymentBallot::paginate(10);
         }
-        return view('admin.multas-cobradas.index')->with('multaspagadas', $multaspagadas);
+        return view('admin.multas-cobradas.index')->with('multaspagadas', $multaspagadas)
+        ->with('inicial', $inicial)->with('final', $final);
     }
 
     /**
@@ -130,5 +135,24 @@ class PaymentBallotController extends Controller
     public function destroy(PaymentBallot $paymentBallot)
     {
         //
+    }
+
+    public function generate_mensual(Request $request)
+    {
+        // $inicial = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('inicial'));
+        // $inicialdt = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('inicial'));
+        $hoy = Carbon::now();
+        $hoy->format('d-m-y_h:i:s');
+        $arrInicial = explode('-', $request->input('inicial'));
+        $arrFinal = explode('-', $request->input('final'));
+        $inicial = $dt = \Carbon\Carbon::create($arrInicial[2], $arrInicial[1], $arrInicial[0]);
+        $final = $dt = \Carbon\Carbon::create($arrFinal[2], $arrFinal[1], $arrFinal[0]);
+        // dd($inicialdt, $finaldt);
+        // Storage::disk('local')->makeDirectory('fonts/', 0775, true);
+        $paymenBallotemp = PaymentBallot::whereBetween('date', [$inicial, $final])->get();
+        $total = $paymenBallotemp->sum('total');
+        $pdf = PDF::loadView('admin.multas-cobradas.reporte.mensual', ['multaspagadas' => $paymenBallotemp, 'total' => $total, 'inicial' => $inicial, 'final' => $final]);
+        return $pdf->download("reporte-multas-pagadas-$hoy.pdf");
+        // return view('peaje.reportes.diario', ['peajes' => $peajesTemp, 'total_dia' => $total_dia]);
     }
 }

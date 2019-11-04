@@ -4,7 +4,31 @@
 
 @section('content_header')
 <h1>Multas - <small>Cobros</small></h1>
-<a href="{{ route('multas-cobradas.listar') }}" class="btn btn-info  btn-sm pull-right"><i class="fa fa-users-cog"></i>Cobrar Multa</a>
+
+<form action="{{ route('multa.generate.mensual') }}" method="get">
+    <div class="row">
+        @csrf
+        <div class="col-md-3 col-md-offset-1">
+            <div class="input-group date">
+                <div class="input-group-addon">Inicial: </div>
+                <input type="text" autocomplete="off" class="datepicker text-right form-control pull-right" data-date-format="dd-mm-yyyy" name="inicial" id="inicial" value="{{ \Carbon\Carbon::parse($inicial)->format('d-m-Y') }}">
+            </div>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+            <div class="input-group date">
+                <div class="input-group-addon">Final: </div>
+                <input type="text" autocomplete="off" class="datepicker text-right form-control pull-right" data-date-format="dd-mm-yyyy" name="final" id="final" value="{{ \Carbon\Carbon::parse($final)->format('d-m-Y') }}">
+            </div>
+        </div>
+
+        <div class="col-md-3 col-md-offset-1">
+            <button type="submit" class="btn btn-block btn-danger  btn-sm pull-right"><i class="fa fa-file-pdf"></i>&NonBreakingSpace; Generar reporte</button>
+        </div>
+           <div class="col-md-3 col-md-offset-1">
+            <a href="{{ route('multas-cobradas.listar') }}" class="btn btn-info  btn-sm pull-right"><i class="fa fa-users-cog"></i>Cobrar Multa</a>
+        </div>
+    </div>
+</form>
 @stop
 
 @section('content')
