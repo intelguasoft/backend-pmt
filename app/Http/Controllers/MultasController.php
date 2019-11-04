@@ -41,6 +41,11 @@ class MultasController extends Controller
      */
     public function anuladas()
     {
+        if (\Route::current()->getName() == 'multas.anuladas') {
+
+            dd(\Route::current()->getName());
+
+        }
 
         $ballots = Ballot::where('is_voided', true)->orderBy('id', 'desc')->paginate(6);
         // dd($ballots);
@@ -54,18 +59,19 @@ class MultasController extends Controller
     public function consultar(Request $request)
     {
         $q = $request->query('q');
+        $pagadas = PaymentBallot::pluck('ballot_id');
         if (!is_null($q) && !empty($q))
         {
             // dd($q);
-            $ballots = OffendingVehicle::with('ballot')->where('car_plate', $q)->get();
-            dd($ballots);
+            $ballots = OffendingVehicle::with('ballot')->where('car_plate', 'LIKE' , $q.'%')->orderBy('ballot_id', 'desc')->paginate(6);
+            // dd($ballots[0]->ballot->offending_vehicle->car_plate);
+        }
+        else
+        {
+            $ballots = OffendingVehicle::with('ballot')->orderBy('ballot_id', 'desc')->paginate(6);
 
         }
-        $pagadas = PaymentBallot::pluck('ballot_id');
 
-        // dd($pagadas->toArray());
-
-        $ballots = Ballot::whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->paginate(6);
         return view('multas.consultar', ['multas' => $ballots]);
     }
 
