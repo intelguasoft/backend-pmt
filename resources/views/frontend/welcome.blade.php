@@ -105,22 +105,22 @@
                 <div class="section-header">
                     <h3 class="section-title">Nosotros</h3>
                     <span class="section-divider"></span>
-                    <div class="section-description text-justify"style="margin:5px 10px">
-                        <p >La Policía Municipal de Tránsito – PMT – fue creada en el año 2,016, de acuerdo con el alcalde municipal de la época, Rony Méndez Caal.</p>
+                    <div class="section-description text-justify" style="margin:5px 10px">
+                        <p>La Policía Municipal de Tránsito – PMT – fue creada en el año 2,016, de acuerdo con el alcalde municipal de la época, Rony Méndez Caal.</p>
 
-                        <p class ="text-justify">
+                        <p class="text-justify">
                             La Policía Municipal de Tránsito inició con 12 agentes de tránsito,
                             de los cuales 4 eran mujeres, también se inició con 1 autopatrulla
                             y 2 motocicletas, iniciando labores en marzo de 2016.
                             Los agentes recibieron un adiestramiento de cuatro meses a cargo de
                             una empresa técnica en sistemas de seguridad, además de que un requisito
                             muy importante para optar a ser parte de la PMT era haber cerrado pensum
-                            de Diversificado.<br/>
-                            <br/>
+                            de Diversificado.<br />
+                            <br />
                             No olvides que la Policía Municipal de Tránsito de la El Estor, Izabal.
                             Se caracteriza por el orden y la disciplina, estando al servicio del vecino
                             en el momento que más lo necesita, y siendo eso, uno de los principales objetivos
-                            por cumplir día con día en El Estor, Izabal. <br/>
+                            por cumplir día con día en El Estor, Izabal. <br />
                             Somos una institución municipal semiautonoma encargada de velar por el ordenamiento
                             vial, coordinar y regular el transito y transporte en el Municipio de El Estor, del
                             Departamento de Izabal, por medio del cumplimiento de la Ley de Transito y su Reglamento,
@@ -177,7 +177,7 @@
                             <div class="col-lg-6 col-md-6 box wow fadeInRight">
                                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
                                 <h4 class="title"><a href="">Cobro de peaje</a></h4>
-                                <p class="description text-justify" >Se realiza los cobros de peaje a transporte pesado en nuestra garita municipal, para la inversión en nuestras calles.</p>
+                                <p class="description text-justify">Se realiza los cobros de peaje a transporte pesado en nuestra garita municipal, para la inversión en nuestras calles.</p>
                             </div>
                             <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
                                 <div class="icon"><i class="ion-model-s"></i></div>
@@ -218,7 +218,7 @@
                                 <h2>Festival construyendo la paz por El Estor, Izabal.</h2>
                                 <h3>SEGURIDAD Y EDUCACIÓN VIAL.</h3>
                                 <p class="text-justify">En cumplimiento con el ordenamiento vial brindan Educación Vial a niños
-                                     quienes hacen presentes dicho festival.</p>
+                                    quienes hacen presentes dicho festival.</p>
                                 <p class="text-justify">De esta manera se fomenta la Educación Vial de manera adecuada,
                                     a niños y niñas de nuestro municipio...</p>
                             </div>
@@ -254,7 +254,7 @@
                             <div class="wow fadeInLeft">
                                 <h2>Colaboración en actividades</h2>
                                 <h3>Promoviendo la cultura y el deporte.</h3>
-                                   <i class="ion-ios-albums-outline"></i>
+                                <i class="ion-ios-albums-outline"></i>
                                 <p class="text-justify">Como parte de los compromisos adquiridos a la sociedad la Policia Municipalidad de Tránsito de El Estor, Izabal. Apoya en la diferentes actividades socio-culturales, para promover el deporte y asi fomententar el la disciplina a los niños, jovenes y adultos de El Estor, Izabal.</p>
                             </div>
                         </div>
@@ -284,7 +284,7 @@
         <!--==========================
     More Features Section
 ============================-->
-        <section id="more-features" class="section-bg">
+        <!-- <section id="more-features" class="section-bg">
             <div class="container">
 
                 <div class="section-header">
@@ -329,7 +329,8 @@
 
                 </div>
             </div>
-        </section><!-- #more-features -->
+        </section> -->
+        <!-- #more-features -->
 
         <!--==========================
     Clients
