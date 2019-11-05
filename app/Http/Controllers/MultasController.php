@@ -25,13 +25,25 @@ class MultasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $q = $request->query('q');
         $pagadas = PaymentBallot::pluck('ballot_id');
 
-        // dd($pagadas->toArray());
+        if (!is_null($q) && !empty($q)) {
+            $ballots = Ballot::whereHas(
+                'offending_vehicle',
+                function ($query) use ($q) {
+                    $query->where('car_plate', 'like', '%' . $q . '%');
+                }
+            )->whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->paginate(6);
+            // dd($ballots);
 
-        $ballots = Ballot::whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->paginate(6);
+        } else {
+            $ballots = Ballot::whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->paginate(6);
+        }
+
+        // $ballots = Ballot::whereNotIn('id', $pagadas->toArray())->where('is_voided', false)->orderBy('id', 'desc')->paginate(6);
         return view('multas.listar', ['multas' => $ballots]);
     }
     /**
@@ -44,10 +56,14 @@ class MultasController extends Controller
         $q = $request->query('q');
 
         if (!is_null($q) && !empty($q)) {
-            // dd($q);
-            // $ballots = OffendingVehicle::with('ballot')->where('car_plate', 'LIKE', $q . '%')->orderBy('ballot_id', 'desc')->paginate(6);
-            $ballots = Ballot::where('car_plate', 'LIKE', $q . '%')->orderBy('id', 'desc')->paginate(6);
-            // dd($ballots[0]->ballot->offending_vehicle->car_plate);
+            $ballots = Ballot::whereHas(
+                'offending_vehicle',
+                function ($query) use ($q){
+                    $query->where('car_plate', 'like', '%' . $q . '%');
+                }
+            )->where('is_voided', true)->orderBy('id', 'desc')->paginate(6);
+            // dd($ballots);
+
         } else {
             $ballots = Ballot::where('is_voided', true)->orderBy('id', 'desc')->paginate(6);
         }
