@@ -395,81 +395,54 @@
                 <div class="section-header">
                     <h3 class="section-title">Preguntas frecuentes</h3>
                     <span class="section-divider"></span>
-                    <p class="section-description">Si tienes alguna duda sobre nuestros servicios, aca puedes encontrar algunas respuestas a tus preguntas.</p>
+                    <p class="section-description">Si tienes alguna duda sobre nuestros servicios, acá puedes encontrar algunas respuestas a tus preguntas.</p>
                 </div>
 
                 <ul id="faq-list" class="wow fadeInUp">
                     <li>
-                        <a data-toggle="collapse" class="collapsed" href="#faq1">Que hago si me imponen una multa por pasarme el semaforo? <i class="ion-android-remove"></i></a>
+                        <a data-toggle="collapse" class="collapsed" href="#faq1">¿Cómo sé que tengo una multa? <i class="ion-android-remove"></i></a>
                         <div id="faq1" class="collapse" data-parent="#faq-list">
                             <p>
-                                Ya se lo llevo la gran puta, debe pagar la multa por Q. 500.00 en nuestras oficinas en Tesorería Municipal.
+                                Debe de buscar en el portal en la sección multa por la placa del vehículo.
                             </p>
                         </div>
                     </li>
-
                     <li>
-                        <a data-toggle="collapse" class="collapsed" href="#faq2">Que hago si me imponen una multa por pasarme el semaforo? <i class="ion-android-remove"></i></a>
+                        <a data-toggle="collapse" class="collapsed" href="#faq2">¿Dónde puedo pagar la multa ? <i class="ion-android-remove"></i></a>
                         <div id="faq2" class="collapse" data-parent="#faq-list">
                             <p>
-                                Ya se lo llevo la gran puta, debe pagar la multa por Q. 500.00 en nuestras oficinas en Tesorería Municipal.
+                                La multa unicamente puede ser pagada en la oficina de arbitrios municipales.
                             </p>
                         </div>
                     </li>
 
                     <li>
-                        <a data-toggle="collapse" class="collapsed" href="#faq3">Que hago si me imponen una multa por pasarme el semaforo? <i class="ion-android-remove"></i></a>
+                        <a data-toggle="collapse" class="collapsed" href="#faq3">¿Cuál es el proceso que debo seguir para pagar una multa? <i class="ion-android-remove"></i></a>
                         <div id="faq3" class="collapse" data-parent="#faq-list">
                             <p>
-                                Ya se lo llevo la gran puta, debe pagar la multa por Q. 500.00 en nuestras oficinas en Tesorería Municipal.
+                                Primero debe de ir a las oficinas de la PMT El Estor, Izabal, en la siguiente direccion 1a. Calle 5-28 Zona 1,Bo. Centro. Allí le indicaran el proceso a seguir.
                             </p>
                         </div>
                     </li>
 
                     <li>
-                        <a data-toggle="collapse" class="collapsed" href="#faq4">Que hago si me imponen una multa por pasarme el semaforo? <i class="ion-android-remove"></i></a>
+                        <a data-toggle="collapse" class="collapsed" href="#faq4">¿Cuánto tiempo tiene uno para pagar la multa? <i class="ion-android-remove"></i></a>
                         <div id="faq4" class="collapse" data-parent="#faq-list">
                             <p>
-                                Ya se lo llevo la gran puta, debe pagar la multa por Q. 500.00 en nuestras oficinas en Tesorería Municipal.
+                                Según nuestro acuerdo municipal, son 30 dás calendario que tiene para pagar la multa.
                             </p>
                         </div>
                     </li>
 
                     <li>
-                        <a data-toggle="collapse" class="collapsed" href="#faq5">Que hago si me imponen una multa por pasarme el semaforo? <i class="ion-android-remove"></i></a>
+                        <a data-toggle="collapse" class="collapsed" href="#faq5">¿Si pasa los 30 días después de tener una multa que pasa ? <i class="ion-android-remove"></i></a>
                         <div id="faq5" class="collapse" data-parent="#faq-list">
                             <p>
-                                Ya se lo llevo la gran puta, debe pagar la multa por Q. 500.00 en nuestras oficinas en Tesorería Municipal.
+                                El juez municipal en su facultad firmará una orden de decomiso a su vehiculo, para que así pague la multa vigente.
                             </p>
                         </div>
                     </li>
 
-                    <li>
-                        <a data-toggle="collapse" class="collapsed" href="#faq6">Que hago si me imponen una multa por pasarme el semaforo? <i class="ion-android-remove"></i></a>
-                        <div id="faq6" class="collapse" data-parent="#faq-list">
-                            <p>
-                                Ya se lo llevo la gran puta, debe pagar la multa por Q. 500.00 en nuestras oficinas en Tesorería Municipal.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a data-toggle="collapse" class="collapsed" href="#faq7">Que hago si me imponen una multa por pasarme el semaforo? <i class="ion-android-remove"></i></a>
-                        <div id="faq7" class="collapse" data-parent="#faq-list">
-                            <p>
-                                Ya se lo llevo la gran puta, debe pagar la multa por Q. 500.00 en nuestras oficinas en Tesorería Municipal.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a data-toggle="collapse" class="collapsed" href="#faq8">Que hago si me imponen una multa por pasarme el semaforo? <i class="ion-android-remove"></i></a>
-                        <div id="faq8" class="collapse" data-parent="#faq-list">
-                            <p>
-                                Ya se lo llevo la gran puta, debe pagar la multa por Q. 500.00 en nuestras oficinas en Tesorería Municipal.
-                            </p>
-                        </div>
-                    </li>
                 </ul>
 
             </div>
@@ -489,8 +462,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
                             <div class="pic"><img src="./landing/img/team/team-1.jpg" alt=""></div>
-                            <h4>Walter White</h4>
-                            <span>Chief Executive Officer</span>
+                            <span>Agente Municipal</span>
                             <!-- <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-facebook"></i></a>
@@ -503,8 +475,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
                             <div class="pic"><img src="./landing/img/team/team-2.jpg" alt=""></div>
-                            <h4>John Jhinson</h4>
-                            <span>Transit Officer</span>
+
+                            <span>Agente Municipal</span>
                             <!-- <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-facebook"></i></a>
@@ -517,8 +489,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
                             <div class="pic"><img src="./landing/img/team/team-3.jpg" alt=""></div>
-                            <h4>William Anderson</h4>
-                            <span>Transit Officer</span>
+                            <span>Agente Municipal</span>
                             <!-- <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-facebook"></i></a>
@@ -531,8 +502,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="member">
                             <div class="pic"><img src="./landing/img/team/team-4.jpg" alt=""></div>
-                            <h4>Amanda Jepson</h4>
-                            <span>Accountant</span>
+                            <span>Jueza Municipal</span>
                             <!-- <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-facebook"></i></a>
@@ -561,48 +531,48 @@
 
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item wow fadeInUp">
-                            <a href="./landing/img/gallery/gallery-1.jpg" class="gallery-popup">
-                                <img src="./landing/img/gallery/gallery-1.jpg" alt="">
+                            <a href="./landing/img/gallery/PMTAC1.jpg" class="gallery-popup">
+                                <img src="./landing/img/gallery/PMTAC1.jpg" alt="">
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item wow fadeInUp">
-                            <a href="./landing/img/gallery/gallery-2.jpg" class="gallery-popup">
-                                <img src="./landing/img/gallery/gallery-2.jpg" alt="">
+                            <a href="./landing/img/gallery/PMTAC2.jpg" class="gallery-popup">
+                                <img src="./landing/img/gallery/PMTAC2.jpg" alt="">
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item wow fadeInUp">
-                            <a href="./landing/img/gallery/gallery-3.jpg" class="gallery-popup">
-                                <img src="./landing/img/gallery/gallery-3.jpg" alt="">
+                            <a href="./landing/img/gallery/PMTAC3.jpg" class="gallery-popup">
+                                <img src="./landing/img/gallery/PMTAC3.jpg" alt="">
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item wow fadeInUp">
-                            <a href="./landing/img/gallery/gallery-4.jpg" class="gallery-popup">
-                                <img src="./landing/img/gallery/gallery-4.jpg" alt="">
+                            <a href="./landing/img/gallery/PMTAC4.jpg" class="gallery-popup">
+                                <img src="./landing/img/gallery/PMTAC4.jpg" alt="">
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item wow fadeInUp">
-                            <a href="./landing/img/gallery/gallery-5.jpg" class="gallery-popup">
-                                <img src="./landing/img/gallery/gallery-5.jpg" alt="">
+                            <a href="./landing/img/gallery/PMTAC5.jpg" class="gallery-popup">
+                                <img src="./landing/img/gallery/PMTAC5.jpg" alt="">
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item wow fadeInUp">
-                            <a href="./landing/img/gallery/gallery-6.jpg" class="gallery-popup">
-                                <img src="./landing/img/gallery/gallery-6.jpg" alt="">
+                            <a href="./landing/img/gallery/PMTAC6.jpg" class="gallery-popup">
+                                <img src="./landing/img/gallery/PMTAC6.jpg" alt="">
                             </a>
                         </div>
                     </div>
