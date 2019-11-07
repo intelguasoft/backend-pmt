@@ -66,6 +66,7 @@ Route::get('multas/{ballot}/voided', 'MultasController@voided')->name('multas.vo
 Route::put('multas/{ballot}', 'MultasController@anular')->name('multas.anular');
 
 Route::get('graficas/multas/totales-meses', 'GraficasController@totales_meses')->name('graficas.multas.totales.meses');
+Route::get('graficas/pejes/totales-meses', 'GraficasController@peaje_totales_meses')->name('graficas.peajes.totales.meses');
 // Rutas para el area de remisiones.
 // Route::resource('multas/municipios', 'CitiesController');
 

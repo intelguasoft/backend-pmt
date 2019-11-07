@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PaymentBallot extends Model
 {
+    protected $dates = ['date', 'create_at', 'update_at'];
     // public function getDateAttribute()
     // {
     //     // dd($this->attributesToArray());

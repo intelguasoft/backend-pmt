@@ -24,7 +24,7 @@
         <div class="col-md-3 col-md-offset-1">
             <button type="submit" class="btn btn-block btn-danger  btn-sm pull-right"><i class="fa fa-file-pdf"></i>&NonBreakingSpace; Generar reporte</button>
         </div>
-           <div class="col-md-3 col-md-offset-1">
+        <div class="col-md-3 col-md-offset-1">
             <a href="{{ route('multas-cobradas.listar') }}" class="btn btn-info  btn-sm pull-right"><i class="fa fa-users-cog"></i>Cobrar Multa</a>
         </div>
     </div>
@@ -52,7 +52,7 @@
             <td class="text-right">{{ $multaspagada->ballot->ballot_no }}</td>
             <td>{{ $multaspagada->user->full_name}}</td>
             <td>{{ $multaspagada->comment}}</td>
-            <td class="text-right">{{ $multaspagada->date }}</td>
+            <td class="text-right">{{ $multaspagada->date->format('d-m-Y') }}</td>
             <td class="text-right">{{ $multaspagada->time }}</td>
             <td class="text-right">Q. {{ $multaspagada->total }}</td>
             <td>

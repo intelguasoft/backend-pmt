@@ -3,9 +3,10 @@
 namespace Edgar\PMT\Http\Controllers;
 
 use Edgar\PMT\Models\PaymentBallot;
+use Edgar\PMT\Models\Toll;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Khill\Lavacharts\Lavacharts;
+
 
 class GraficasController extends Controller
 {
@@ -48,30 +49,37 @@ class GraficasController extends Controller
             // if($mont)
             // $data[$mont->monthKey - 1] = $order->sums;
         }
-
         return $data_graph;
     }
 
-    public function graph()
+    public function peaje_totales_meses()
     {
-        $lava = new Lavacharts; // See note below for Laravel
+        $data_graph_peajes = [];
+        $data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        $yearlyAmount = Toll::with('type_toll_vehicle')->get()
+            ->groupBy(function ($proj) {
+                return \Carbon\Carbon::parse($proj->date)->format('m');
+            })
+            ->map(function ($year) {
+                return $year->sum('type_toll_vehicle.cost');
+            });
 
-        $finances = $lava->DataTable();
 
-        $finances->addDateColumn('Year')
-            ->addNumberColumn('Sales')
-            ->setDateTimeFormat('Y')
-            ->addRow(['2004', 1000])
-            ->addRow(['2005', 1170])
-            ->addRow(['2006', 660])
-            ->addRow(['2007', 1030]);
+        foreach ($yearlyAmount as $key => $month) {
+            // dd($key);
+            foreach ($data as $i => $d) {
+                if (($i + 1) == $key) {
+                    $data[$i] = $month;
+                }
+                $data_graph_peajes[$i] = [$meses[$i], $data[$i]];
+            }
 
-        $lava->ColumnChart('Finances', $finances, [
-            'title' => 'Company Performance',
-            'titleTextStyle' => [
-                'color'    => '#eb6b2c',
-                'fontSize' => 14
-            ]
-        ]);
+
+            // if($mont)
+            // $data[$mont->monthKey - 1] = $order->sums;
+        }
+
+        return $data_graph_peajes;
     }
 }

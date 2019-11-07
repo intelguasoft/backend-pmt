@@ -43,7 +43,7 @@
         @forelse($peajes as $peaje)
         <tr>
             <td class="text-right">{{ $peaje->id }}</td>
-            <td class="text-right">{{ $peaje->date }}</td>
+            <td class="text-right">{{ $peaje->date->format('d-m-Y') }}</td>
             <td class="text-right">{{ $peaje->time }}</td>
             <td>{{ $peaje->type_toll_vehicle->type_vehicle->type }}</td>
             <td class="text-right">{{ $peaje->type_toll_vehicle->prefix_car_plate }}{{ $peaje->car_plate }}</td>

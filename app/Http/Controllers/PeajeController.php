@@ -35,8 +35,8 @@ class PeajeController extends Controller
         $inicial = \Carbon\Carbon::now()->startOfMonth()->toDateString();
         $final = \Carbon\Carbon::now()->endOfMonth()->toDateString();
         // dd($inicial, $final);
-        $peajes = Toll::with('type_toll_vehicle')->whereBetween('date', [$inicial, $final])->paginate(10);
-        $peajesTemp = Toll::whereBetween('date', [$inicial, $final])->get();
+        $peajes = Toll::with('type_toll_vehicle')->paginate(10);
+        $peajesTemp = Toll::all();
         $total_dia = $peajesTemp->sum('type_toll_vehicle.cost');
         return view('peaje.mensual', compact('peajes', 'total_dia', 'inicial', 'final'));
         $this->generatePdf($peajesTemp, $total_dia);
@@ -60,7 +60,7 @@ class PeajeController extends Controller
 
     public function generate_mensual(Request $request)
     {
-         $hoy = \Carbon\Carbon::now();
+        $hoy = \Carbon\Carbon::now();
         $hoy->format('d-m-y_h:i:s');
         // $inicial = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('inicial'));
         // $inicialdt = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('inicial'));

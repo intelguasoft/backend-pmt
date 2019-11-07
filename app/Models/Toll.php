@@ -42,12 +42,12 @@ class Toll extends Model
      *
      * @return string
      */
-    public function getDateAttribute()
-    {
-        // dd($this->attributesToArray());
-        // return Carbon::parse($value)->format('d-m-Y H:i:s');
-        return date('d/m/Y', strtotime($this->attributes['date']));
-    }
+    // public function getDateAttribute()
+    // {
+    //     // dd($this->attributesToArray());
+    //     // return Carbon::parse($value)->format('d-m-Y H:i:s');
+    //     return date('d/m/Y', strtotime($this->attributes['date']));
+    // }
 
     /**
      * Formatea la fecha de nacimiento para ser almacenada de manera correcta en la base de datos.
@@ -61,11 +61,13 @@ class Toll extends Model
     //     $this->attributes['date'] = $date_parts[2] . '-' . $date_parts[1] . '-' . $date_parts[0];
     // }
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function type_toll_vehicle(){
+    public function type_toll_vehicle()
+    {
         return $this->belongsTo(TypeTollVehicle::class);
     }
 
