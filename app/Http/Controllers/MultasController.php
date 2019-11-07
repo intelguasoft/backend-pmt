@@ -2,6 +2,9 @@
 
 namespace Edgar\PMT\Http\Controllers;
 
+use Barryvdh\DomPDF\PDF as BarryvdhPDF;
+use PDF2;
+use SnappyImage;
 use Edgar\PMT\Http\Requests\Ballot\BallotStoreFormRequest;
 use Edgar\PMT\Models\Ballot;
 use Edgar\PMT\Models\Infringement;
@@ -16,7 +19,9 @@ use Edgar\PMT\Models\PaymentBallot;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
+
 
 class MultasController extends Controller
 {
@@ -58,7 +63,7 @@ class MultasController extends Controller
         if (!is_null($q) && !empty($q)) {
             $ballots = Ballot::whereHas(
                 'offending_vehicle',
-                function ($query) use ($q){
+                function ($query) use ($q) {
                     $query->where('car_plate', 'like', '%' . $q . '%');
                 }
             )->where('is_voided', true)->orderBy('id', 'desc')->paginate(6);
@@ -195,7 +200,18 @@ class MultasController extends Controller
 
     public function print(Ballot $ballot)
     {
-        return view('multas.reportes.print', ['multa' => $ballot]);
+
+        $hoy = \Carbon\Carbon::now();
+        $hoy->format('d-m-y_h:i:s');
+        $pdf = PDF2::loadView('multas.reportes.print', ['multa' => $ballot]);
+        return $pdf->download('multa.pdf');
+
+        // $pdf = new PDF('', '../../../vendor/wemersonjanuario/wkhtmltopdf-windows/bin/64bit/wkhtmltopdf.exe');
+        // // $pdf = new PDF($cmd, '../../../vendor/wemersonjanuario/wkhtmltopdf-windows/bin/64bit/wkhtmltopdf');
+        // // $pdf = new PDF('../../../vendor/wemersonjanuario/wkhtmltopdf-windows/bin/wkhtmltopdf-windows');
+        // $pdf->loadHTMLFile('multas.reportes.print')->lowquality()->pageSize('Latter')->get();
+        // // $pdf = PDF::loadView('multas.reportes.print', ['multa' => $ballot]);
+        // return $pdf->download("multa.pdf");
     }
 
     /**

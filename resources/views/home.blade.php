@@ -47,19 +47,14 @@
     <!-- /.row -->
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-xs-12">
             <!-- Line chart -->
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <i class="fa fa-bar-chart-o"></i>
 
-                    <h3 class="box-title">Peajes por dia</h3>
-
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
+                    <div id="perf_div"></div>
+                    {!! $finanzas->render('ColumnChart', 'Finances', 'perf_div') !!}
                 </div>
                 <div class="box-body">
                     <div id="line-chart" style="height: 300px;"></div>
@@ -69,7 +64,7 @@
             <!-- /.box -->
 
             <!-- Area chart -->
-            <div class="box box-primary">
+            <!-- <div class="box box-primary">
                 <div class="box-header with-border">
                     <i class="fa fa-bar-chart-o"></i>
 
@@ -85,58 +80,63 @@
                     <div id="area-chart" style="height: 338px;" class="full-width-chart"></div>
                 </div>
                 <!-- /.box-body-->
-            </div>
+            <!-- </div> -->
             <!-- /.box -->
 
-        </div>
-        <!-- /.col -->
+            <!-- </div> -->
+            <!-- /.col -->
 
-        <div class="col-md-6">
-            <!-- Bar chart -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <i class="fa fa-bar-chart-o"></i>
+            <div class="col-xs-12">
+                <!-- Bar chart -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <i class="fa fa-bar-chart-o"></i>
 
-                    <h3 class="box-title">Remisiones por mes</h3>
+                        <h3 class="box-title">Total recaudado de multas por mes</h3>
 
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                    class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i
+                                    class="fa fa-times"></i></button>
+                        </div>
                     </div>
-                </div>
-                <div class="box-body">
-                    <div id="bar-chart" style="height: 300px;"></div>
-                </div>
-                <!-- /.box-body-->
-            </div>
-            <!-- /.box -->
-
-            <!-- Donut chart -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <i class="fa fa-bar-chart-o"></i>
-
-                    <h3 class="box-title">Remisiones por mes</h3>
-
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    <div class="box-body">
+                        <div id="bar-chart" style="height: 300px;"></div>
                     </div>
+                    <!-- /.box-body-->
                 </div>
-                <div class="box-body">
-                    <div id="donut-chart" style="height: 300px;"></div>
+                <!-- /.box -->
+
+                <!-- Donut chart -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <i class="fa fa-bar-chart-o"></i>
+
+                        <h3 class="box-title">total</h3>
+
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                    class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i
+                                    class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div id="donut-chart" style="height: 300px;"></div>
+                    </div>
+                    <!-- /.box-body-->
                 </div>
-                <!-- /.box-body-->
+                <!-- /.box -->
             </div>
-            <!-- /.box -->
+            <!-- /.col -->
         </div>
-        <!-- /.col -->
-    </div>
-    <!-- /.row -->
+        <!-- /.row -->
 </section>
 <!-- /.content -->
+
 @stop
 
 @section('js')
@@ -355,17 +355,17 @@
          * ---------
          */
 
+        $.get("{{ route('graficas.multas.totales.meses') }}", function(data_s, status) {
+            // alert("Data: " + data + "\nStatus: " + status);
+            bar_data.data = data_s;
+            console.log(bar_data);
+        });
+
         var bar_data = {
-            data: [
-                ['January', 10],
-                ['February', 8],
-                ['March', 4],
-                ['April', 13],
-                ['May', 17],
-                ['June', 9]
-            ],
+            data: [],
             color: '#3c8dbc'
         }
+
         $.plot('#bar-chart', [bar_data], {
             grid: {
                 borderWidth: 1,
@@ -384,6 +384,8 @@
                 tickLength: 0
             }
         })
+        console.log(bar_data);
+
         /* END BAR CHART */
 
         /*

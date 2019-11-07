@@ -13,14 +13,14 @@
 </head>
 
 <body>
-    <div class="container">
+    <table>
         <h1 class="text-center text-info"><small>Boleta de infracción</small></h1>
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-5 text-success">
+            <div class="col-sm-6 col-sm-6 col-xs-6 text-success">
                 <h3>PMT (Policia Municipal de Transito)</h3>
                 <h4><small>El Estor, Izabal.</small></h4>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-5 offset-md-4">
+            <div class="col-md-2 col-sm-4 col-xs-6 offset-md-4">
                 <div class="form-group has-error">
                     <label for="name">No. Boleta:</label>
                     <label class="form-control text-danger text-right">{{$multa->ballot_no}}</label>
@@ -29,13 +29,13 @@
         </div>
         <h3 class="bg-info text-light"><small>Infractor</small></h3>
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
                     <label for="name">Nombre:</label>
                     <label class="form-control">{{$multa->offender->first_name}}</label>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="form-group">
                     <label for="name">Apellidos:</label>
                     <label class="form-control">{{$multa->offender->last_name}}</label>
@@ -168,12 +168,12 @@
             </div>
             <div class="col-md-2 col-sm-2 col-xs-12 offset-md-4"">
                 <div class=" form-group">
-                    <label for="name">Valor de la multa: Q.</label>
-                    <label class="form-control text-right">{{$multa->infringement->total}}</label>
-                </div>
+                <label for="name">Valor de la multa: Q.</label>
+                <label class="form-control text-right">{{$multa->infringement->total}}</label>
             </div>
         </div>
-    </div>
+        </div>
+    </table>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
