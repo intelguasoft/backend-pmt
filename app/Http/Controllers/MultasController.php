@@ -195,7 +195,9 @@ class MultasController extends Controller
 
     public function print(Ballot $ballot)
     {
-        return view('multas.reportes.print', ['multa' => $ballot]);
+        $pdf = PDF::loadView('peaje.reportes.print', ['peajes' => $ballot]);
+        return $pdf->download("reporte-peaje-mensual$hoy.pdf");
+        // return view('multas.reportes.print', ['multa' => $ballot]);
     }
 
     /**

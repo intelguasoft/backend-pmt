@@ -74,7 +74,7 @@
         <div class="intro-text">
             <h2></h2>
             <p class="text-justify">Velar por el ordenamiento vial, coordinar y regular el tránsito y transporte en el Municipio de El Estor, del Departamento de Izabal, por medio del cumplimiento de la Ley de Transito y su Reglamento, así como Normas Municipales y otras Leyes referentes a Tránsito.</p>
-            <a href="/ver-multas" class="btn-get-started scrollto">Ver multas</a>
+            <a href="#show-tolls" class="btn-get-started scrollto">Ver multas</a>
         </div>
 
         <div class="product-screens">
@@ -374,15 +374,94 @@
         <section id="show-tolls">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 text-center text-lg-left">
+                    <div class="col-md-7 text-justify text-lg-left">
                         <h3 class="cta-title">Multas</h3>
-                        <p class="cta-text">¿Quieres saber si tienes alguna multa pendiente de pago.?<br />Si tienes alguna multa pendiente de pago, debes dirigirte a nuestras oficinas los mas pronto posible y<br />evitar recargos por incumplimiento de deberes.</p>
+                        <p class="cta-text">¿Quieres saber si tienes alguna multa pendiente de pago.?</p>
+                        <p class="cta-text">Si tienes alguna multa pendiente de pago, debes dirigirte a nuestras oficinas los mas pronto posible y evitar recargos por incumplimiento de deberes.</p>
                     </div>
-                    <div class="col-lg-3 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="#">Ir al portal</a>
+                    <div class="col-md-5">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group @error('prefijo') has-error @enderror">
+                                        <label for="prefijo" class="cta-text">Tipo de placa:</label>
+                                        <select class="form-control" name="prefijo" id="prefijo" placeholder="Perfil">
+                                            <option value="">[Seleccione]</option>
+                                            <option value="P" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'P' ? "selected":"") }}>P</option>
+                                            <option value="C" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'C' ? "selected":"") }}>C</option>
+                                            <option value="M" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'M' ? "selected":"") }}>M</option>
+                                            <option value="A" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'A' ? "selected":"") }}>A</option>
+                                            <option value="U" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'U' ? "selected":"") }}>U</option>
+                                            <option value="CD" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'CD' ? "selected":"") }}>CD</option>
+                                            <option value="MI" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'MI' ? "selected":"") }}>MI</option>
+                                            <option value="DIS" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'DIS' ? "selected":"") }}>DIS</option>
+                                            <option value="O" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'O' ? "selected":"") }}>O</option>
+                                            <option value="CC" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'CC' ? "selected":"") }}>CC</option>
+                                            <option value="E" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'E' ? "selected":"") }}>E</option>
+                                            <option value="EXT" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'EXT' ? "selected":"") }}>EXT</option>
+                                            <option value="TC" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'TC' ? "selected":"") }}>TC</option>
+                                            <option value="TRC" {{ (\Illuminate\Support\Facades\Input::old("prefijo") == 'TRC' ? "selected":"") }}>TRC</option>
+                                        </select>
+                                        @error('prefijo')
+                                        <span class="help-block">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group @error('placa') has-error @enderror">
+                                        <label for="placa" class="cta-text">Número de placa</label>
+                                        <input type="text" class="form-control" id="placa" name="placa" value="{{ \Illuminate\Support\Facades\Input::old('placa') }}" aria-describedby="placaHelp" placeholder="432PTT">
+                                        <small id="placaHelp" class="form-text cta-text">Ingrese la placa de su vehículo.</small>
+                                        @error('placa')
+                                        <span class="help-block">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-dark btn-block">Buscar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- <a class="align-middle" href="#">Ir al portal</a> -->
+
                     </div>
                 </div>
-
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-striped table-dark">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Placa</th>
+                                    <th scope="col">Marca</th>
+                                    <th scope="col">Color</th>
+                                    <th scope="col">Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse($multas as $multa)
+                                <tr>
+                                    <th scope="row">{{$multa->offending_vehicle->car_plate}}</th>
+                                    <td>{{$multa->offending_vehicle->mark->name}}</td>
+                                    <td>{{$multa->offending_vehicle->color_design}}</td>
+                                    <td>{{$multa->infringement->date}}</td>
+                                </tr>
+                                @empty
+                                <tr>
+                                    <td colspan="4" class="text-center">No hay datos</td>
+                                </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </section><!-- #call-to-action -->
 
@@ -707,6 +786,15 @@
 
     <!-- Template Main Javascript File -->
     <script src="./landing/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            @if($scroll)
+            $('html, body').animate({
+                scrollTop: $('#show-tolls').offset().top
+            }, 'slow');
+            @endif
+        });
+    </script>
 
 </body>
 
