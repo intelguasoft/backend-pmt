@@ -132,18 +132,24 @@ return [
             'text' => 'Buscar',
             'search' => true,
         ],
-        ['header' => 'Reportes de Peaje'],
+        ['header' => ' Peaje'],
         [
-            'text' => 'Cobro diario',
-            'url'  => 'peaje/diario',
-            'icon' => 'fas fa-fw fa-piggy-bank',
+            'text'    => 'Peajes',
+            'icon'    => 'fas fa-file-invoice-dollar',
+            'submenu' => [
+                [
+                    'text' => 'Cobro diario',
+                    'url'  => 'peaje/diario',
+                    'icon' => 'fas fa-fw fa-piggy-bank',
+                ],
+                [
+                    'text' => 'Consolidado mensual',
+                    'url'  => 'peaje/mensual',
+                    'icon' => 'fas fa-fw fa-money-check',
+                ],
+            ],
         ],
-        [
-            'text' => 'Consolidado mensual',
-            'url'  => 'peaje/mensual',
-            'icon' => 'fas fa-fw fa-money-check',
-        ],
-
+        ['header' => ' Multas'],
         [
             'text'    => 'Multas',
             'icon'    => 'fas fa-file-invoice-dollar',
@@ -173,11 +179,7 @@ return [
 
             ],
         ],
-        [
-            'text'        => 'Reportes',
-            'url'         => 'multas/reportes',
-            'icon'        => 'far fa-edit',
-        ],
+
         ['header' => 'Administración', 'icon' => 'fas fa-fw fa-user-shield'],
         [
             'text' => 'Perfiles',
